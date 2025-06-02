@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:ns1="http://schema.org/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:about="http://example.org/wifi/UnionSquare">
+    <ns1:name>Union Square</ns1:name>
+    <ns1:address>14th St &amp; Broadway</ns1:address>
+    <ns1:latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">40.7359</ns1:latitude>
+    <ns1:longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-73.9911</ns1:longitude>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/CentralPark">
+    <ns1:name>Central Park WiFi</ns1:name>
+    <ns1:address>5th Ave &amp; 59th St</ns1:address>
+    <ns1:latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">40.7644</ns1:latitude>
+    <ns1:longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-73.9738</ns1:longitude>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/BryantPark">
+    <ns1:name>Bryant Park</ns1:name>
+    <ns1:address>42nd St &amp; 6th Ave</ns1:address>
+    <ns1:latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">40.7536</ns1:latitude>
+    <ns1:longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-73.9832</ns1:longitude>
+  </rdf:Description>
+</rdf:RDF>

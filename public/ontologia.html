@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ontología - Proyecto WiFi Semántica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fc;
+            color: #333;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            color: #003366;
+        }
+        img {
+            max-width: 100%;
+            border: 1px solid #ccc;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .box {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+        ul {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h1>🔎 Diseño Ontológico del Proyecto WiFi Semántica</h1>
+
+    <p>La ontología desarrollada está estructurada en cinco clases principales que permiten representar, consultar y reutilizar información sobre redes WiFi públicas en entornos urbanos.</p>
+
+    <h2>🧩 Clases principales</h2>
+    <ul>
+        <li><strong>PuntoDeAccesoWiFi:</strong> Nodo central. Contiene propiedades como SSID, velocidad máxima, tipo de acceso, tipo de conexión, etc.</li>
+        <li><strong>Ubicación:</strong> Relaciona el punto con una latitud, longitud, dirección y ciudad.</li>
+        <li><strong>Proveedor:</strong> Representa la empresa o entidad que ofrece el servicio WiFi.</li>
+        <li><strong>Seguridad:</strong> Define el protocolo de seguridad (WEP, WPA2, etc.) del punto.</li>
+        <li><strong>Dispositivo:</strong> Describe los tipos de dispositivos compatibles (smartphones, portátiles, etc.).</li>
+    </ul>
+
+    <h2>⚙️ Propiedades</h2>
+    <p><strong>De objeto:</strong> tieneUbicacion, tieneProveedor, tieneSeguridad, soportaDispositivo</p>
+    <p><strong>De datos:</strong> SSID, velocidadMaxima, tipoConexion, coordenadas, protocoloSeguridad</p>
+
+    <h2>📊 Diagrama Ontológico</h2>
+    <p>A continuación se muestra una representación visual de la ontología construida:</p>
+    <img src="A_webpage_titled_%22ESTUDIO_ONTOLÓGICO_DE_REDES_WI-F.png" alt="Diseño ontológico del proyecto">
+
+    <h2>🔎 Consultas SPARQL</h2>
+    <p>La ontología se ha validado mediante consultas ejecutadas en Apache Jena Fuseki. Algunos ejemplos:</p>
+    <ul>
+        <li>Seleccionar todos los puntos WiFi disponibles en una ciudad específica</li>
+        <li>Filtrar por proveedor o protocolo de seguridad</li>
+        <li>Obtener las coordenadas y velocidad máxima por punto</li>
+    </ul>
+
+    <h2>🌍 Enfoque Semántico y ODS</h2>
+    <p>Este modelo ontológico se alinea con el <strong>ODS 11</strong> (Ciudades y comunidades sostenibles), ya que fomenta la reutilización de datos abiertos, la mejora de la conectividad urbana y la toma de decisiones basadas en datos.</p>
+</div>
+
+</body>
+</html>
