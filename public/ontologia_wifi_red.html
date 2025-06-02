@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ontología WiFi - Diagrama de Red</title>
+  <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    h2 { text-align: center; margin-top: 20px; color: #2c3e50; }
+    #network { width: 100%; height: 600px; border: 1px solid lightgray; }
+  </style>
+</head>
+<body>
+  <h2>Diagrama de Red - Ontología WiFi</h2>
+  <div id="network"></div>
+  <script type="text/javascript">
+    const nodes = new vis.DataSet([
+      { id: 1, label: "PuntoDeAccesoWiFi", color: "#ff6f61" },
+      { id: 2, label: "Ubicacion", color: "#6ec6ff" },
+      { id: 3, label: "Proveedor", color: "#81c784" },
+      { id: 4, label: "Seguridad", color: "#fbc02d" },
+      { id: 5, label: "Dispositivo", color: "#ba68c8" }
+    ]);
+
+    const edges = new vis.DataSet([
+      { from: 1, to: 2, label: "está en" },
+      { from: 1, to: 3, label: "proveído por" },
+      { from: 1, to: 4, label: "con" },
+      { from: 1, to: 5, label: "accedido por" }
+    ]);
+
+    const container = document.getElementById("network");
+    const data = { nodes, edges };
+    const options = {
+      nodes: {
+        shape: "box",
+        font: { color: "white", face: "arial" },
+        borderWidth: 1
+      },
+      edges: {
+        arrows: "to",
+        font: { align: "middle" }
+      },
+      layout: {
+        improvedLayout: true
+      },
+      physics: {
+        stabilization: true
+      }
+    };
+
+    new vis.Network(container, data, options);
+  </script>
+</body>
+</html>
