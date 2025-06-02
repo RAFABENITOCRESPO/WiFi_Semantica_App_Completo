@@ -1,55 +1,88 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>WiFi Semántica App</title>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
-  <style>
-    #map { height: 500px; margin-top: 20px; }
-  </style>
+    <meta charset="UTF-8" />
+    <title>WiFi Semántica - Visualización</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    />
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        #map { height: 90vh; }
+        .filters { padding: 10px; background: #f5f5f5; display: flex; flex-wrap: wrap; gap: 10px; }
+        select, button { padding: 5px; }
+    </style>
 </head>
 <body>
-  <h1>Explora Puntos WiFi</h1>
-  <form id="filterForm">
-    <select name="city">
-      <option value="Buenos Aires">Buenos Aires</option>
-      <option value="New York">New York</option>
-    </select>
-    <select name="type">
-      <option value="">Tipo</option>
-      <option value="Free">Gratis</option>
-      <option value="Commercial">Comercial</option>
-    </select>
-    <select name="coverage">
-      <option value="">Cobertura</option>
-      <option value="High">Alta</option>
-      <option value="Medium">Media</option>
-      <option value="Low">Baja</option>
-    </select>
-    <button type="submit">Buscar</button>
-  </form>
-  <div id="map"></div>
+    <div class="filters">
+        <select id="citySelect">
+            <option value="">Selecciona ciudad</option>
+            <option value="New York">New York</option>
+            <option value="Buenos Aires">Buenos Aires</option>
+        </select>
+        <select id="coverageSelect">
+            <option value="">Cobertura</option>
+            <option value="Alta">Alta</option>
+            <option value="Media">Media</option>
+            <option value="Baja">Baja</option>
+        </select>
+        <select id="providerSelect">
+            <option value="">Proveedor</option>
+            <option value="LinkNYC">LinkNYC</option>
+            <option value="BA WIFI">BA WIFI</option>
+        </select>
+        <button onclick="exportData('csv')">Exportar CSV</button>
+        <button onclick="exportData('json')">Exportar JSON</button>
+    </div>
+    <div id="map"></div>
 
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script>
-    const form = document.getElementById('filterForm');
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const params = new URLSearchParams(new FormData(form)).toString();
-      const response = await fetch(`/api/wifi?${params}`);
-      const data = await response.json();
-      showMap(data);
-    });
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script>
+        const map = L.map('map').setView([40.7128, -74.0060], 12); // NY por defecto
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 18
+        }).addTo(map);
 
-    function showMap(points) {
-      const map = L.map('map').setView([0, 0], 2);
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; OpenStreetMap contributors'
-      }).addTo(map);
-      points.forEach(p => {
-        L.marker([p.lat, p.lon]).addTo(map).bindPopup(p.ssid || "Punto WiFi");
-      });
-    }
-  </script>
+        let wifiMarkers = [];
+
+        async function fetchData() {
+            const city = document.getElementById("citySelect").value;
+            const provider = document.getElementById("providerSelect").value;
+            const coverage = document.getElementById("coverageSelect").value;
+
+            let url = `/api/wifi?city=${encodeURIComponent(city)}`;
+            const res = await fetch(url);
+            const data = await res.json();
+
+            wifiMarkers.forEach(m => map.removeLayer(m));
+            wifiMarkers = [];
+
+            const filtered = data.filter(p => {
+                return (!provider || (p.provider && p.provider.includes(provider))) &&
+                       (!coverage || (p.coverage && p.coverage.includes(coverage)));
+            });
+
+            filtered.forEach(p => {
+                const marker = L.marker([p.latitude, p.longitude]).addTo(map)
+                    .bindPopup(`<strong>${p.name}</strong><br/>${p.address}<br/>${p.provider || ""}`);
+                wifiMarkers.push(marker);
+            });
+        }
+
+        document.getElementById("citySelect").addEventListener("change", fetchData);
+        document.getElementById("providerSelect").addEventListener("change", fetchData);
+        document.getElementById("coverageSelect").addEventListener("change", fetchData);
+
+        function exportData(format) {
+            const city = document.getElementById("citySelect").value;
+            const url = `/api/wifi?city=${encodeURIComponent(city)}&format=${format}`;
+            window.open(url, "_blank");
+        }
+
+        fetchData();
+    </script>
 </body>
 </html>
