@@ -42,4 +42,54 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("Fallo al recuperar datos.");
         }
     });
+
+    // Funciones de botones personalizados
+    async function fetchWiFiAll() {
+        const res = await fetch("/api/wifi/all");
+        const data = await res.json();
+        drawOnMap(data);
+    }
+
+    async function fetchWiFiByCity() {
+        const city = prompt("Introduce el nombre de la ciudad:");
+        const res = await fetch(`/api/wifi/city/${city}`);
+        const data = await res.json();
+        drawOnMap(data);
+    }
+
+    async function fetchWiFiByProvider() {
+        const provider = prompt("Introduce el nombre del proveedor:");
+        const res = await fetch(`/api/wifi/provider/${provider}`);
+        const data = await res.json();
+        drawOnMap(data);
+    }
+
+    async function fetchSecureWiFi() {
+        const res = await fetch("/api/wifi/secure");
+        const data = await res.json();
+        drawOnMap(data);
+    }
+
+    async function fetchOpenWiFi() {
+        const res = await fetch("/api/wifi/open");
+        const data = await res.json();
+        drawOnMap(data);
+    }
+
+    async function fetchConnectedDevices() {
+        const res = await fetch("/api/wifi/devices");
+        const data = await res.json();
+        drawOnMap(data);
+    }
+
+    function drawOnMap(data) {
+        markersLayer.clearLayers();
+        const markers = data.map(item => 
+            L.marker([item.latitude, item.longitude]).bindPopup(item.name || "Punto WiFi")
+        );
+        markers.forEach(marker => marker.addTo(markersLayer));
+    }
+
+    // Opcional: llamar a algún fetch inicial
+    // fetchWiFiAll();
 });

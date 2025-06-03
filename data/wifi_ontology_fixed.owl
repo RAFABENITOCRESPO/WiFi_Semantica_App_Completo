@@ -1,26 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:ns1="http://www.w3.org/2002/07/owl#"
 >
-  <rdf:Description rdf:about="http://example.org/wifi#Ubicacion">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>Ubicacion</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://example.org/wifi#Seguridad">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>Seguridad</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://example.org/wifi#Dispositivo">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  <ns1:Class rdf:about="http://example.org/wifi#Dispositivo">
     <rdfs:label>Dispositivo</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://example.org/wifi#PuntoDeAccesoWiFi">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </ns1:Class>
+  <ns1:Class rdf:about="http://example.org/wifi#Ubicacion">
+    <rdfs:label>Ubicacion</rdfs:label>
+  </ns1:Class>
+  <ns1:Class rdf:about="http://example.org/wifi#PuntoDeAccesoWiFi">
     <rdfs:label>PuntoDeAccesoWiFi</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://example.org/wifi#Proveedor">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </ns1:Class>
+  <ns1:Class rdf:about="http://example.org/wifi#Seguridad">
+    <rdfs:label>Seguridad</rdfs:label>
+  </ns1:Class>
+  <ns1:Class rdf:about="http://example.org/wifi#Proveedor">
     <rdfs:label>Proveedor</rdfs:label>
-  </rdf:Description>
+  </ns1:Class>
 </rdf:RDF>

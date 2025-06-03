@@ -1,0 +1,9 @@
+PREFIX ex: <http://example.org/wifi#>
+
+SELECT ?nombre ?ciudad WHERE {
+  ?punto a ex:PuntoDeAccesoWiFi ;
+         ex:nombre ?nombre ;
+         ex:ubicacion ?ubicacion .
+  ?ubicacion ex:ciudad ?ciudad .
+  FILTER(CONTAINS(LCASE(?ciudad), "sevilla"))
+}

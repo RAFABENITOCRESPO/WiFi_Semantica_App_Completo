@@ -1,0 +1,8 @@
+PREFIX ex: <http://example.org/wifi#>
+
+SELECT ?nombre WHERE {
+  ?punto a ex:PuntoDeAccesoWiFi ;
+         ex:nombre ?nombre ;
+         ex:seguridad ?seg .
+  ?seg ex:tipo "Abierta" .
+}

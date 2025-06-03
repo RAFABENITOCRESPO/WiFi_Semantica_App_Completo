@@ -1,0 +1,9 @@
+PREFIX ex: <http://example.org/wifi#>
+
+SELECT ?nombre ?tipoSeguridad WHERE {
+  ?punto a ex:PuntoDeAccesoWiFi ;
+         ex:nombre ?nombre ;
+         ex:seguridad ?seg .
+  ?seg ex:tipo ?tipoSeguridad .
+  FILTER(?tipoSeguridad IN ("WPA2", "WPA3"))
+}

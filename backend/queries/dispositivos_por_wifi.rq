@@ -1,0 +1,6 @@
+PREFIX ex: <http://example.org/wifi#>
+
+SELECT ?punto ?dispositivo WHERE {
+  ?punto a ex:PuntoDeAccesoWiFi ;
+         ex:conectado ?dispositivo .
+}

@@ -86,3 +86,62 @@
     </script>
 </body>
 </html>
+
+<!-- NUEVOS BOTONES -->
+<div class="filters">
+    <button onclick="consultarGeneral()">WiFi - Todos</button>
+    <button onclick="consultarPorCiudad()">WiFi por Ciudad</button>
+    <button onclick="consultarPorProveedor()">WiFi por Proveedor</button>
+    <button onclick="consultarWiFiSeguro()">WiFi Seguros</button>
+    <button onclick="consultarWiFiAbierto()">WiFi Abiertos</button>
+    <button onclick="consultarDispositivos()">Dispositivos Conectados</button>
+</div>
+
+<script>
+    function limpiarMarcadores() {
+        wifiMarkers.forEach(m => map.removeLayer(m));
+        wifiMarkers = [];
+    }
+
+    function mostrarDatos(data) {
+        limpiarMarcadores();
+        data.forEach(p => {
+            if (p.lat && p.lon) {
+                const marker = L.marker([parseFloat(p.lat), parseFloat(p.lon)])
+                    .addTo(map)
+                    .bindPopup(p.nombre || "Punto WiFi");
+                wifiMarkers.push(marker);
+            }
+        });
+    }
+
+    async function fetchConsulta(endpoint) {
+        const res = await fetch(`http://localhost:8000/api/consulta/${endpoint}`);
+        const json = await res.json();
+        mostrarDatos(json);
+    }
+
+    function consultarGeneral() {
+        fetchConsulta("wifi");
+    }
+
+    function consultarPorCiudad() {
+        fetchConsulta("por_ciudad");
+    }
+
+    function consultarPorProveedor() {
+        fetchConsulta("por_proveedor");
+    }
+
+    function consultarWiFiSeguro() {
+        fetchConsulta("seguro");
+    }
+
+    function consultarWiFiAbierto() {
+        fetchConsulta("abierto");
+    }
+
+    function consultarDispositivos() {
+        fetchConsulta("dispositivos");
+    }
+</script>
