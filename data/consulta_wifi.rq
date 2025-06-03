@@ -1,4 +1,4 @@
-PREFIX ex: <http://example.org/wifi#Ubicacion>
+PREFIX ex: <http://example.org/wifi#>
 SELECT ?ssid ?lat ?lon ?proveedor ?ciudad
 WHERE {
     ?wifi a ex:WiFi.

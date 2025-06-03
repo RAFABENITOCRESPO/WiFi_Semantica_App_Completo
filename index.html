@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>WiFi Semántico - Mapa Interactivo</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 80vh;
+            width: 100%;
+            margin-top: 10px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            padding: 10px;
+        }
+        .controls {
+            margin-bottom: 10px;
+        }
+        .controls select,
+        .controls button {
+            margin: 5px;
+            padding: 6px 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+    <script src="script.js"></script>
+<body>
+    <h2>Puntos de Acceso WiFi - Proyecto Web Semántica</h2>
+    <div class="controls">
+        <label for="city">Selecciona una ciudad:</label>
+        <select id="city">
+            <option value="New York">New York</option>
+            <option value="Buenos Aires">Buenos Aires</option>
+        </select>
+
+        <button onclick="cargarDatos('general')">WiFi - Todos</button>
+        <button onclick="cargarDatos('por_ciudad')">WiFi por Ciudad</button>
+        <button onclick="cargarDatos('por_proveedor')">WiFi por Proveedor</button>
+        <button onclick="cargarDatos('abierto')">WiFi Abiertos</button>
+        <button onclick="cargarDatos('seguro')">WiFi Seguros</button>
+        <button onclick="cargarDatos('dispositivos')">Dispositivos Conectados</button>
+    </div>
+
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        let map = L.map('map').setView([-34.61, -58.38], 12); // Vista inicial en Buenos Aires
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        const ciudadSelect = document.getElementById('city');
+
+        function limpiarMarcadores() {
+            map.eachLayer(layer => {
+                if (layer instanceof L.Marker) {
+                    map.removeLayer(layer);
+                }
+            });
+        }
+
+        function cargarDatos(tipo) {
+            const ciudad = ciudadSelect.value;
+            let endpoint = '';
+
+            switch (tipo) {
+                case 'general':
+                    endpoint = '/api/consulta/wifi';
+                    break;
+                case 'por_ciudad':
+                    endpoint = '/api/consulta/por_ciudad';
+                    break;
+                case 'por_proveedor':
+                    endpoint = '/api/consulta/por_proveedor';
+                    break;
+                case 'abierto':
+                    endpoint = '/api/consulta/abierto';
+                    break;
+                case 'seguro':
+                    endpoint = '/api/consulta/seguro';
+                    break;
+                case 'dispositivos':
+                    endpoint = '/api/consulta/dispositivos';
+                    break;
+                default:
+                    endpoint = '/api/wifi?city=' + encodeURIComponent(ciudad);
+                    break;
+            }
+
+            fetch('http://127.0.0.1:8000' + endpoint)
+                .then(res => res.json())
+                .then(data => {
+                    limpiarMarcadores();
+                    if (data.length > 0) {
+                        map.setView([data[0].lat, data[0].lon], 13);
+                    }
+                    data.forEach(punto => {
+                        if (punto.lat && punto.lon) {
+                            const marker = L.marker([punto.lat, punto.lon]).addTo(map);
+                            marker.bindPopup(`<strong>${punto.nombre || 'WiFi'}</strong><br>${punto.direccion || ''}`);
+                        }
+                    });
+                })
+                .catch(err => console.error('Error al obtener datos:', err));
+        }
+
+        ciudadSelect.addEventListener('change', () => {
+            cargarDatos(); // Llamada sin tipo para consulta por ciudad
+        });
+
+        // Carga inicial
+        cargarDatos();
+    </script>
+</body>
+</html>

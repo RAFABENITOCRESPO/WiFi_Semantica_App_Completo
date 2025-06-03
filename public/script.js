@@ -1,95 +1,74 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById("filterForm");
-    const map = L.map("map").setView([0, 0], 2);
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map);
+let map = L.map('map').setView([-34.61, -58.38], 12); // Vista inicial en Buenos Aires
 
-    let markersLayer = L.layerGroup().addTo(map);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors'
+}).addTo(map);
 
-    form.addEventListener("submit", async (e) => {
-        e.preventDefault();
-        const city = form.city.value;
-        const type = form.type.value;
-        const coverage = form.coverage.value;
+const ciudadSelect = document.getElementById('city');
 
-        const url = new URL("http://127.0.0.1:8000/api/wifi");
-        url.searchParams.append("city", city);
-        if (type) url.searchParams.append("type", type);
-        if (coverage) url.searchParams.append("coverage", coverage);
-
-        try {
-            const res = await fetch(url);
-            const data = await res.json();
-            markersLayer.clearLayers();
-
-            if (Array.isArray(data)) {
-                data.forEach(p => {
-                    if (p.lat && p.lon) {
-                        L.marker([p.lat, p.lon])
-                            .addTo(markersLayer)
-                            .bindPopup(`<strong>${p.nombre}</strong><br>${p.direccion || ""}<br><em>${p.cobertura || ""}</em>`);
-                    }
-                });
-                if (data.length > 0) {
-                    map.setView([data[0].lat, data[0].lon], 13);
-                }
-            } else {
-                alert("No se encontraron datos.");
-            }
-        } catch (err) {
-            console.error("Error:", err);
-            alert("Fallo al recuperar datos.");
+function limpiarMarcadores() {
+    map.eachLayer(layer => {
+        if (layer instanceof L.Marker) {
+            map.removeLayer(layer);
         }
     });
+}
 
-    // Funciones de botones personalizados
-    async function fetchWiFiAll() {
-        const res = await fetch("/api/wifi/all");
-        const data = await res.json();
-        drawOnMap(data);
+function cargarDatos(tipo = '') {
+    const ciudad = ciudadSelect.value;
+    let endpoint = '';
+
+    switch (tipo) {
+        case 'general':
+            endpoint = '/api/consulta/wifi';
+            break;
+        case 'por_ciudad':
+            endpoint = '/api/consulta/por_ciudad';
+            break;
+        case 'por_proveedor':
+            endpoint = '/api/consulta/por_proveedor';
+            break;
+        case 'abierto':
+            endpoint = '/api/consulta/abierto';
+            break;
+        case 'seguro':
+            endpoint = '/api/consulta/seguro';
+            break;
+        case 'dispositivos':
+            endpoint = '/api/consulta/dispositivos';
+            break;
+        default:
+            endpoint = '/api/wifi?city=' + encodeURIComponent(ciudad);
     }
 
-    async function fetchWiFiByCity() {
-        const city = prompt("Introduce el nombre de la ciudad:");
-        const res = await fetch(`/api/wifi/city/${city}`);
-        const data = await res.json();
-        drawOnMap(data);
-    }
+    fetch('http://127.0.0.1:8000' + endpoint)
+        .then(res => {
+            if (!res.ok) {
+                throw new Error('Respuesta de red no OK');
+            }
+            return res.json();
+        })
+        .then(data => {
+            limpiarMarcadores();
+            if (data.length > 0) {
+                map.setView([data[0].lat, data[0].lon], 13);
+            }
+            data.forEach(punto => {
+                if (punto.lat && punto.lon) {
+                    const marker = L.marker([punto.lat, punto.lon]).addTo(map);
+                    marker.bindPopup(\`\${punto.nombre || 'WiFi'}<br>\${punto.direccion || ''}\`);
+                }
+            });
+        })
+        .catch(err => {
+            console.error('Error al obtener datos:', err);
+            alert("No se pudieron cargar los datos. Verifica que la API esté funcionando.");
+        });
+}
 
-    async function fetchWiFiByProvider() {
-        const provider = prompt("Introduce el nombre del proveedor:");
-        const res = await fetch(`/api/wifi/provider/${provider}`);
-        const data = await res.json();
-        drawOnMap(data);
-    }
-
-    async function fetchSecureWiFi() {
-        const res = await fetch("/api/wifi/secure");
-        const data = await res.json();
-        drawOnMap(data);
-    }
-
-    async function fetchOpenWiFi() {
-        const res = await fetch("/api/wifi/open");
-        const data = await res.json();
-        drawOnMap(data);
-    }
-
-    async function fetchConnectedDevices() {
-        const res = await fetch("/api/wifi/devices");
-        const data = await res.json();
-        drawOnMap(data);
-    }
-
-    function drawOnMap(data) {
-        markersLayer.clearLayers();
-        const markers = data.map(item => 
-            L.marker([item.latitude, item.longitude]).bindPopup(item.name || "Punto WiFi")
-        );
-        markers.forEach(marker => marker.addTo(markersLayer));
-    }
-
-    // Opcional: llamar a algún fetch inicial
-    // fetchWiFiAll();
+ciudadSelect.addEventListener('change', () => {
+    cargarDatos(); // Llamada sin tipo para consulta por ciudad
 });
+
+// Carga inicial
+cargarDatos();

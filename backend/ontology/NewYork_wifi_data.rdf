@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:wifi="http://example.org/wifi#"
+>
+  <rdf:Description rdf:about="http://example.org/wifi#wifi2">
+    <rdf:type rdf:resource="http://example.org/wifi#WiFi"/>
+    <wifi:city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New York</wifi:city>
+    <wifi:provider rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verizon</wifi:provider>
+    <wifi:isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</wifi:isOpen>
+    <wifi:isSecure rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</wifi:isSecure>
+    <wifi:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">40.73061</wifi:lat>
+    <wifi:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-73.935242</wifi:lon>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi#wifi1">
+    <rdf:type rdf:resource="http://example.org/wifi#WiFi"/>
+    <wifi:city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New York</wifi:city>
+    <wifi:provider rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LinkNYC</wifi:provider>
+    <wifi:isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</wifi:isOpen>
+    <wifi:isSecure rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</wifi:isSecure>
+    <wifi:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">40.7128</wifi:lat>
+    <wifi:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-74.006</wifi:lon>
+  </rdf:Description>
+</rdf:RDF>

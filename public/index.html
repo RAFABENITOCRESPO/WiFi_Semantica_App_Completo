@@ -2,146 +2,41 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <title>WiFi Semántica - Visualización</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-        rel="stylesheet"
-        href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
-    />
+    <meta charset="UTF-8">
+    <title>WiFi Semántica</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-        #map { height: 90vh; }
-        .filters { padding: 10px; background: #f5f5f5; display: flex; flex-wrap: wrap; gap: 10px; }
-        select, button { padding: 5px; }
+        #map {
+            height: 80vh;
+            width: 100%;
+        }
+        .controls {
+            margin: 10px;
+        }
+        button, select {
+            margin: 5px;
+            padding: 8px 12px;
+        }
     </style>
 </head>
 <body>
-    <div class="filters">
-        <select id="citySelect">
-            <option value="">Selecciona ciudad</option>
-            <option value="New York">New York</option>
+    <div class="controls">
+        <label for="city">Ciudad:</label>
+        <select id="city">
             <option value="Buenos Aires">Buenos Aires</option>
+            <option value="New York">New York</option>
         </select>
-        <select id="coverageSelect">
-            <option value="">Cobertura</option>
-            <option value="Alta">Alta</option>
-            <option value="Media">Media</option>
-            <option value="Baja">Baja</option>
-        </select>
-        <select id="providerSelect">
-            <option value="">Proveedor</option>
-            <option value="LinkNYC">LinkNYC</option>
-            <option value="BA WIFI">BA WIFI</option>
-        </select>
-        <button onclick="exportData('csv')">Exportar CSV</button>
-        <button onclick="exportData('json')">Exportar JSON</button>
+        <button onclick="cargarDatos('general')">WiFi - Todos</button>
+        <button onclick="cargarDatos('por_ciudad')">WiFi por Ciudad</button>
+        <button onclick="cargarDatos('por_proveedor')">WiFi por Proveedor</button>
+        <button onclick="cargarDatos('seguro')">WiFi Seguros</button>
+        <button onclick="cargarDatos('abierto')">WiFi Abiertos</button>
+        <button onclick="cargarDatos('dispositivos')">Dispositivos Conectados</button>
     </div>
     <div id="map"></div>
 
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
-    <script>
-        const map = L.map('map').setView([40.7128, -74.0060], 12); // NY por defecto
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 18
-        }).addTo(map);
-
-        let wifiMarkers = [];
-
-        async function fetchData() {
-            const city = document.getElementById("citySelect").value;
-            const provider = document.getElementById("providerSelect").value;
-            const coverage = document.getElementById("coverageSelect").value;
-
-            let url = `/api/wifi?city=${encodeURIComponent(city)}`;
-            const res = await fetch(url);
-            const data = await res.json();
-
-            wifiMarkers.forEach(m => map.removeLayer(m));
-            wifiMarkers = [];
-
-            const filtered = data.filter(p => {
-                return (!provider || (p.provider && p.provider.includes(provider))) &&
-                       (!coverage || (p.coverage && p.coverage.includes(coverage)));
-            });
-
-            filtered.forEach(p => {
-                const marker = L.marker([p.latitude, p.longitude]).addTo(map)
-                    .bindPopup(`<strong>${p.name}</strong><br/>${p.address}<br/>${p.provider || ""}`);
-                wifiMarkers.push(marker);
-            });
-        }
-
-        document.getElementById("citySelect").addEventListener("change", fetchData);
-        document.getElementById("providerSelect").addEventListener("change", fetchData);
-        document.getElementById("coverageSelect").addEventListener("change", fetchData);
-
-        function exportData(format) {
-            const city = document.getElementById("citySelect").value;
-            const url = `/api/wifi?city=${encodeURIComponent(city)}&format=${format}`;
-            window.open(url, "_blank");
-        }
-
-        fetchData();
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
-
-<!-- NUEVOS BOTONES -->
-<div class="filters">
-    <button onclick="consultarGeneral()">WiFi - Todos</button>
-    <button onclick="consultarPorCiudad()">WiFi por Ciudad</button>
-    <button onclick="consultarPorProveedor()">WiFi por Proveedor</button>
-    <button onclick="consultarWiFiSeguro()">WiFi Seguros</button>
-    <button onclick="consultarWiFiAbierto()">WiFi Abiertos</button>
-    <button onclick="consultarDispositivos()">Dispositivos Conectados</button>
-</div>
-
-<script>
-    function limpiarMarcadores() {
-        wifiMarkers.forEach(m => map.removeLayer(m));
-        wifiMarkers = [];
-    }
-
-    function mostrarDatos(data) {
-        limpiarMarcadores();
-        data.forEach(p => {
-            if (p.lat && p.lon) {
-                const marker = L.marker([parseFloat(p.lat), parseFloat(p.lon)])
-                    .addTo(map)
-                    .bindPopup(p.nombre || "Punto WiFi");
-                wifiMarkers.push(marker);
-            }
-        });
-    }
-
-    async function fetchConsulta(endpoint) {
-        const res = await fetch(`http://localhost:8000/api/consulta/${endpoint}`);
-        const json = await res.json();
-        mostrarDatos(json);
-    }
-
-    function consultarGeneral() {
-        fetchConsulta("wifi");
-    }
-
-    function consultarPorCiudad() {
-        fetchConsulta("por_ciudad");
-    }
-
-    function consultarPorProveedor() {
-        fetchConsulta("por_proveedor");
-    }
-
-    function consultarWiFiSeguro() {
-        fetchConsulta("seguro");
-    }
-
-    function consultarWiFiAbierto() {
-        fetchConsulta("abierto");
-    }
-
-    function consultarDispositivos() {
-        fetchConsulta("dispositivos");
-    }
-</script>

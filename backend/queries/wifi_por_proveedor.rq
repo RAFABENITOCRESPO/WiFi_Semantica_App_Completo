@@ -1,8 +1,9 @@
-PREFIX ex: <http://example.org/wifi#>
-
-SELECT ?nombre ?proveedor WHERE {
-  ?punto a ex:PuntoDeAccesoWiFi ;
-         ex:nombre ?nombre ;
-         ex:proveedor ?prov .
-  ?prov ex:nombre ?proveedor .
+PREFIX ex: <http://example.org/wifi#proveedor>
+SELECT ?ssid ?lat ?lon ?proveedor
+WHERE {
+    ?wifi a ex:WiFi.
+    ?wifi ex:ssid ?ssid.
+    ?wifi ex:latitud ?lat.
+    ?wifi ex:longitud ?lon.
+    ?wifi ex:proveedor ?proveedor.
 }

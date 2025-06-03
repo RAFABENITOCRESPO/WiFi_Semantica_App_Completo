@@ -1,0 +1,17 @@
+@prefix wifi: <http://example.org/wifi#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+wifi:NY001 a wifi:PuntoDeAccesoWiFi ;
+    wifi:dispositivo "Router A"^^xsd:string ;
+    wifi:proveedor "NYProvider"^^xsd:string ;
+    wifi:seguridad "WPA2"^^xsd:string ;
+    wifi:tieneNombre "WiFi Central Park"^^xsd:string ;
+    wifi:ubicadoEn "New York"^^xsd:string .
+
+wifi:NY002 a wifi:PuntoDeAccesoWiFi ;
+    wifi:dispositivo "Router B"^^xsd:string ;
+    wifi:proveedor "NYProvider"^^xsd:string ;
+    wifi:seguridad "Abierto"^^xsd:string ;
+    wifi:tieneNombre "WiFi Times Square"^^xsd:string ;
+    wifi:ubicadoEn "New York"^^xsd:string .
+
