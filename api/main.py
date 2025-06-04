@@ -13,7 +13,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-BASE_ONTOLOGY_PATH = "data/wifi_ontology_fixed.owl"
+BASE_ONTOLOGY_PATH = "data/wifi_ontology_combined.owl"
 QUERY_PATH = "backend/queries/"
 
 def execute_query(file_name: str):
