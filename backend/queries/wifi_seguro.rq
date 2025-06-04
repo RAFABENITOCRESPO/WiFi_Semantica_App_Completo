@@ -1,10 +1,10 @@
-PREFIX ex: <http://example.org/wifi#>
-SELECT ?ssid ?lat ?lon ?ciudad
+PREFIX wifi: <http://example.org/wifi#>
+SELECT ?provider ?lat ?lon ?city
 WHERE {
-    ?wifi a ex:WiFi.
-    ?wifi ex:ssid ?ssid.
-    ?wifi ex:latitud ?lat.
-    ?wifi ex:longitud ?lon.
-    ?wifi ex:ciudad ?ciudad.
-    ?wifi ex:esSeguro true.
+    ?wifi a wifi:WiFi ;
+        wifi:provider ?provider ;
+        wifi:lat ?lat ;
+        wifi:lon ?lon ;
+        wifi:city ?city ;
+        wifi:isSecure true .
 }

@@ -102,7 +102,8 @@
                     data.forEach(punto => {
                         if (punto.lat && punto.lon) {
                             const marker = L.marker([punto.lat, punto.lon]).addTo(map);
-                            marker.bindPopup(`<strong>${punto.nombre || 'WiFi'}</strong><br>${punto.direccion || ''}`);
+                            const texto = punto.proveedor || punto.nombre || 'WiFi';
+                            marker.bindPopup(`<strong>${texto}</strong><br>${punto.ciudad || punto.direccion || ''}`);
                         }
                     });
                 })

@@ -13,6 +13,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Ontology with WiFi instances used for the SPARQL queries
 BASE_ONTOLOGY_PATH = "data/wifi_ontology_combined.owl"
 QUERY_PATH = "backend/queries/"
 

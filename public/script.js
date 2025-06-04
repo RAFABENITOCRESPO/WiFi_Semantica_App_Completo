@@ -56,9 +56,8 @@ function cargarDatos(tipo = '') {
             data.forEach(punto => {
                 if (punto.lat && punto.lon) {
                     const marker = L.marker([punto.lat, punto.lon]).addTo(map);
-                    const nombre = punto.nombre || punto.provider || 'WiFi';
-                    const info = punto.direccion || punto.city || '';
-                    marker.bindPopup(`${nombre}<br>${info}`);
+                    const texto = punto.proveedor || punto.nombre || "WiFi";
+                    marker.bindPopup(`${texto}<br>${punto.ciudad || punto.direccion || ''}`);
                 }
             });
         })

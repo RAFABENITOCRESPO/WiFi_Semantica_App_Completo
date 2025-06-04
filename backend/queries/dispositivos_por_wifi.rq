@@ -1,7 +1,7 @@
-PREFIX ex: <http://example.org/wifi#>
-SELECT ?wifi ?dispositivo ?tipo
+PREFIX wifi: <http://example.org/wifi#>
+SELECT ?wifi ?provider ?city
 WHERE {
-    ?wifi a ex:WiFi.
-    ?wifi ex:conecta ?dispositivo.
-    ?dispositivo ex:tipo ?tipo.
+    ?wifi a wifi:WiFi ;
+        wifi:provider ?provider ;
+        wifi:city ?city .
 }
