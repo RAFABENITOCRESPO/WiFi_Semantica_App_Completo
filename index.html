@@ -30,13 +30,12 @@
 <body>
     <h2>Puntos de Acceso WiFi - Proyecto Web Semántica</h2>
     <div class="controls">
+        <label for="Puntos de Acceso">Wifi</label>
         <label for="city">Selecciona una ciudad:</label>
         <select id="city">
             <option value="New York">New York</option>
             <option value="Buenos Aires">Buenos Aires</option>
-        </select>
-
-        <button onclick="cargarDatos('general')">WiFi - Todos</button>
+        </select>       
         <button onclick="cargarDatos('por_ciudad')">WiFi por Ciudad</button>
         <button onclick="cargarDatos('por_proveedor')">WiFi por Proveedor</button>
         <button onclick="cargarDatos('abierto')">WiFi Abiertos</button>
@@ -69,9 +68,6 @@
             let endpoint = '';
 
             switch (tipo) {
-                case 'general':
-                    endpoint = '/api/consulta/wifi';
-                    break;
                 case 'por_ciudad':
                     endpoint = '/api/consulta/por_ciudad';
                     break;

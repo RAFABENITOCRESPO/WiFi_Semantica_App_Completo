@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Consultas Wi-Fi con Mapa</title>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    #formulario { padding: 20px; background: #f4f4f4; }
+    .menu button { margin-right: 10px; padding: 10px; }
+    select, button { margin-top: 10px; padding: 8px; }
+    #map { height: 70vh; width: 100%; }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    th, td { border: 1px solid #ccc; padding: 6px; text-align: left; }
+  </style>
+</head>
+<body>
+
+<div id="formulario">
+  <div class="menu">
+    <button onclick="cambiarTipo('ciudad')">Por ciudad</button>
+    <button onclick="cambiarTipo('proveedor')">Por proveedor</button>
+    <button onclick="cambiarTipo('seguridad')">Por seguridad</button>
+    <button onclick="cambiarTipo('abierto')">Abiertos / Cerrados</button>
+  </div>
+
+  <label id="labelFiltro" for="valorFiltro">Selecciona una opción:</label>
+  <select id="valorFiltro"></select>
+  <button onclick="ejecutarConsulta()">Ejecutar consulta</button>
+</div>
+
+<div id="map"></div>
+<div id="resultados"></div>
+
+<script>
+let tipoConsulta = "";
+const selectFiltro = document.getElementById("valorFiltro");
+const opciones = {
+  ciudad: ["Buenos Aires", "New York"],
+  proveedor: ["LinkNYC", "BA WiFi", "Verizon", "Fibertel"],
+  seguridad: ["true", "false"],
+  abierto: ["true", "false"]
+};
+
+const map = L.map('map').setView([0, 0], 2);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© OpenStreetMap contributors'
+}).addTo(map);
+
+let markers = [];
+
+function limpiarMapa() {
+  markers.forEach(marker => map.removeLayer(marker));
+  markers = [];
+}
+
+function cambiarTipo(tipo) {
+  tipoConsulta = tipo;
+  const label = document.getElementById("labelFiltro");
+  selectFiltro.innerHTML = "";
+  opciones[tipo].forEach(op => {
+    const option = document.createElement("option");
+    option.value = op;
+    option.text = op;
+    selectFiltro.appendChild(option);
+  });
+
+  label.textContent = {
+    ciudad: "Selecciona ciudad:",
+    proveedor: "Selecciona proveedor:",
+    seguridad: "¿Es red segura?",
+    abierto: "¿Está disponible 24h?"
+  }[tipo];
+}
+
+async function ejecutarConsulta() {
+  const valor = selectFiltro.value;
+  const query = generarConsulta(tipoConsulta, valor);
+
+  try {
+    const response = await axios.post("http://localhost:8000/query", { query });
+    const results = response.data.results.bindings;
+    if (results.length === 0) {
+      document.getElementById("resultados").innerHTML = "<p>No hay resultados.</p>";
+      limpiarMapa();
+      return;
+    }
+
+    let tabla = "<table><tr>";
+    for (let campo in results[0]) tabla += `<th>${campo}</th>`;
+    tabla += "</tr>";
+
+    limpiarMapa();
+    results.forEach(r => {
+      tabla += "<tr>";
+      for (let campo in r) tabla += `<td>${r[campo].value}</td>`;
+      tabla += "</tr>";
+
+      if (r.lat && r.lon) {
+        const lat = parseFloat(r.lat.value);
+        const lon = parseFloat(r.lon.value);
+        if (!isNaN(lat) && !isNaN(lon)) {
+          const marker = L.marker([lat, lon])
+            .addTo(map)
+            .bindPopup(`<b>${r.wifi?.value || "WiFi"}</b><br>${r.city?.value || ""}`);
+          markers.push(marker);
+        }
+      }
+    });
+
+    tabla += "</table>";
+    document.getElementById("resultados").innerHTML = tabla;
+
+    if (markers.length > 0) {
+      map.setView(markers[0].getLatLng(), 13);
+    }
+
+  } catch (err) {
+    console.error(err);
+    document.getElementById("resultados").innerHTML = "<p>Error al consultar.</p>";
+  }
+}
+
+function generarConsulta(tipo, valor) {
+  const prefix = "PREFIX : <http://example.org/wifi#>\n";
+  let filter = `FILTER regex(str(?filtro), "${valor}", "i")`;
+
+  let base = `
+    SELECT ?wifi ?city ?provider ?lat ?lon
+    WHERE {
+      ?wifi a :WiFi ;
+            :city ?city ;
+            :provider ?provider ;
+            :lat ?lat ;
+            :lon ?lon ;
+  `;
+
+  const filtros = {
+    ciudad: `:city ?filtro . ${filter}`,
+    proveedor: `:provider ?filtro . ${filter}`,
+    seguridad: `:isSecure ?filtro . FILTER(?filtro = ${valor})`,
+    abierto: `:isOpen ?filtro . FILTER(?filtro = ${valor})`
+  };
+
+  base += filtros[tipo] + "\n} LIMIT 50";
+  return prefix + base;
+}
+</script>
+
+</body>
+</html>

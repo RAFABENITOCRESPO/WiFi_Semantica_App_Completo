@@ -82,3 +82,23 @@ def get_wifi_points(city: str = Query(..., description="Nombre de la ciudad (ej.
 
     else:
         return {"error": "Ciudad no encontrada"}
+
+from pydantic import BaseModel
+from fastapi import Request
+
+class SPARQLQuery(BaseModel):
+    query: str
+
+@app.post("/query")
+async def query_endpoint(query_data: SPARQLQuery):
+    g = Graph()
+    g.parse(BASE_ONTOLOGY_PATH)
+    results = g.query(query_data.query)
+    return {
+        "results": {
+            "bindings": [
+                {str(var): {"value": str(row[var])} for var in row.labels}
+                for row in results
+            ]
+        }
+    }

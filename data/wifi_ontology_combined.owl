@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
   xmlns:wifi="http://example.org/wifi#"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 >
@@ -36,3 +37,4 @@
     <wifi:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.3816</wifi:lon>
   </wifi:WiFi>
 </rdf:RDF>
+
