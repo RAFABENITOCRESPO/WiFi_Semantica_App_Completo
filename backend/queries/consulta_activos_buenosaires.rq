@@ -1,8 +1,8 @@
-PREFIX ex: <http://www.semanticweb.org/ontowifi#>
+PREFIX ex: <http://example.org/wifi#>
 
 SELECT ?punto
 WHERE {
   ?punto a ex:PuntoDeAccesoWiFi ;
-         ex:ciudad "Buenos Aires" ;
-         ex:activated true .
+         ex:ciudad "New York" ;
+         ex:estado "activo" .
 }

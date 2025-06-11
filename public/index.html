@@ -25,8 +25,8 @@
   <div class="controls">
     <label for="ciudad">Selecciona ciudad:</label>
     <select id="ciudad" onchange="cambiarCiudad()">
-      <option value="Buenos Aires">Buenos Aires</option>
-      <option value="New York">New York</option>
+      <option value="Buenos Aires">Buenos_Aires</option>
+      <option value="New York">New_York</option>
     </select>
   </div>
 
@@ -74,33 +74,32 @@
   <p>&copy; 2025 Ontología WiFi Semántica</p>
 </footer>
 
+<!-- (Contenido anterior igual hasta el script) -->
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script>
-  let map = L.map('map').setView([-34.61, -58.38], 12);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors'
-  }).addTo(map);
-
+  let map;
   let markers = [];
 
   function cambiarCiudad() {
     const ciudad = document.getElementById('ciudad').value;
-    if (ciudad === "Buenos Aires") {
+    const nombreCiudad = ciudad.replace("_", " ");
+    if (nombreCiudad === "Buenos Aires") {
       map.setView([-34.61, -58.38], 12);
-    } else if (ciudad === "New York") {
+    } else if (nombreCiudad === "New York") {
       map.setView([40.71, -74.00], 12);
     }
     consultar('todos');
   }
 
   async function consultar(tipo) {
-    const ciudad = document.getElementById('ciudad').value;
-    const params = new URLSearchParams({ ciudad, consulta: tipo });
-    const url = `/api/puntos?${params}`;
+    const ciudadSelect = document.getElementById('ciudad').value;
+    const ciudad = ciudadSelect.replace("_", " ");
+    const tipoConsulta = tipo.toLowerCase();
+    const url = `/api/puntos?ciudad=${encodeURIComponent(ciudad)}&consulta=${encodeURIComponent(tipoConsulta)}`;
+
     try {
       const res = await fetch(url);
       const data = await res.json();
-      console.log("Datos recibidos:", data);
       markers.forEach(m => map.removeLayer(m));
       markers = [];
 
@@ -111,9 +110,13 @@
       data.forEach(p => {
         if (p.lat && p.long) {
           const marker = L.marker([p.lat, p.long]).addTo(map)
-            .bindPopup(`<strong>${p.ssid || 'Sin nombre'}</strong><br>Seguridad: ${p.seguridad || 'N/A'}<br>Proveedor: ${p.proveedor || 'N/A'}`);
-          
-            markers.push(marker);
+            .bindPopup(`
+              <strong>${p.ssid || 'Sin nombre'}</strong><br>
+              Seguridad: ${p.seguridad || 'N/A'}<br>
+              Proveedor: ${p.proveedor || 'N/A'}<br>
+              Estado: ${p.estado || 'N/A'}
+            `);
+          markers.push(marker);
         }
       });
     } catch (error) {
@@ -122,7 +125,13 @@
     }
   }
 
-  cambiarCiudad();
+  window.onload = function () {
+    map = L.map('map').setView([-34.61, -58.38], 12);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+    cambiarCiudad();
+  };
 </script>
 </body>
 </html>
