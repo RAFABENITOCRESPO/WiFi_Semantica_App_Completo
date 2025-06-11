@@ -80,3 +80,28 @@ def consulta_general(ciudad: str, consulta: str = "todos"):
         })
 
     return resultado
+
+
+@app.get("/api/consulta/seguridad_debil")
+def consulta_seguridad_debil(ciudad: str):
+    """Return hotspots with weak security (WEP) for the given city."""
+    resultado = []
+
+    for s in g.subjects(RDF.type, WIFI.PuntoDeAccesoWiFi):
+        if get_value(s, WIFI.ubicadoEnCiudad) != ciudad:
+            continue
+
+        seguridad = get_value(s, WIFI.seguridad)
+        if seguridad and seguridad.lower() == "wep":
+            resultado.append({
+                "nombre": get_value(s, WIFI.nombre),
+                "calle": get_value(s, WIFI.calle),
+                "barrio": get_value(s, WIFI.barrio),
+                "comuna": get_value(s, WIFI.comuna),
+                "proveedor": get_value(s, WIFI.proveedor),
+                "seguridad": seguridad,
+                "latitud": get_value(s, GEO.lat),
+                "longitud": get_value(s, GEO.long)
+            })
+
+    return resultado
