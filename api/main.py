@@ -1,10 +1,8 @@
 
-from fastapi import FastAPI, Query
-from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse
+from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
-from rdflib import Graph, Namespace
-from rdflib.namespace import RDF
+from fastapi.responses import JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
 import os
 
 app = FastAPI()
@@ -12,119 +10,27 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
-    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# Ruta base del archivo index.html
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-ROOT_DIR = os.path.dirname(BASE_DIR)
-INDEX_PATH = os.path.join(ROOT_DIR, "index.html")
-DATA_PATH = os.path.join(ROOT_DIR, "data", "wifi_ontology_combined.owl")
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_DIR = os.path.join(ROOT_DIR, "../public")
 
-# Cargar ontología
-g = Graph()
-g.parse(DATA_PATH, format="xml")
-
-# Namespaces
-WIFI = Namespace("http://example.org/wifi#")
-GEO = Namespace("http://www.w3.org/2003/01/geo/wgs84_pos#")
-
-def get_value(s, p):
-    val = g.value(s, p)
-    return val.toPython() if val else None
-
-@app.get("/")
-def index():
-    return FileResponse(INDEX_PATH, media_type="text/html")
+app.mount("/", StaticFiles(directory=STATIC_DIR, html=True), name="static")
 
 @app.get("/api/consulta")
-def consulta_general(ciudad: str, consulta: str = "todos"):
-    resultado = []
-
-    for s in g.subjects(RDF.type, WIFI.PuntoDeAccesoWiFi):
-        ciudad_val = get_value(s, WIFI.ubicadoEnCiudad)
-        if ciudad_val != ciudad:
-            continue
-
-        proveedor = get_value(s, WIFI.proveedor)
-        seguridad = get_value(s, WIFI.seguridad)
-        estado = get_value(s, WIFI.estado)
-        tipo = get_value(s, WIFI.tipo)
-
-        if consulta == "todos":
-            pass
-        elif consulta == "abierto" and seguridad != "Abierto":
-            continue
-        elif consulta == "activos" and estado != "Activo":
-            continue
-        elif consulta == "inactivos" and estado != "Inactivo":
-            continue
-             elif consulta.lower() in ["wpa2", "wpa3", "wep", "abierto"] and seguridad.lower() != consulta.lower():
-            continue
-        elif consulta in ["Gobierno_BA", "Starbucks_Corporation"] and proveedor != consulta:
-            continue        
-        elif consulta.lower() in ["publico", "privado", "municipal", "comercial"] and tipo and tipo.lower() != consulta.lower():
-            continue
-
-        resultado.append({
-            "nombre": get_value(s, WIFI.nombre),
-            "calle": get_value(s, WIFI.calle),
-            "barrio": get_value(s, WIFI.barrio),
-            "comuna": get_value(s, WIFI.comuna),
-            "proveedor": proveedor,
-            "seguridad": seguridad,
-            "latitud": get_value(s, GEO.lat),
-            "longitud": get_value(s, GEO.long)
-        })
-
-    return resultado
-
-@app.get("/api/consulta/streaming")
-def consulta_streaming():
-    """WiFi aptos para streaming"""
-    query_path = os.path.join(ROOT_DIR, "backend", "queries", "wifi_streaming.rq")
-    with open(query_path, "r", encoding="utf-8") as f:
-        query = f.read()
-    resultados = []
-    for row in g.query(query):
-        resultados.append({
-            "wifi": str(row.get("wifi")),
-            "velocidad": row.get("velocidad").toPython() if hasattr(row.get("velocidad"), "toPython") else row.get("velocidad")
-        })
-    return resultados
-
-
-@app.get("/api/consulta/tiempo_completo")
-def consulta_tiempo_completo():
-    """Puntos con acceso disponible las 24 horas"""
-    query_path = os.path.join(ROOT_DIR, "backend", "queries", "wifi_tiempo_completo.rq")
-    with open(query_path, "r", encoding="utf-8") as f:
-        query = f.read()
-    resultados = [str(row.get("wifi")) for row in g.query(query)]
-    return resultados
-
-@app.get("/api/consulta/seguridad_debil")
-def consulta_seguridad_debil(ciudad: str):
-    """Return hotspots with weak security (WEP) for the given city."""
-    resultado = []
-
-    for s in g.subjects(RDF.type, WIFI.PuntoDeAccesoWiFi):
-        if get_value(s, WIFI.ubicadoEnCiudad) != ciudad:
-            continue
-
-        seguridad = get_value(s, WIFI.seguridad)
-        if seguridad and seguridad.lower() == "wep":
-            resultado.append({
-                "nombre": get_value(s, WIFI.nombre),
-                "calle": get_value(s, WIFI.calle),
-                "barrio": get_value(s, WIFI.barrio),
-                "comuna": get_value(s, WIFI.comuna),
-                "proveedor": get_value(s, WIFI.proveedor),
-                "seguridad": seguridad,
-                "latitud": get_value(s, GEO.lat),
-                "longitud": get_value(s, GEO.long)
-            })
-
-    return resultado
+def consulta(ciudad: str, consulta: str):
+    # Devolver datos de ejemplo
+    if ciudad.lower() == "buenos aires":
+        return JSONResponse(content=[
+            {"nombre": "WiFi Plaza", "latitud": -34.6037, "longitud": -58.3816},
+            {"nombre": "WiFi Parque", "latitud": -34.6090, "longitud": -58.3922}
+        ])
+    elif ciudad.lower() == "new york":
+        return JSONResponse(content=[
+            {"nombre": "WiFi Central Park", "latitud": 40.7812, "longitud": -73.9665},
+            {"nombre": "WiFi Times Square", "latitud": 40.7580, "longitud": -73.9855}
+        ])
+    else:
+        return JSONResponse(content=[])
