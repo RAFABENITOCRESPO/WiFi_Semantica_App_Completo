@@ -1,7 +1,0 @@
-PREFIX ex: <http://example.org/wifi#>
-SELECT ?wifi ?dispositivo ?tipo
-WHERE {
-    ?wifi a ex:WiFi.
-    ?wifi ex:conecta ?dispositivo.
-    ?dispositivo ex:tipo ?tipo.
-}
