@@ -38,22 +38,16 @@ def _load_points(ciudad: str):
         ssid = g.value(punto, WIFI.nombreSSID)
         lat = g.value(ubicacion, WIFI.latitud)
         lon = g.value(ubicacion, WIFI.longitud)
-        calle = g.value(ubicacion, WIFI.calle)
-        barrio = g.value(ubicacion, WIFI.barrio)
-        comuna = g.value(ubicacion, WIFI.comuna)
         seguridad = g.value(punto, WIFI.usaSeguridad)
         proveedor = g.value(punto, WIFI.esOperadoPor)
 
         if lat and lon:
             puntos.append({
-                "nombre": str(ssid) if ssid else None,
-                "calle": str(calle) if calle else None,
-                "barrio": str(barrio) if barrio else None,
-                "comuna": str(comuna) if comuna else None,
-                "latitud": float(lat),
-                "longitud": float(lon),
-                "seguridad": str(seguridad) if seguridad else None,
-                "proveedor": str(proveedor) if proveedor else None,
+                "ssid": str(ssid),
+                "lat": float(lat),
+                "long": float(lon),
+                "seguridad": str(seguridad),
+                "proveedor": str(proveedor),
             })
     return puntos
 
