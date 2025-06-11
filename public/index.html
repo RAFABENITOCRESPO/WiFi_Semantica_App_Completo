@@ -95,7 +95,7 @@
 
   async function consultar(tipo) {
     const ciudad = document.getElementById('ciudad').value;
-    const params = new URLSearchParams({ ciudad });
+    const params = new URLSearchParams({ ciudad, consulta: tipo });
     const url = `/api/puntos?${params}`;
     try {
       const res = await fetch(url);
