@@ -3,6 +3,7 @@ from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
+from rdflib import Graph, Namespace, RDF
 import os
 
 app = FastAPI()
@@ -16,21 +17,40 @@ app.add_middleware(
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_DIR = os.path.join(ROOT_DIR, "../public")
+ONTOLOGY_PATH = os.path.join(ROOT_DIR, "../backend/ontology/ontology.owl")
 
 app.mount("/", StaticFiles(directory=STATIC_DIR, html=True), name="static")
 
-@app.get("/api/consulta")
-def consulta(ciudad: str, consulta: str):
-    # Devolver datos de ejemplo
-    if ciudad.lower() == "buenos aires":
-        return JSONResponse(content=[
-            {"nombre": "WiFi Plaza", "latitud": -34.6037, "longitud": -58.3816},
-            {"nombre": "WiFi Parque", "latitud": -34.6090, "longitud": -58.3922}
-        ])
-    elif ciudad.lower() == "new york":
-        return JSONResponse(content=[
-            {"nombre": "WiFi Central Park", "latitud": 40.7812, "longitud": -73.9665},
-            {"nombre": "WiFi Times Square", "latitud": 40.7580, "longitud": -73.9855}
-        ])
-    else:
-        return JSONResponse(content=[])
+WIFI = Namespace("http://www.semanticweb.org/ontowifi#")
+g = Graph()
+g.parse(ONTOLOGY_PATH, format="xml")
+
+def _load_points(ciudad: str):
+    puntos = []
+    for punto in g.subjects(RDF.type, WIFI.PuntoDeAccesoWiFi):
+        ubicacion = g.value(punto, WIFI.tieneUbicacion)
+        if ubicacion is None:
+            continue
+        ciudad_val = g.value(ubicacion, WIFI.ciudad)
+        if ciudad_val is None or ciudad.lower() not in str(ciudad_val).lower():
+            continue
+
+        ssid = g.value(punto, WIFI.nombreSSID)
+        lat = g.value(ubicacion, WIFI.latitud)
+        lon = g.value(ubicacion, WIFI.longitud)
+        seguridad = g.value(punto, WIFI.usaSeguridad)
+        proveedor = g.value(punto, WIFI.esOperadoPor)
+
+        if lat and lon:
+            puntos.append({
+                "ssid": str(ssid),
+                "lat": float(lat),
+                "long": float(lon),
+                "seguridad": str(seguridad),
+                "proveedor": str(proveedor),
+            })
+    return puntos
+
+@app.get("/api/puntos")
+def puntos(ciudad: str):
+    return JSONResponse(content=_load_points(ciudad))
