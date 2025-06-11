@@ -28,4 +28,4 @@ siguientes endpoints:
 - `/api/consulta/seguridad_debil` – lista los accesos con seguridad débil
   (WEP).
 
-La ontología utilizada se encuentra en `data/wifi_ontology_combined.owl`.
+La ontología utilizada se encuentra en `data/ontology.owl`.

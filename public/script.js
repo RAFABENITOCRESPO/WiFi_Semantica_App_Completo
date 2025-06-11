@@ -1,7 +1,7 @@
 
 async function cargarDatos(ciudad, consulta) {
     try {
-        const response = await fetch(`/api/consulta?ciudad=${encodeURIComponent(ciudad)}&consulta=${consulta}`);
+        const response = await fetch(`/api/puntos?ciudad=${encodeURIComponent(ciudad)}`);
         const data = await response.json();
 
         if (Array.isArray(data)) {

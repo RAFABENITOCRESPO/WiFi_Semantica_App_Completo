@@ -102,7 +102,7 @@
       url = '/api/consulta/tiempo_completo';
     } else {
       const params = new URLSearchParams({ ciudad, consulta: tipo });
-      url = `/api/consulta?${params}`;
+      url = `/api/puntos?${params}`;
     }
     try {
       const res = await fetch(url);
