@@ -8,6 +8,9 @@ import os
 
 app = FastAPI()
 
+# Servir contenido estático desde /public
+app.mount("/", StaticFiles(directory="public", html=True), name="static")
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -89,3 +92,5 @@ def run_query(name: str):
     results = g.query(sparql)
     rows = [{str(var): str(row[var]) for var in row.labels} for row in results]
     return JSONResponse(content=rows)
+
+app.mount("/", StaticFiles(directory=STATIC_DIR, html=True), name="static")

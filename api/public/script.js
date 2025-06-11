@@ -1,7 +1,7 @@
 
 async function cargarDatos(ciudad, consulta) {
     try {
-        const response = await fetch(`/api/consulta?ciudad=${encodeURIComponent(ciudad)}&consulta=${consulta}`);
+        const response = await fetch(`/api/puntos?ciudad=${encodeURIComponent(ciudad)}`);
         const data = await response.json();
 
         if (Array.isArray(data)) {
@@ -22,9 +22,9 @@ function agregarPuntosAlMapa(data) {
     }
 
     data.forEach(punto => {
-        if (punto.lat && punto.lon) {
-            const marker = L.marker([punto.lat, punto.lon])
-                .bindPopup(`<b>${punto.nombre}</b><br>${punto.direccion}`);
+        if (punto.lat && punto.long) {
+            const marker = L.marker([punto.lat, punto.long])
+                .bindPopup(`<b>${punto.ssid}</b><br>${'Seguridad: ' + punto.seguridad + '<br>Proveedor: ' + punto.proveedor}`);
             window.markersLayer.addLayer(marker);
         }
     });
