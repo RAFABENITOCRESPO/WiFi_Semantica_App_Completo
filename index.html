@@ -95,9 +95,17 @@
 
   async function consultar(tipo) {
     const ciudad = document.getElementById('ciudad').value;
-    const params = new URLSearchParams({ ciudad, consulta: tipo });
+    let url;
+    if (tipo === 'streaming') {
+      url = '/api/consulta/streaming';
+    } else if (tipo === 'tiempo_completo') {
+      url = '/api/consulta/tiempo_completo';
+    } else {
+      const params = new URLSearchParams({ ciudad, consulta: tipo });
+      url = `/api/consulta?${params}`;
+    }
     try {
-      const res = await fetch(`/api/consulta?${params}`);
+      const res = await fetch(url);
       const data = await res.json();
       console.log("Datos recibidos:", data);
       markers.forEach(m => map.removeLayer(m));

@@ -61,10 +61,10 @@ def consulta_general(ciudad: str, consulta: str = "todos"):
             continue
         elif consulta == "inactivos" and estado != "Inactivo":
             continue
-        elif consulta.lower() in ["wpa2", "wpa3", "wep", "abierto"] and seguridad.lower() != consulta.lower():
+             elif consulta.lower() in ["wpa2", "wpa3", "wep", "abierto"] and seguridad.lower() != consulta.lower():
             continue
         elif consulta in ["Gobierno_BA", "Starbucks_Corporation"] and proveedor != consulta:
-            continue
+            continue        
         elif consulta.lower() in ["publico", "privado", "municipal", "comercial"] and tipo and tipo.lower() != consulta.lower():
             continue
 
@@ -81,6 +81,29 @@ def consulta_general(ciudad: str, consulta: str = "todos"):
 
     return resultado
 
+@app.get("/api/consulta/streaming")
+def consulta_streaming():
+    """WiFi aptos para streaming"""
+    query_path = os.path.join(ROOT_DIR, "backend", "queries", "wifi_streaming.rq")
+    with open(query_path, "r", encoding="utf-8") as f:
+        query = f.read()
+    resultados = []
+    for row in g.query(query):
+        resultados.append({
+            "wifi": str(row.get("wifi")),
+            "velocidad": row.get("velocidad").toPython() if hasattr(row.get("velocidad"), "toPython") else row.get("velocidad")
+        })
+    return resultados
+
+
+@app.get("/api/consulta/tiempo_completo")
+def consulta_tiempo_completo():
+    """Puntos con acceso disponible las 24 horas"""
+    query_path = os.path.join(ROOT_DIR, "backend", "queries", "wifi_tiempo_completo.rq")
+    with open(query_path, "r", encoding="utf-8") as f:
+        query = f.read()
+    resultados = [str(row.get("wifi")) for row in g.query(query)]
+    return resultados
 
 @app.get("/api/consulta/seguridad_debil")
 def consulta_seguridad_debil(ciudad: str):
