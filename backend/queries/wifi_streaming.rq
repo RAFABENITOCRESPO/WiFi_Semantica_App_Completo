@@ -1,0 +1,6 @@
+PREFIX wifi: <http://example.org/wifi#>
+SELECT ?wifi ?velocidad
+WHERE {
+    ?wifi wifi:aptoParaStreaming true ;
+          wifi:velocidadMaxima ?velocidad .
+}

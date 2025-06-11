@@ -1,0 +1,5 @@
+PREFIX wifi: <http://example.org/wifi#>
+SELECT ?wifi
+WHERE {
+    ?wifi wifi:accesoTiempoCompleto true .
+}

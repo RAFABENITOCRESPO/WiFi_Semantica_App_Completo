@@ -18,4 +18,13 @@ Una aplicación que permite la consulta, visualización, análisis y exportació
 - `api/export_tools.py`: exportación de resultados
 - `api/statistics_tools.py`: estadísticas de uso
 - `data/`: RDF, CSV, GeoJSON y fuentes de datos
-- `.gitignore`, `README.md`: documentación y configuración
+-`.gitignore`, `README.md`: documentación y configuración
+## Nuevas consultas
+
+Se añadió una ontología extendida con clases de puntos de acceso, ubicaciones, proveedores, dispositivos y protocolos de seguridad. La API ahora incluye los siguientes endpoints adicionales:
+
+- `/api/consulta/streaming` – devuelve los puntos con `aptoParaStreaming` verdadero.
+- `/api/consulta/seguridad_debil` – lista los accesos con seguridad débil (WEP).
+- `/api/consulta/tiempo_completo` – muestra los accesos disponibles las 24 horas.
+
+La ontología extendida se encuentra en `data/wifi_ontology_extended.owl`.

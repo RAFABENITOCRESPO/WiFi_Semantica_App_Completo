@@ -1,104 +1,82 @@
+
 from fastapi import FastAPI, Query
 from fastapi.middleware.cors import CORSMiddleware
-from typing import List, Dict
-import pandas as pd
-from rdflib import Graph
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
+from rdflib import Graph, Namespace
+from rdflib.namespace import RDF
+import os
 
 app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# Ontology with WiFi instances used for the SPARQL queries
-BASE_ONTOLOGY_PATH = "data/wifi_ontology_combined.owl"
-QUERY_PATH = "backend/queries/"
+# Ruta base del archivo index.html
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+ROOT_DIR = os.path.dirname(BASE_DIR)
+INDEX_PATH = os.path.join(ROOT_DIR, "index.html")
+DATA_PATH = os.path.join(ROOT_DIR, "data", "wifi_ontology_combined.owl")
 
-def execute_query(file_name: str):
-    g = Graph()
-    g.parse(BASE_ONTOLOGY_PATH)
-    with open(f"{QUERY_PATH}{file_name}", "r", encoding="utf-8") as f:
-        query = f.read()
-    results = g.query(query)
-    return [{str(var): str(row[var]) for var in row.labels} for row in results]
+# Cargar ontología
+g = Graph()
+g.parse(DATA_PATH, format="xml")
 
-@app.get("/api/consulta/wifi")
-def consulta_general():
-    return execute_query("consulta_wifi.rq")
+# Namespaces
+WIFI = Namespace("http://example.org/wifi#")
+GEO = Namespace("http://www.w3.org/2003/01/geo/wgs84_pos#")
 
-@app.get("/api/consulta/por_ciudad")
-def consulta_por_ciudad():
-    return execute_query("wifi_por_ciudad.rq")
+def get_value(s, p):
+    val = g.value(s, p)
+    return val.toPython() if val else None
 
-@app.get("/api/consulta/por_proveedor")
-def consulta_por_proveedor():
-    return execute_query("wifi_por_proveedor.rq")
+@app.get("/")
+def index():
+    return FileResponse(INDEX_PATH, media_type="text/html")
 
-@app.get("/api/consulta/seguro")
-def consulta_wifi_seguro():
-    return execute_query("wifi_seguro.rq")
+@app.get("/api/consulta")
+def consulta_general(ciudad: str, consulta: str = "todos"):
+    resultado = []
 
-@app.get("/api/consulta/abierto")
-def consulta_wifi_abierto():
-    return execute_query("wifi_abierto.rq")
+    for s in g.subjects(RDF.type, WIFI.PuntoDeAccesoWiFi):
+        ciudad_val = get_value(s, WIFI.ubicadoEnCiudad)
+        if ciudad_val != ciudad:
+            continue
 
-@app.get("/api/consulta/dispositivos")
-def consulta_dispositivos_por_wifi():
-    return execute_query("dispositivos_por_wifi.rq")
+        proveedor = get_value(s, WIFI.proveedor)
+        seguridad = get_value(s, WIFI.seguridad)
+        estado = get_value(s, WIFI.estado)
+        tipo = get_value(s, WIFI.tipo)
 
-@app.get("/api/wifi")
-def get_wifi_points(city: str = Query(..., description="Nombre de la ciudad (ej. New York o Buenos Aires)")):
-    city_clean = city.strip().lower()
+        if consulta == "todos":
+            pass
+        elif consulta == "abierto" and seguridad != "Abierto":
+            continue
+        elif consulta == "activos" and estado != "Activo":
+            continue
+        elif consulta == "inactivos" and estado != "Inactivo":
+            continue
+        elif consulta.lower() in ["wpa2", "wpa3", "wep", "abierto"] and seguridad.lower() != consulta.lower():
+            continue
+        elif consulta in ["Gobierno_BA", "Starbucks_Corporation"] and proveedor != consulta:
+            continue
+        elif consulta.lower() in ["publico", "privado", "municipal", "comercial"] and tipo and tipo.lower() != consulta.lower():
+            continue
 
-    if city_clean == "new york":
-        g = Graph()
-        g.parse("data/FINAL_CON_INDIIVDUOS_NY.rdf")
-        query = """
-        SELECT ?nombre ?direccion ?lat ?lon WHERE {
-            ?s <http://schema.org/name> ?nombre .
-            ?s <http://schema.org/address> ?direccion .
-            ?s <http://schema.org/latitude> ?lat .
-            ?s <http://schema.org/longitude> ?lon .
-        }
-        """
-        results = g.query(query)
-        data = [
-            {
-                "nombre": str(row.nombre),
-                "direccion": str(row.direccion),
-                "lat": float(row.lat),
-                "lon": float(row.lon)
-            }
-            for row in results
-        ]
-        return data
+        resultado.append({
+            "nombre": get_value(s, WIFI.nombre),
+            "calle": get_value(s, WIFI.calle),
+            "barrio": get_value(s, WIFI.barrio),
+            "comuna": get_value(s, WIFI.comuna),
+            "proveedor": proveedor,
+            "seguridad": seguridad,
+            "latitud": get_value(s, GEO.lat),
+            "longitud": get_value(s, GEO.long)
+        })
 
-    elif city_clean == "buenos aires":
-        df = pd.read_csv("data/puntos_wifi_ba.csv")
-        return df.to_dict(orient="records")
-
-    else:
-        return {"error": "Ciudad no encontrada"}
-
-from pydantic import BaseModel
-from fastapi import Request
-
-class SPARQLQuery(BaseModel):
-    query: str
-
-@app.post("/query")
-async def query_endpoint(query_data: SPARQLQuery):
-    g = Graph()
-    g.parse(BASE_ONTOLOGY_PATH)
-    results = g.query(query_data.query)
-    return {
-        "results": {
-            "bindings": [
-                {str(var): {"value": str(row[var])} for var in row.labels}
-                for row in results
-            ]
-        }
-    }
+    return resultado

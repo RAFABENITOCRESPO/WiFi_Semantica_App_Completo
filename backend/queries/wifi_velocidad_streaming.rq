@@ -1,0 +1,14 @@
+
+PREFIX schema: <http://schema.org/>
+
+SELECT ?nombre ?direccion ?lat ?lon ?velocidad ?streaming
+WHERE {
+  ?wifi a schema:WirelessAccessPoint ;
+        schema:name ?nombre ;
+        schema:address ?direccion ;
+        schema:latitude ?lat ;
+        schema:longitude ?lon ;
+        schema:maximumSpeed ?velocidad .
+
+  BIND(IF(?velocidad >= 10, "Sí", "No") AS ?streaming)
+}
