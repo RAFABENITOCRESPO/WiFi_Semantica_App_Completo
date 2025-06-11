@@ -21,11 +21,15 @@ Una aplicación que permite la consulta, visualización, análisis y exportació
 ## Nuevas consultas
 
 La ontología integra clases de puntos de acceso, ubicaciones, proveedores,
-dispositivos y protocolos de seguridad. Actualmente la API expone los
-siguientes endpoints:
+dispositivos y protocolos de seguridad. dispositivos y protocolos de seguridad. 
 
-- `/api/consulta` – consulta general filtrando por ciudad y tipo.
-- `/api/consulta/seguridad_debil` – lista los accesos con seguridad débil
-  (WEP).
+Los ejemplos de consultas SPARQL se
+encuentran en el directorio `backend/queries` y se pueden ejecutar desde la API
+con el endpoint `/api/run_query`:
+
+```bash
+curl "http://localhost:8000/api/run_query?name=consulta_abiertos_buenosaires"
+```
 
 La ontología utilizada se encuentra en `data/ontology.owl`.
+

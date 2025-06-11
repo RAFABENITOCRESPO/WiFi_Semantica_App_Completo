@@ -95,15 +95,8 @@
 
   async function consultar(tipo) {
     const ciudad = document.getElementById('ciudad').value;
-    let url;
-    if (tipo === 'streaming') {
-      url = '/api/consulta/streaming';
-    } else if (tipo === 'tiempo_completo') {
-      url = '/api/consulta/tiempo_completo';
-    } else {
-      const params = new URLSearchParams({ ciudad, consulta: tipo });
-      url = `/api/puntos?${params}`;
-    }
+    const params = new URLSearchParams({ ciudad });
+    const url = `/api/puntos?${params}`;
     try {
       const res = await fetch(url);
       const data = await res.json();
@@ -116,10 +109,11 @@
       }
 
       data.forEach(p => {
-        if (p.latitud && p.longitud) {
-          const marker = L.marker([p.latitud, p.longitud]).addTo(map)
-            .bindPopup(`<strong>${p.nombre || 'Sin nombre'}</strong><br>${p.calle || ''}<br>${p.barrio || ''} (${p.comuna || ''})<br>Seguridad: ${p.seguridad || 'N/A'}<br>Proveedor: ${p.proveedor || 'N/A'}`);
-          markers.push(marker);
+        if (p.lat && p.long) {
+          const marker = L.marker([p.lat, p.long]).addTo(map)
+            .bindPopup(`<strong>${p.ssid || 'Sin nombre'}</strong><br>Seguridad: ${p.seguridad || 'N/A'}<br>Proveedor: ${p.proveedor || 'N/A'}`);
+          
+            markers.push(marker);
         }
       });
     } catch (error) {

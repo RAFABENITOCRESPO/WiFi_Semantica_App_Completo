@@ -1,4 +1,4 @@
-PREFIX ex: <http://example.org/wifi#>
+PREFIX ex: <http://www.semanticweb.org/ontowifi#>
 
 SELECT ?punto ?lat ?lon ?direccion
 WHERE {
