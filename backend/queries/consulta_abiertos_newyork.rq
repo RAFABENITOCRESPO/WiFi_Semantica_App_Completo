@@ -1,8 +1,11 @@
-PREFIX ex: <http://example.org/wifi#>
+PREFIX nyc: <http://example.org/nyc_wifi_nyc_public.owl#>
 
-SELECT ?punto
+SELECT ?ssid ?lat ?long
 WHERE {
-  ?punto a ex:PuntoDeAccesoWiFi ;
-         ex:ciudad "New York" ;
-         ex:seguridad "Abierto" .
+  ?wifi a nyc:WifiNetwork ;
+        nyc:ssid ?ssid ;
+        nyc:hasLocation ?loc .
+  ?loc nyc:latitude ?lat ;
+       nyc:longitude ?long .
+  FILTER CONTAINS(lcase(str(?ssid)), "open")
 }

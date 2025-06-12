@@ -1,9 +1,14 @@
 PREFIX ex: <http://example.org/wifi#>
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
 
-SELECT ?punto ?proveedor
+SELECT ?ssid ?lat ?long ?estado ?proveedor
 WHERE {
   ?punto a ex:PuntoDeAccesoWiFi ;
-         ex:ciudad "New York" ;
-         ex:proveedor "Gobierno_BA" ;
-         ex:proveedor ?proveedor .
+         ex:nombreSSID ?ssid ;
+         ex:estado ?estado ;
+         ex:esOperadoPor ?proveedor ;
+         geo:lat ?lat ;
+         geo:long ?long .
+  FILTER CONTAINS(lcase(str(?proveedor)), "gobierno")
 }
+

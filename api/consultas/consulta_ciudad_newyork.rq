@@ -1,0 +1,10 @@
+PREFIX nyc: <http://example.org/nyc_wifi_nyc_public.owl#>
+
+SELECT ?ssid ?lat ?long
+WHERE {
+  ?wifi a nyc:WifiNetwork ;
+        nyc:ssid ?ssid ;
+        nyc:hasLocation ?loc .
+  ?loc nyc:latitude ?lat ;
+       nyc:longitude ?long .
+}

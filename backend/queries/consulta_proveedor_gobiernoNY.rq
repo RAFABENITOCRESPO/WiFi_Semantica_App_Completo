@@ -1,9 +1,12 @@
-PREFIX ex: <http://example.org/wifi#>
+PREFIX nyc: <http://example.org/nyc_wifi_nyc_public.owl#>
 
-SELECT ?punto ?proveedor
+SELECT ?ssid ?lat ?long ?prov
 WHERE {
-  ?punto a ex:PuntoDeAccesoWiFi ;
-         ex:ciudad "New York" ;
-         ex:proveedor "Gobierno_NY" ;
-         ex:proveedor ?proveedor .
+  ?wifi a nyc:WifiNetwork ;
+        nyc:ssid ?ssid ;
+        nyc:hasLocation ?loc ;
+        nyc:hasProvider ?prov .
+  ?loc nyc:latitude ?lat ;
+       nyc:longitude ?long .
+  FILTER CONTAINS(lcase(str(?prov)), "government")
 }

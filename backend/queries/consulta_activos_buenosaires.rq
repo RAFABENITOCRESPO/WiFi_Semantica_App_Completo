@@ -1,8 +1,12 @@
 PREFIX ex: <http://example.org/wifi#>
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
 
-SELECT ?punto
+SELECT ?ssid ?lat ?long ?estado
 WHERE {
   ?punto a ex:PuntoDeAccesoWiFi ;
-         ex:ciudad "New York" ;
-         ex:estado "activo" .
+         ex:nombreSSID ?ssid ;
+         ex:estado ?estado ;
+         geo:lat ?lat ;
+         geo:long ?long .
+  FILTER(lcase(str(?estado)) = "activo")
 }

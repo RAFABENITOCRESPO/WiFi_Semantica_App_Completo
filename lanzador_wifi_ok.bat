@@ -1,21 +1,24 @@
 @echo off
-setlocal
+echo ---------------------------------------------
+echo Inicializando entorno virtual y servidor API
+echo ---------------------------------------------
 
-echo ==== Entrando a la carpeta del proyecto ====
-cd /d "%~dp0"
-
-IF NOT EXIST env (
-    echo ==== Creando entorno virtual ====
+REM Paso 1: Crear entorno virtual si no existe
+IF NOT EXIST "env" (
+    echo Creando entorno virtual...
     python -m venv env
 )
 
-echo ==== Activando entorno virtual ====
-call env\Scripts\activate.bat
+REM Paso 2: Activar entorno virtual
+call env\Scripts\activate
 
-echo ==== Instalando dependencias necesarias ====
-pip install fastapi uvicorn rdflib python-dotenv
+REM Paso 3: Instalar dependencias
+echo Instalando dependencias necesarias...
+pip install --upgrade pip
+pip install fastapi uvicorn rdflib
 
-echo ==== Iniciando servidor FastAPI con Uvicorn ====
-uvicorn api.main:app --reload --port 8000
-
+REM Paso 4: Lanzar servidor
+echo Lanzando servidor en http://localhost:8000
+cd api
+uvicorn main:app --reload
 pause
