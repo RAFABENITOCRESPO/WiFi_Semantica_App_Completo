@@ -1,12 +1,25 @@
+
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import JSONResponse
+from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from rdflib import Graph, Namespace, RDF
+from pyproj import Transformer
 import os
 
-# --- Configuración de la app ---
 app = FastAPI()
+
+app.mount("/static", StaticFiles(directory="public"), name="static")
+
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent  # Ajusta según estructura, dos niveles arriba
+
+@app.get("/")
+async def read_index():
+    return FileResponse(BASE_DIR / "public" / "index.html")
+
 
 app.add_middleware(
     CORSMiddleware,
@@ -16,127 +29,45 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# --- Directorios del proyecto ---
-ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
-ONTOLOGY_PATH_BA = os.path.join(ROOT_DIR, "../backend/ontology/buenos_aires_wifi.owl")
-ONTOLOGY_PATH_NY = os.path.join(ROOT_DIR, "../backend/ontology/nyc_wifi_public.owl")
-RDF_PATH_BA = os.path.join(ROOT_DIR, "../data/buenos_aires_wifi.rdf")
-RDF_PATH_NY = os.path.join(ROOT_DIR, "../data/FINAL CON INDIIVDUOS NY.rdf")
-CONSULTAS_DIR = os.path.join(ROOT_DIR, "consultas")
-PUBLIC_DIR = os.path.join(ROOT_DIR, "../public")
+wifi_ns = Namespace("http://example.org/wifi#")
 
-# --- Cargar ontologías ---
-print(f"[INFO] Cargando ontologías y RDFs...")
-
+# Cargar los grafos RDF
 g_ba = Graph()
-g_ba.parse(ONTOLOGY_PATH_BA, format="xml")
-try:
-    with open(RDF_PATH_BA, "r", encoding="utf-8") as f:
-        g_ba.parse(f, format="xml")
-    print("[INFO] RDF de Buenos Aires cargado.")
-except FileNotFoundError:
-    print(f"[ERROR] RDF_PATH_BA no encontrado: {RDF_PATH_BA}")
-
 g_ny = Graph()
-g_ny.parse(ONTOLOGY_PATH_NY, format="xml")
-try:
-    with open(RDF_PATH_NY, "r", encoding="utf-8") as f:
-        g_ny.parse(f, format="xml")
-    print("[INFO] RDF de New York cargado.")
-except FileNotFoundError:
-    print(f"[ERROR] RDF_PATH_NY no encontrado: {RDF_PATH_NY}")
 
-# --- Namespaces ---
-WIFI = Namespace("http://example.org/wifi#")
-
-# --- API REST para visualización por ciudad y filtro ---
-def _load_points(ciudad: str, consulta: str | None = None):
-    puntos = []
-    consulta_lower = consulta.lower() if consulta else None
-
-    if "buenos" in ciudad.lower():
-        g = g_ba
-        WIFI = Namespace("http://example.org/wifi#")
-        LAT = Namespace("http://www.w3.org/2003/01/geo/wgs84_pos#")["lat"]
-        LON = Namespace("http://www.w3.org/2003/01/geo/wgs84_pos#")["long"]
-
-        for punto in g.subjects(RDF.type, WIFI.PuntoDeAccesoWiFi):
-            ssid = g.value(punto, WIFI.nombreSSID)
-            lat = g.value(punto, LAT)
-            lon = g.value(punto, LON)
-            estado = g.value(punto, WIFI.estado)
-
-            if lat and lon:
-                punto_data = {
-                    "ssid": str(ssid),
-                    "lat": float(lat),
-                    "long": float(lon),
-                    "estado": str(estado) if estado else ""
-                }
-                if consulta_lower == "todos" or (consulta_lower == "activos" and str(estado).lower() == "activo"):
-                    puntos.append(punto_data)
-
-    elif "new" in ciudad.lower():
-        g = g_ny
-        NYC = Namespace("http://example.org/nyc_wifi_nyc_public.owl#")
-
-        for punto in g.subjects(RDF.type, None):
-            ssid = g.value(punto, NYC.ssid)
-            lat = g.value(punto, NYC.latitude)
-            lon = g.value(punto, NYC.longitude)
-            proveedor = g.value(punto, NYC.hasProvider)
-
-            if lat and lon:
-                punto_data = {
-                    "ssid": str(ssid),
-                    "lat": float(lat),
-                    "long": float(lon),
-                    "proveedor": str(proveedor) if proveedor else ""
-                }
-                if consulta_lower == "todos" or (consulta_lower == "starbucks" and "starbucks" in str(proveedor).lower()):
-                    puntos.append(punto_data)
-
-    else:
-        raise HTTPException(status_code=400, detail="Ciudad no reconocida")
-
-    return puntos
+g_ba.parse("backend/ontology/buenos_aires_wifi.rdf", format="xml")
+print("[INFO] RDF de Buenos Aires cargado.")
+g_ny.parse("backend/ontology/final_individuos_ny.rdf", format="xml")
+print("[INFO] RDF de New York cargado.")
 
 @app.get("/api/puntos")
-def puntos(ciudad: str, consulta: str | None = None):
-    return JSONResponse(content=_load_points(ciudad, consulta))
+async def get_puntos(ciudad: str = "", consulta: str = "todos"):
+    resultados = []
 
-# --- API para ejecutar consultas SPARQL desde archivos .rq ---
-@app.get("/api/sparql/{archivo}")
-def ejecutar_sparql(archivo: str):
-    ruta = os.path.join(CONSULTAS_DIR, f"{archivo}.rq")
-    if not os.path.exists(ruta):
-        raise HTTPException(status_code=404, detail="Consulta no encontrada")
+    grafo = g_ba if ciudad.lower() == "buenosaires" else g_ny
 
-    consulta = open(ruta, "r", encoding="utf-8").read()
-    archivo_lower = archivo.lower()
-    if "buenosaires" in archivo_lower or "_ba" in archivo_lower:
-        grafo = g_ba
-    elif "newyork" in archivo_lower or "_ny" in archivo_lower:
-        grafo = g_ny
-    else:
-        grafo = g_ba + g_ny
+    for s in grafo.subjects(RDF.type, wifi_ns.PuntoDeAccesoWiFi):
+        ssid = grafo.value(s, wifi_ns.ssid)
+        lat = grafo.value(s, wifi_ns.latitud)
+        lon = grafo.value(s, wifi_ns.longitud)
+        estado = grafo.value(s, wifi_ns.estado)
+        proveedor = grafo.value(s, wifi_ns.proveedor)
+        seguridad = grafo.value(s, wifi_ns.seguridad)
 
-    try:
-        resultados = grafo.query(consulta)
-        salida = [
-            {str(var): str(row[var]) for var in row.labels} for row in resultados
-        ]
-        return JSONResponse(content=salida)
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Error al ejecutar SPARQL: {str(e)}")
+        print(f"[DEBUG] ssid={ssid} lat={lat} lon={lon} estado={estado} proveedor={proveedor} seguridad={seguridad}")
 
-# --- Listado de archivos SPARQL disponibles ---
-@app.get("/api/sparql/list")
-def listar_consultas():
-    archivos = [
-        f.replace(".rq", "") for f in os.listdir(CONSULTAS_DIR) if f.endswith(".rq")
-    ]
-    return JSONResponse(content=archivos)
+        if lat and lon:
+            try:
+                punto_data = {
+                    "ssid": str(ssid) if ssid else "",
+                    "lat": float(lat),
+                    "long": float(lon),
+                    "estado": str(estado) if estado else "",
+                    "proveedor": str(proveedor) if proveedor else "",
+                    "seguridad": str(seguridad) if seguridad else ""
+                }
+                resultados.append(punto_data)
+            except Exception as e:
+                print(f"[ERROR] Problema procesando {s}: {e}")
 
-# --- Montar frontend estático ---
-app.mount("/", StaticFiles(directory=PUBLIC_DIR, html=True), name="static")
+    return JSONResponse(content=resultados)

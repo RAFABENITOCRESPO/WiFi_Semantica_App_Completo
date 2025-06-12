@@ -1,136 +1,95 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>WiFi Semántico - Visualizador</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <style>
-    body { font-family: sans-serif; margin: 0; }
-    header, footer { background-color: #003366; color: white; text-align: center; padding: 1em; }
-    main { padding: 1em; }
-    #map { height: 500px; margin-top: 1em; border: 2px solid #003366; border-radius: 10px; }
-    #contadorResultados { margin-top: 1em; font-weight: bold; color: #003366; }
-    .controls, .grupo-consultas { margin-bottom: 1em; }
-    .grupo-consultas h3 { margin-bottom: 0.3em; color: #003366; }
-    .botones button { margin: 0.2em; }
-  </style>
+    <meta charset="UTF-8">
+    <title>WiFi Semántica</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <style>
+        #mapa { height: 600px; }
+        .controls { margin: 10px 0; }
+    </style>
 </head>
 <body>
-<header>
-  <h1>Visualizador de Puntos WiFi Semánticos</h1>
-</header>
-<main>
-  <div class="controls">
-    <label for="ciudad">Selecciona ciudad:</label>
-    <select id="ciudad" onchange="cambiarCiudad()">
-      <option value="buenosaires">Buenos Aires</option>
-      <option value="newyork">New York</option>
-    </select>
-  </div>
+    <h1>Puntos de Acceso WiFi</h1>
 
-  <div class="grupo-consultas">
-    <h3>Consultas básicas</h3>
-    <div class="botones">
-      <button onclick="consultar('todos')">Todos los puntos WiFi</button>
-      <button onclick="consultar('abierto')">Solo puntos abiertos</button>
-      <button onclick="consultar('activos')">Solo activos</button>
-      <button onclick="consultar('inactivos')">Solo inactivos</button>
+    <div class="controls">
+        <label for="ciudad">Selecciona ciudad:</label>
+        <select id="ciudad" onchange="cambiarCiudad()">
+            <option value="Buenos Aires">Buenos Aires</option>
+            <option value="New York">New York</option>
+        </select>
+
+        <label for="consulta">Selecciona consulta:</label>
+        <select id="consulta" onchange="realizarConsulta()">
+            <!-- Se llenará dinámicamente -->
+        </select>
     </div>
-  </div>
 
-  <div class="grupo-consultas">
-    <h3>Por proveedor</h3>
-    <div class="botones">
-      <button onclick="consultar('Gobierno_BA')">Gobierno Buenos Aires</button>
-      <button onclick="consultar('Starbucks_Corporation')">Starbucks (NYC)</button>
-    </div>
-  </div>
+    <div id="mapa"></div>
 
-  <div class="grupo-consultas">
-    <h3>Por seguridad</h3>
-    <div class="botones">
-      <button onclick="consultar('WPA2')">WPA2</button>
-      <button onclick="consultar('WPA3')">WPA3</button>
-      <button onclick="consultar('WEP')">WEP</button>
-      <button onclick="consultar('Abierto')">Abierto</button>
-    </div>
-  </div>
+    <script>
+        let mapa = L.map('mapa').setView([-34.6037, -58.3816], 12); // Vista predeterminada: Buenos Aires
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: 'OpenStreetMap'
+        }).addTo(mapa);
 
-  <div class="grupo-consultas">
-    <h3>Por tipo de red</h3>
-    <div class="botones">
-      <button onclick="consultar('Publico')">Público</button>
-      <button onclick="consultar('Privado')">Privado</button>
-      <button onclick="consultar('Municipal')">Municipal</button>
-      <button onclick="consultar('Comercial')">Comercial</button>
-    </div>
-  </div>
+        let marcadores = [];
+        let ciudadActual = "Buenos Aires";
 
-  <div id="map"></div>
-  <div id="contadorResultados"></div>
-</main>
-<footer>
-  <p>&copy; 2025 Ontología WiFi Semántica</p>
-</footer>
-
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<script>
-  let map;
-  let markers = [];
-  let ciudadActual = "buenosaires";
-
-  function cambiarCiudad() {
-    ciudadActual = document.getElementById('ciudad').value;
-    if (ciudadActual === "buenosaires") {
-      map.setView([-34.61, -58.38], 12);
-    } else {
-      map.setView([40.71, -74.00], 12);
-    }
-    consultar("todos");
-  }
-
-  async function consultar(tipo) {
-    const url = `/api/puntos?ciudad=${encodeURIComponent(ciudadActual)}&consulta=${encodeURIComponent(tipo.toLowerCase())}`;
-    try {
-      const res = await fetch(url);
-      const data = await res.json();
-      limpiarMarcadores();
-      const contador = document.getElementById("contadorResultados");
-      if (!Array.isArray(data) || !data.length) {
-        contador.textContent = "No se encontraron puntos para esta consulta.";
-        return;
-      }
-      contador.textContent = `Mostrando ${data.length} puntos en ${ciudadActual === 'buenosaires' ? 'Buenos Aires' : 'New York'}.`;
-      data.forEach(p => {
-        if (p.lat && p.long) {
-          const marker = L.marker([p.lat, p.long]).addTo(map)
-            .bindPopup(`<strong>${p.ssid || 'Sin nombre'}</strong><br>
-                        Seguridad: ${p.seguridad || 'N/A'}<br>
-                        Proveedor: ${p.proveedor || 'N/A'}<br>
-                        Estado: ${p.estado || 'N/A'}`);
-          markers.push(marker);
+        function limpiarMarcadores() {
+            marcadores.forEach(m => mapa.removeLayer(m));
+            marcadores = [];
         }
-      });
-    } catch (err) {
-      console.error("Error al consultar datos:", err);
-      alert("Error al realizar la consulta.");
-    }
-  }
 
-  function limpiarMarcadores() {
-    markers.forEach(m => map.removeLayer(m));
-    markers = [];
-  }
+        function cambiarCiudad() {
+            ciudadActual = document.getElementById('ciudad').value;
+            if (ciudadActual === "Buenos Aires") {
+                mapa.setView([-34.6037, -58.3816], 12);
+            } else if (ciudadActual === "New York") {
+                mapa.setView([40.7128, -74.0060], 12);
+            }
+            realizarConsulta();
+        }
 
-  window.onload = function () {
-    map = L.map('map').setView([-34.61, -58.38], 12);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map);
-    cambiarCiudad();
-  };
-</script>
+        function cargarConsultasSparql() {
+            const consultas = [
+                { id: "todos", nombre: "Todos los puntos WiFi" },
+                { id: "activos", nombre: "Solo puntos activos" },
+                { id: "proveedor", nombre: "Por proveedor" },
+                { id: "seguridad", nombre: "Por tipo de seguridad" }
+            ];
+            const select = document.getElementById("consulta");
+            consultas.forEach(c => {
+                let opcion = document.createElement("option");
+                opcion.value = c.id;
+                opcion.text = c.nombre;
+                select.add(opcion);
+            });
+        }
+
+        async function realizarConsulta() {
+            const consulta = document.getElementById("consulta").value;
+            const url = `/api/puntos?ciudad=${encodeURIComponent(ciudadActual)}&consulta=${encodeURIComponent(consulta)}`;
+            try {
+                const respuesta = await fetch(url);
+                const datos = await respuesta.json();
+                limpiarMarcadores();
+                datos.forEach(punto => {
+                    const marcador = L.marker([punto.lat, punto.long])
+                        .bindPopup(`<strong>${punto.ssid}</strong><br>${punto.estado}<br>${punto.proveedor}<br>${punto.seguridad}`)
+                        .addTo(mapa);
+                    marcadores.push(marcador);
+                });
+            } catch (err) {
+                console.error("Error al realizar la consulta:", err);
+            }
+        }
+
+        window.onload = function() {
+            cargarConsultasSparql();
+            realizarConsulta();
+        };
+    </script>
 </body>
 </html>

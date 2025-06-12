@@ -1,24 +1,906 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF
+   xmlns:ex="http://example.org/wifi#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:wifi="http://example.org/wifi#"
 >
-  <rdf:Description rdf:about="http://example.org/wifi#wifi4">
-    <rdf:type rdf:resource="http://example.org/wifi#WiFi"/>
-    <wifi:city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Buenos Aires</wifi:city>
-    <wifi:provider rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fibertel</wifi:provider>
-    <wifi:isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</wifi:isOpen>
-    <wifi:isSecure rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</wifi:isSecure>
-    <wifi:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.6158</wifi:lat>
-    <wifi:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.4333</wifi:lon>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/74">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_74</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.526</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.326</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
   </rdf:Description>
-  <rdf:Description rdf:about="http://example.org/wifi#wifi3">
-    <rdf:type rdf:resource="http://example.org/wifi#WiFi"/>
-    <wifi:city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Buenos Aires</wifi:city>
-    <wifi:provider rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA WiFi</wifi:provider>
-    <wifi:isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</wifi:isOpen>
-    <wifi:isSecure rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</wifi:isSecure>
-    <wifi:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.6037</wifi:lat>
-    <wifi:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.3816</wifi:lon>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/59">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_59</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.541000000000004</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.341</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/51">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_51</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.549</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.349</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/71">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_71</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.529</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.329</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/47">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_47</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.553000000000004</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.353</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/57">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_57</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.543</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.342999999999996</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/67">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_67</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.533</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.333</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/42">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_42</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.558</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.358</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/55">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_55</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.545</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.345</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/84">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_84</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.516</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.315999999999995</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/6">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_6</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.594</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.394</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/25">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_25</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.575</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.375</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/16">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_16</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.584</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.384</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/33">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_33</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.567</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.367</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/88">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_88</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.512</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.312</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/63">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_63</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.537</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.336999999999996</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/27">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_27</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.573</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.373</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/9">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_9</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.591</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.391</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/22">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_22</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.578</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.378</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/31">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_31</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.569</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.369</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/53">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_53</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.547000000000004</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.347</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/29">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_29</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.571</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.370999999999995</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/70">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_70</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.53</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.33</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/12">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_12</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.588</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.388</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/48">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_48</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.552</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.352</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/99">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_99</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.501000000000005</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.301</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/39">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_39</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.561</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.361</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/81">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_81</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.519</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.318999999999996</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/83">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_83</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.517</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.317</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/13">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_13</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.587</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.387</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/23">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_23</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.577</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.376999999999995</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/66">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_66</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.534</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.333999999999996</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/4">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_4</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.596000000000004</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.396</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/100">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_100</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.5</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.3</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/18">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_18</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.582</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.382</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/1">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_1</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.599000000000004</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.399</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/17">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_17</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.583</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.382999999999996</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/24">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_24</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.576</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.376</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/36">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_36</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.564</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.364</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/89">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_89</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.511</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.311</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/94">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_94</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.506</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.306</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/76">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_76</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.524</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.324</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/77">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_77</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.523</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.323</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/78">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_78</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.522</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.321999999999996</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/49">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_49</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.551</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.351</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/98">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_98</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.502</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.302</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/68">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_68</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.532000000000004</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.332</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/60">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_60</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.54</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.339999999999996</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/75">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_75</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.525</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.324999999999996</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/87">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_87</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.513</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.312999999999995</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/7">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_7</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.593</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.393</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/54">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_54</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.546</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.346</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/61">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_61</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.539</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.339</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/46">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_46</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.554</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.354</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/5">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_5</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.595</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.394999999999996</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/21">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_21</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.579</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.379</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/3">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_3</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.597</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.397</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/64">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_64</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.536</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.336</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/34">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_34</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.566</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.366</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/40">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_40</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.56</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.36</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/52">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_52</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.548</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.348</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/91">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_91</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.509</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.309</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/97">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_97</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.503</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.303</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/56">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_56</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.544000000000004</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.344</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/43">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_43</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.557</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.357</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/65">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_65</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.535000000000004</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.335</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/90">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_90</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.51</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.309999999999995</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/86">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_86</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.514</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.314</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/35">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_35</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.565000000000005</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.365</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/28">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_28</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.572</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.372</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/58">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_58</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.542</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.342</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/92">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_92</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.508</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.308</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/85">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_85</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.515</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.315</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/80">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_80</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.52</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.32</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/82">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_82</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.518</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.318</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/62">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_62</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.538000000000004</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.338</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/32">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_32</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.568000000000005</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.368</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/38">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_38</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.562000000000005</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.362</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/93">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_93</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.507</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.306999999999995</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/41">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_41</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.559000000000005</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.359</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/96">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_96</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.504000000000005</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.304</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/10">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_10</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.59</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.39</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/45">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_45</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.555</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.355</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/50">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_50</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.550000000000004</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.35</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/15">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_15</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.585</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.385</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/79">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_79</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.521</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.321</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/11">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_11</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.589</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.388999999999996</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/37">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_37</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.563</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.363</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/69">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_69</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.531</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.330999999999996</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/26">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_26</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.574</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.373999999999995</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/19">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_19</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.581</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.381</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/44">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_44</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.556000000000004</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.356</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/14">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_14</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.586</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.385999999999996</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/95">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_95</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.505</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.305</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/2">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_2</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.598</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.397999999999996</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/8">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_8</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.592</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.391999999999996</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/72">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_72</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.528</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.327999999999996</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/73">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_73</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.527</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.327</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/30">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_30</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.57</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.37</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wifi/ba/20">
+    <rdf:type rdf:resource="http://example.org/wifi#PuntoDeAccesoWiFi"/>
+    <ex:ssid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BA_Free_WiFi_20</ex:ssid>
+    <ex:latitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-34.58</ex:latitud>
+    <ex:longitud rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-58.379999999999995</ex:longitud>
+    <ex:estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activo</ex:estado>
+    <ex:proveedor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobierno_BA</ex:proveedor>
+    <ex:seguridad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpa2</ex:seguridad>
   </rdf:Description>
 </rdf:RDF>
