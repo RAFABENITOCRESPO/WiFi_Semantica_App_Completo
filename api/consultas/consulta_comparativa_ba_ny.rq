@@ -1,0 +1,6 @@
+SELECT (COUNT(?ba) AS ?BA_Points) (COUNT(?ny) AS ?NY_Points)
+WHERE {
+  { SELECT ?ba WHERE { ?ba a <http://example.org/wifi#PuntoDeAccesoWiFi> } }
+  UNION
+  { SELECT ?ny WHERE { ?ny a <http://example.org/nyc_wifi_nyc_public.owl#WifiNetwork> } }
+}

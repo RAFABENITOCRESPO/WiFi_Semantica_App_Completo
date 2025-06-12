@@ -1,0 +1,8 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX nyc: <http://example.org/nyc_wifi_nyc_public.owl#>
+
+SELECT DISTINCT ?type
+WHERE {
+  ?punto a nyc:WifiNetwork ;
+         nyc:type ?type .
+}

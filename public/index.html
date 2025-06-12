@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -103,9 +104,8 @@
       }
       contador.textContent = `Mostrando ${data.length} puntos en ${ciudadActual === 'buenosaires' ? 'Buenos Aires' : 'New York'}.`;
       data.forEach(p => {
-        if (p.lat && (p.lng || p.long)) {
-          const lngValue = p.lng || p.long;
-          const marker = L.marker([p.lat, lngValue]).addTo(map)
+        if (p.lat && p.long) {
+          const marker = L.marker([p.lat, p.long]).addTo(map)
             .bindPopup(`<strong>${p.ssid || 'Sin nombre'}</strong><br>
                         Seguridad: ${p.seguridad || 'N/A'}<br>
                         Proveedor: ${p.proveedor || 'N/A'}<br>

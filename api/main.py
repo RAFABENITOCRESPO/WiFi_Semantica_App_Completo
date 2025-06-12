@@ -20,18 +20,31 @@ app.add_middleware(
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 ONTOLOGY_PATH_BA = os.path.join(ROOT_DIR, "../backend/ontology/buenos_aires_wifi.owl")
 ONTOLOGY_PATH_NY = os.path.join(ROOT_DIR, "../backend/ontology/nyc_wifi_public.owl")
+RDF_PATH_BA = os.path.join(ROOT_DIR, "../data/buenos_aires_wifi.rdf")
+RDF_PATH_NY = os.path.join(ROOT_DIR, "../data/FINAL CON INDIIVDUOS NY.rdf")
 CONSULTAS_DIR = os.path.join(ROOT_DIR, "consultas")
 PUBLIC_DIR = os.path.join(ROOT_DIR, "../public")
 
 # --- Cargar ontologías ---
-print(f"[INFO] Cargando ontología de Buenos Aires desde: {ONTOLOGY_PATH_BA}")
-print(f"[INFO] Cargando ontología de New York desde: {ONTOLOGY_PATH_NY}")
+print(f"[INFO] Cargando ontologías y RDFs...")
 
 g_ba = Graph()
 g_ba.parse(ONTOLOGY_PATH_BA, format="xml")
+try:
+    with open(RDF_PATH_BA, "r", encoding="utf-8") as f:
+        g_ba.parse(f, format="xml")
+    print("[INFO] RDF de Buenos Aires cargado.")
+except FileNotFoundError:
+    print(f"[ERROR] RDF_PATH_BA no encontrado: {RDF_PATH_BA}")
 
 g_ny = Graph()
 g_ny.parse(ONTOLOGY_PATH_NY, format="xml")
+try:
+    with open(RDF_PATH_NY, "r", encoding="utf-8") as f:
+        g_ny.parse(f, format="xml")
+    print("[INFO] RDF de New York cargado.")
+except FileNotFoundError:
+    print(f"[ERROR] RDF_PATH_NY no encontrado: {RDF_PATH_NY}")
 
 # --- Namespaces ---
 WIFI = Namespace("http://example.org/wifi#")
@@ -100,7 +113,13 @@ def ejecutar_sparql(archivo: str):
         raise HTTPException(status_code=404, detail="Consulta no encontrada")
 
     consulta = open(ruta, "r", encoding="utf-8").read()
-    grafo = g_ba if "buenosaires" in archivo.lower() else g_ny if "newyork" in archivo.lower() else g_ba + g_ny
+    archivo_lower = archivo.lower()
+    if "buenosaires" in archivo_lower or "_ba" in archivo_lower:
+        grafo = g_ba
+    elif "newyork" in archivo_lower or "_ny" in archivo_lower:
+        grafo = g_ny
+    else:
+        grafo = g_ba + g_ny
 
     try:
         resultados = grafo.query(consulta)
@@ -118,7 +137,6 @@ def listar_consultas():
         f.replace(".rq", "") for f in os.listdir(CONSULTAS_DIR) if f.endswith(".rq")
     ]
     return JSONResponse(content=archivos)
-
 
 # --- Montar frontend estático ---
 app.mount("/", StaticFiles(directory=PUBLIC_DIR, html=True), name="static")

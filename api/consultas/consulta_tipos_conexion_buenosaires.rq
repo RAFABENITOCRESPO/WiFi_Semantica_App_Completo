@@ -1,0 +1,7 @@
+PREFIX wifi: <http://example.org/wifi#>
+
+SELECT DISTINCT ?tipo
+WHERE {
+  ?punto a wifi:PuntoDeAccesoWiFi ;
+         wifi:tipo ?tipo .
+}
