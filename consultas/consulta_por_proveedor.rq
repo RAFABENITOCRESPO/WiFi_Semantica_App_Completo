@@ -1,0 +1,18 @@
+PREFIX ex: <http://example.org/wifi#>
+SELECT ?ssid ?latitud ?longitud ?direccion ?proveedor ?estado ?tipo ?velocidad ?ciudad ?barrio ?seguridad
+WHERE {
+  ?punto a ex:PuntoDeAccesoWiFi ;
+         ex:ssid ?ssid ;
+         ex:latitud ?latitud ;
+         ex:longitud ?longitud ;
+         ex:proveedor ?proveedor .
+  OPTIONAL { ?punto ex:direccion ?direccion }
+  OPTIONAL { ?punto ex:estado ?estado }
+  OPTIONAL { ?punto ex:tipo ?tipo }
+  OPTIONAL { ?punto ex:velocidad ?velocidad }
+  OPTIONAL { ?punto ex:ciudad ?ciudad }
+  OPTIONAL { ?punto ex:barrio ?barrio }
+  OPTIONAL { ?punto ex:seguridad ?seguridad }
+  FILTER (lcase(str(?proveedor)) = lcase("$PROVEEDOR"))
+}
+

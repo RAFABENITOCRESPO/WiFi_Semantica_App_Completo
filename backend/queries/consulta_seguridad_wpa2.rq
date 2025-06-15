@@ -1,8 +1,0 @@
-PREFIX wifi: <http://example.org/wifi#>
-
-SELECT ?punto ?ssid ?seguridad
-WHERE {
-  ?punto a wifi:PuntoDeAccesoWiFi ;
-         wifi:nombreSSID ?ssid ;
-         wifi:seguridad "WPA2" .
-}

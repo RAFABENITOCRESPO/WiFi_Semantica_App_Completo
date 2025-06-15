@@ -1,7 +1,0 @@
-PREFIX nyc: <http://example.org/nyc_wifi_nyc_public.owl#>
-
-SELECT DISTINCT ?prov
-WHERE {
-  ?punto a nyc:WifiNetwork ;
-         nyc:hasProvider ?prov .
-}

@@ -1,0 +1,9 @@
+PREFIX wifi: <http://example.org/wifi#>
+
+SELECT ?ciudad (COUNT(?punto) AS ?totalPuntos)
+WHERE {
+  ?punto a wifi:PuntoDeAccesoWiFi .
+  ?punto wifi:ciudad ?ciudad .
+}
+GROUP BY ?ciudad
+ORDER BY DESC(?totalPuntos)

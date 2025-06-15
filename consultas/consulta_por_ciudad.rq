@@ -1,0 +1,11 @@
+PREFIX ex: <http://example.org/wifi#>
+SELECT ?ssid ?ciudad ?latitud ?longitud
+WHERE {
+  ?p a ex:PuntoDeAccesoWiFi ;
+     ex:ssid ?ssid ;
+     ex:ciudad ?ciudad ;
+     ex:latitud ?latitud ;
+     ex:longitud ?longitud .
+}
+LIMIT 10
+

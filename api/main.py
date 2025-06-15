@@ -1,26 +1,14 @@
-
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Query
 from fastapi.responses import JSONResponse
-from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
-from rdflib import Graph, Namespace, RDF
-from pyproj import Transformer
+from rdflib import Graph
+import rdflib
 import os
 
 app = FastAPI()
 
-app.mount("/static", StaticFiles(directory="public"), name="static")
-
-from pathlib import Path
-
-BASE_DIR = Path(__file__).resolve().parent.parent  # Ajusta según estructura, dos niveles arriba
-
-@app.get("/")
-async def read_index():
-    return FileResponse(BASE_DIR / "public" / "index.html")
-
-
+# CORS para permitir peticiones desde el frontend
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -29,45 +17,123 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-wifi_ns = Namespace("http://example.org/wifi#")
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_DIR = os.path.join(ROOT_DIR, "../data")
+CONSULTAS_DIR = os.path.join(ROOT_DIR, "../consultas")
+PUBLIC_DIR = os.path.join(ROOT_DIR, "../public")
 
-# Cargar los grafos RDF
-g_ba = Graph()
-g_ny = Graph()
+# Diccionario: ciudad -> fichero OWL
+OWL_FILES = {
+    "Buenos Aires": os.path.join(DATA_DIR, "buenos_aires_wifi.owl"),
+    "New York": os.path.join(DATA_DIR, "nyc_wifi_public.owl"),
+}
 
-g_ba.parse("backend/ontology/buenos_aires_wifi.rdf", format="xml")
-print("[INFO] RDF de Buenos Aires cargado.")
-g_ny.parse("backend/ontology/final_individuos_ny.rdf", format="xml")
-print("[INFO] RDF de New York cargado.")
+def cargar_consulta(filename, params):
+    with open(os.path.join(CONSULTAS_DIR, filename), "r", encoding="utf-8") as f:
+        query = f.read()
+    for key, value in params.items():
+        query = query.replace(f"${key.upper()}", value)
+    return query
+
+def cargar_grafo_owl(ciudad):
+    path = OWL_FILES.get(ciudad)
+    if not path or not os.path.exists(path):
+        raise HTTPException(status_code=404, detail=f"No hay datos OWL para la ciudad '{ciudad}'.")
+    g = Graph()
+    g.parse(path, format="xml")
+    return g
 
 @app.get("/api/puntos")
-async def get_puntos(ciudad: str = "", consulta: str = "todos"):
-    resultados = []
+def puntos(
+    ciudad: str = Query(None),
+    estado: str = Query(None),
+    proveedor: str = Query(None),
+    tipo: str = Query(None),
+    seguridad: str = Query(None),
+    barrio: str = Query(None)
+):
+    if not ciudad:
+        raise HTTPException(status_code=400, detail="Debes especificar una ciudad.")
 
-    grafo = g_ba if ciudad.lower() == "buenosaires" else g_ny
+    g = cargar_grafo_owl(ciudad)
 
-    for s in grafo.subjects(RDF.type, wifi_ns.PuntoDeAccesoWiFi):
-        ssid = grafo.value(s, wifi_ns.ssid)
-        lat = grafo.value(s, wifi_ns.latitud)
-        lon = grafo.value(s, wifi_ns.longitud)
-        estado = grafo.value(s, wifi_ns.estado)
-        proveedor = grafo.value(s, wifi_ns.proveedor)
-        seguridad = grafo.value(s, wifi_ns.seguridad)
+    # --- Detección de consulta según los parámetros recibidos ---
+    # Orden de prioridad: barrio>estado>proveedor>seguridad>tipo>ciudad (solo)
+    consulta_file = None
+    params = {}
 
-        print(f"[DEBUG] ssid={ssid} lat={lat} lon={lon} estado={estado} proveedor={proveedor} seguridad={seguridad}")
+    if ciudad and barrio:
+        consulta_file = "consulta_por_barrio_ciudad.rq"
+        params = {"ciudad": ciudad, "barrio": barrio}
+    elif estado:
+        consulta_file = "consulta_por_estado.rq"
+        params = {"estado": estado}
+    elif proveedor:
+        consulta_file = "consulta_por_proveedor.rq"
+        params = {"proveedor": proveedor}
+    elif seguridad:
+        consulta_file = "consulta_por_seguridad.rq"
+        params = {"seguridad": seguridad}
+    elif tipo:
+        consulta_file = "consulta_por_tipo_de_red.rq"
+        params = {"tipo": tipo}
+    elif ciudad:
+        consulta_file = "consulta_por_ciudad.rq"
+        params = {"ciudad": ciudad}
+    else:
+        raise HTTPException(status_code=400, detail="No hay parámetros de filtro suficientes.")
 
-        if lat and lon:
-            try:
-                punto_data = {
-                    "ssid": str(ssid) if ssid else "",
-                    "lat": float(lat),
-                    "long": float(lon),
-                    "estado": str(estado) if estado else "",
-                    "proveedor": str(proveedor) if proveedor else "",
-                    "seguridad": str(seguridad) if seguridad else ""
-                }
-                resultados.append(punto_data)
-            except Exception as e:
-                print(f"[ERROR] Problema procesando {s}: {e}")
+    # --- Ejecutar consulta ---
+    sparql = cargar_consulta(consulta_file, params)
+    try:
+        results = g.query(sparql)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error al ejecutar consulta SPARQL: {e}")
 
-    return JSONResponse(content=resultados)
+    puntos = []
+    for row in results:
+        punto = {str(k): (str(getattr(row, k)) if getattr(row, k) is not None else "") for k in row.labels}
+        if "latitud" in punto: punto["lat"] = float(punto["latitud"])
+        if "longitud" in punto: punto["long"] = float(punto["longitud"])
+        puntos.append(punto)
+
+    return JSONResponse(content=puntos)
+
+# 🚀 NUEVO ENDPOINT: Comparar ciudades por número de puntos WiFi
+@app.get("/api/comparar_ciudades")
+async def comparar_ciudades():
+    resultados_comparacion = []
+    ciudades = ["Buenos Aires", "New York"]
+
+    for ciudad in ciudades:
+        g = cargar_grafo_owl(ciudad)
+        query = cargar_consulta("consulta_comparar_ciudades.rq", {})  # sin parámetros
+        results = g.query(query)
+
+        for row in results:
+            ciudad_nombre = str(row[0])
+            total = int(row[1]) if row and row[1] else 0
+            resultados_comparacion.append({
+                "ciudad": ciudad_nombre,
+                "total": total
+            })
+
+    return JSONResponse(content=resultados_comparacion)
+# 🧩 FIN DEL NUEVO ENDPOINT
+
+# Servir archivos estáticos (frontend)
+app.mount("/", StaticFiles(directory=PUBLIC_DIR, html=True), name="static")
+
+@app.get("/api/valores")
+def obtener_valores(filtro: str = Query(...), ciudad: str = Query(...)):
+    archivo_consulta = f"consulta_{'proveedores_por_ciudad' if filtro == 'proveedor' else f'por_{filtro}'}.rq"
+
+    g = cargar_grafo_owl(ciudad)
+    try:
+        sparql = cargar_consulta(archivo_consulta, {"ciudad": ciudad})
+        resultados = g.query(sparql)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error en la consulta SPARQL: {e}")
+
+    valores = sorted({str(row[0]) for row in resultados})
+    return JSONResponse(content=valores)

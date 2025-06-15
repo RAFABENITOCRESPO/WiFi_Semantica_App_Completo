@@ -1,7 +1,0 @@
-PREFIX wifi: <http://example.org/wifi#>
-
-SELECT DISTINCT ?barrio
-WHERE {
-  ?punto a wifi:PuntoDeAccesoWiFi ;
-         wifi:barrio ?barrio .
-}

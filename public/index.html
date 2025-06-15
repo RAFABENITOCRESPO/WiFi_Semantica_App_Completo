@@ -1,95 +1,63 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>WiFi Semántica</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <title>WiFi Semántica - Consultas</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <style>
-        #mapa { height: 600px; }
-        .controls { margin: 10px 0; }
+        body { font-family: Arial, sans-serif; background: #f0f0f0; margin: 0; }
+        #controls { padding: 20px; background: #fff; display: flex; flex-wrap: wrap; gap: 10px; }
+        #map { height: 70vh; width: 100%; margin-bottom: 20px; border: 1px solid #ccc; }
+        select, button { padding: 8px; font-size: 1em; border-radius: 4px; border: 1px solid #aaa; }
+        table { width: 95%; margin: 0 auto 20px; border-collapse: collapse; }
+        th, td { padding: 6px 10px; border: 1px solid #ccc; text-align: left; }
     </style>
 </head>
 <body>
-    <h1>Puntos de Acceso WiFi</h1>
-
-    <div class="controls">
-        <label for="ciudad">Selecciona ciudad:</label>
-        <select id="ciudad" onchange="cambiarCiudad()">
-            <option value="Buenos Aires">Buenos Aires</option>
-            <option value="New York">New York</option>
-        </select>
-
-        <label for="consulta">Selecciona consulta:</label>
-        <select id="consulta" onchange="realizarConsulta()">
-            <!-- Se llenará dinámicamente -->
-        </select>
+    <div id="controls">
+        <label>Ciudad:
+            <select id="ciudad">
+                <option value="Buenos Aires">Buenos Aires</option>
+                <option value="New York">New York</option>
+            </select>
+        </label>
+        <label>Consulta:
+            <select id="tipoConsulta">
+                <option value="">-- Selecciona --</option>
+                <option value="estado">Estado</option>
+                <option value="proveedor">Proveedor</option>
+                <option value="tipo">Tipo de red</option>
+                <option value="seguridad">Seguridad</option>
+                <option value="barrio">Barrio</option>
+            </select>
+        </label>
+        <label>Valor:
+            <select id="valorFiltro">
+                <option value="">-- Selecciona un tipo --</option>
+            </select>
+        </label>
+        <button id="btnBuscar">Buscar</button>
+        
+        <button id="btnComparar">Comparar Ciudades</button>
     </div>
 
-    <div id="mapa"></div>
+    <div id="map"></div>
 
-    <script>
-        let mapa = L.map('mapa').setView([-34.6037, -58.3816], 12); // Vista predeterminada: Buenos Aires
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: 'OpenStreetMap'
-        }).addTo(mapa);
+    <table id="tablaResultados" style="display:none">
+        <thead>
+            <tr>
+                <th>SSID</th>
+                <th>Ciudad</th>
+                <th>Barrio</th>
+                <th>Latitud</th>
+                <th>Longitud</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
 
-        let marcadores = [];
-        let ciudadActual = "Buenos Aires";
-
-        function limpiarMarcadores() {
-            marcadores.forEach(m => mapa.removeLayer(m));
-            marcadores = [];
-        }
-
-        function cambiarCiudad() {
-            ciudadActual = document.getElementById('ciudad').value;
-            if (ciudadActual === "Buenos Aires") {
-                mapa.setView([-34.6037, -58.3816], 12);
-            } else if (ciudadActual === "New York") {
-                mapa.setView([40.7128, -74.0060], 12);
-            }
-            realizarConsulta();
-        }
-
-        function cargarConsultasSparql() {
-            const consultas = [
-                { id: "todos", nombre: "Todos los puntos WiFi" },
-                { id: "activos", nombre: "Solo puntos activos" },
-                { id: "proveedor", nombre: "Por proveedor" },
-                { id: "seguridad", nombre: "Por tipo de seguridad" }
-            ];
-            const select = document.getElementById("consulta");
-            consultas.forEach(c => {
-                let opcion = document.createElement("option");
-                opcion.value = c.id;
-                opcion.text = c.nombre;
-                select.add(opcion);
-            });
-        }
-
-        async function realizarConsulta() {
-            const consulta = document.getElementById("consulta").value;
-            const url = `/api/puntos?ciudad=${encodeURIComponent(ciudadActual)}&consulta=${encodeURIComponent(consulta)}`;
-            try {
-                const respuesta = await fetch(url);
-                const datos = await respuesta.json();
-                limpiarMarcadores();
-                datos.forEach(punto => {
-                    const marcador = L.marker([punto.lat, punto.long])
-                        .bindPopup(`<strong>${punto.ssid}</strong><br>${punto.estado}<br>${punto.proveedor}<br>${punto.seguridad}`)
-                        .addTo(mapa);
-                    marcadores.push(marcador);
-                });
-            } catch (err) {
-                console.error("Error al realizar la consulta:", err);
-            }
-        }
-
-        window.onload = function() {
-            cargarConsultasSparql();
-            realizarConsulta();
-        };
-    </script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

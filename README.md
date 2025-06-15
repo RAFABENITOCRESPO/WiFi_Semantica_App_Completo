@@ -7,8 +7,6 @@ Una aplicación que permite la consulta, visualización, análisis y exportació
 - 🔍 Búsqueda por ciudad, tipo o cobertura
 - 🗺️ Mapa interactivo (Leaflet)
 - 🧩 Filtros avanzados por proveedor, velocidad o área
-- 📊 Estadísticas básicas de conectividad por zona
-- ⚖️ Comparación entre ciudades
 - 📡 Preparado para integrarse con endpoints SPARQL
 
 ## Estructura del proyecto
@@ -31,5 +29,7 @@ con el endpoint `/api/run_query`:
 curl "http://localhost:8000/api/run_query?name=consulta_abiertos_buenosaires"
 ```
 
-La ontología utilizada se encuentra en `data/ontology.owl`.
+La ontología utilizada se encuentra en `data/buenos_aires_wifi.owl`.
+                                       `data/nyc_wifi_public.owl`.
+
 
