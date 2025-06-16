@@ -1,22 +1,56 @@
 import csv
 import json
+import os
+from datetime import datetime
+from rdflib import Graph
 
-def export_to_csv(data, filename="wifi_export.csv"):
-    keys = data[0].keys()
-    with open(filename, "w", newline="", encoding="utf-8") as output_file:
-        dict_writer = csv.DictWriter(output_file, fieldnames=keys)
-        dict_writer.writeheader()
-        dict_writer.writerows(data)
+EXPORT_DIR = "exports"
+os.makedirs(EXPORT_DIR, exist_ok=True)
 
-def export_to_json(data, filename="wifi_export.json"):
-    with open(filename, "w", encoding="utf-8") as output_file:
-        json.dump(data, output_file, indent=4, ensure_ascii=False)
+def exportar_csv(datos):
+    filename = f"{EXPORT_DIR}/datos_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
+    with open(filename, mode="w", newline='', encoding='utf-8') as file:
+        writer = csv.DictWriter(file, fieldnames=datos[0].keys())
+        writer.writeheader()
+        writer.writerows(datos)
+    return filename
 
-# Ejemplo de uso
-if __name__ == "__main__":
-    example_data = [
-        {"city": "New York", "ssid": "LinkNYC Free Wi-Fi", "lat": 40.7128, "lon": -74.0060, "coverage": "High"},
-        {"city": "Buenos Aires", "ssid": "BA WiFi", "lat": -34.6037, "lon": -58.3816, "coverage": "Medium"}
-    ]
-    export_to_csv(example_data)
-    export_to_json(example_data)
+def exportar_json(datos):
+    filename = f"{EXPORT_DIR}/datos_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+    with open(filename, mode="w", encoding='utf-8') as file:
+        json.dump(datos, file, indent=4, ensure_ascii=False)
+    return filename
+def obtener_datos_exportar():
+    g = Graph()
+    # Cargar todos los ficheros OWL desde el directorio 'data'
+    data_dir = os.path.join(os.path.dirname(__file__), "..", "data")
+    for filename in os.listdir(data_dir):
+        if filename.endswith(".owl"):
+            g.parse(os.path.join(data_dir, filename), format="xml")
+
+    query = """
+    PREFIX ex: <http://example.org/wifi#>
+    SELECT ?ssid ?ciudad ?barrio ?latitud ?longitud
+    WHERE {
+        ?punto a ex:PuntoDeAccesoWiFi ;
+               ex:ssid ?ssid ;
+               ex:ciudad ?ciudad ;
+               ex:barrio ?barrio ;
+               ex:latitud ?latitud ;
+               ex:longitud ?longitud .
+    }
+    """
+
+    resultados = g.query(query)
+    datos = []
+
+    for row in resultados:
+        datos.append({
+            "ssid": str(row.ssid),
+            "ciudad": str(row.ciudad),
+            "barrio": str(row.barrio),
+            "latitud": str(row.latitud),
+            "longitud": str(row.longitud)
+        })
+
+    return datos

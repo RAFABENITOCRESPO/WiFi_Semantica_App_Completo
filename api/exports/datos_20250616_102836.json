@@ -1,0 +1,4069 @@
+[
+    {
+        "ssid": "BA300_266",
+        "ciudad": "Buenos Aires",
+        "barrio": "Nueva Pompeya",
+        "latitud": "-34.65463657524524",
+        "longitud": "-58.42051283546278"
+    },
+    {
+        "ssid": "BA300_198",
+        "ciudad": "Buenos Aires",
+        "barrio": "Saavedra",
+        "latitud": "-34.55736361580958",
+        "longitud": "-58.4997723194923"
+    },
+    {
+        "ssid": "BA300_141",
+        "ciudad": "Buenos Aires",
+        "barrio": "Almagro",
+        "latitud": "-34.603165969913995",
+        "longitud": "-58.42096840543523"
+    },
+    {
+        "ssid": "BA300_18",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Devoto",
+        "latitud": "-34.599283428862634",
+        "longitud": "-58.5107247353059"
+    },
+    {
+        "ssid": "BA300_172",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Urquiza",
+        "latitud": "-34.56862366949602",
+        "longitud": "-58.482788053023185"
+    },
+    {
+        "ssid": "BA300_71",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Lugano",
+        "latitud": "-34.67066816998847",
+        "longitud": "-58.495148480553645"
+    },
+    {
+        "ssid": "BA300_199",
+        "ciudad": "Buenos Aires",
+        "barrio": "Palermo",
+        "latitud": "-34.57517119585003",
+        "longitud": "-58.43500975643524"
+    },
+    {
+        "ssid": "BA300_51",
+        "ciudad": "Buenos Aires",
+        "barrio": "Nuñez",
+        "latitud": "-34.54865512392493",
+        "longitud": "-58.468333078030824"
+    },
+    {
+        "ssid": "BA300_256",
+        "ciudad": "Buenos Aires",
+        "barrio": "Colegiales",
+        "latitud": "-34.5658788154397",
+        "longitud": "-58.45284797234935"
+    },
+    {
+        "ssid": "BA300_132",
+        "ciudad": "Buenos Aires",
+        "barrio": "Saavedra",
+        "latitud": "-34.54493711145893",
+        "longitud": "-58.47133662254861"
+    },
+    {
+        "ssid": "BA300_40",
+        "ciudad": "Buenos Aires",
+        "barrio": "Palermo",
+        "latitud": "-34.58645293195856",
+        "longitud": "-58.44172419751499"
+    },
+    {
+        "ssid": "BA300_149",
+        "ciudad": "Buenos Aires",
+        "barrio": "Flores",
+        "latitud": "-34.6565452646213",
+        "longitud": "-58.455838672810614"
+    },
+    {
+        "ssid": "BA300_78",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Crespo",
+        "latitud": "-34.59896897104259",
+        "longitud": "-58.43977147272488"
+    },
+    {
+        "ssid": "BA300_258",
+        "ciudad": "Buenos Aires",
+        "barrio": "Liniers",
+        "latitud": "-34.63482979469471",
+        "longitud": "-58.52645792475178"
+    },
+    {
+        "ssid": "BA300_275",
+        "ciudad": "Buenos Aires",
+        "barrio": "Palermo",
+        "latitud": "-34.57057661061171",
+        "longitud": "-58.42143205190601"
+    },
+    {
+        "ssid": "BA300_233",
+        "ciudad": "Buenos Aires",
+        "barrio": "Parque Chacabuco",
+        "latitud": "-34.64097432066948",
+        "longitud": "-58.431687686540826"
+    },
+    {
+        "ssid": "BA300_147",
+        "ciudad": "Buenos Aires",
+        "barrio": "Balvanera",
+        "latitud": "-34.61263078613838",
+        "longitud": "-58.400231425704526"
+    },
+    {
+        "ssid": "BA300_14",
+        "ciudad": "Buenos Aires",
+        "barrio": "Balvanera",
+        "latitud": "-34.62038453321349",
+        "longitud": "-58.411616652462556"
+    },
+    {
+        "ssid": "BA300_88",
+        "ciudad": "Buenos Aires",
+        "barrio": "Colegiales",
+        "latitud": "-34.56886136939023",
+        "longitud": "-58.44722837957056"
+    },
+    {
+        "ssid": "BA300_74",
+        "ciudad": "Buenos Aires",
+        "barrio": "Saavedra",
+        "latitud": "-34.54561070790021",
+        "longitud": "-58.47069883951693"
+    },
+    {
+        "ssid": "BA300_226",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Devoto",
+        "latitud": "-34.610834037815785",
+        "longitud": "-58.518071451203824"
+    },
+    {
+        "ssid": "BA300_270",
+        "ciudad": "Buenos Aires",
+        "barrio": "San Nicolas",
+        "latitud": "-34.60171048452225",
+        "longitud": "-58.37397621523768"
+    },
+    {
+        "ssid": "BA300_55",
+        "ciudad": "Buenos Aires",
+        "barrio": "Flores",
+        "latitud": "-34.624125573922925",
+        "longitud": "-58.46947602871313"
+    },
+    {
+        "ssid": "BA300_140",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Soldati",
+        "latitud": "-34.672529867198605",
+        "longitud": "-58.45766003376401"
+    },
+    {
+        "ssid": "BA300_161",
+        "ciudad": "Buenos Aires",
+        "barrio": "San Nicolas",
+        "latitud": "-34.60120572635459",
+        "longitud": "-58.377436174703526"
+    },
+    {
+        "ssid": "BA300_104",
+        "ciudad": "Buenos Aires",
+        "barrio": "Coghlan",
+        "latitud": "-34.56494993849923",
+        "longitud": "-58.47111327955876"
+    },
+    {
+        "ssid": "BA300_155",
+        "ciudad": "Buenos Aires",
+        "barrio": "Palermo",
+        "latitud": "-34.59428395466962",
+        "longitud": "-58.416040292873"
+    },
+    {
+        "ssid": "BA300_224",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Devoto",
+        "latitud": "-34.59880149982403",
+        "longitud": "-58.512704877918615"
+    },
+    {
+        "ssid": "BA300_23",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Soldati",
+        "latitud": "-34.676618875788265",
+        "longitud": "-58.45384343380914"
+    },
+    {
+        "ssid": "BA300_1",
+        "ciudad": "Buenos Aires",
+        "barrio": "San Nicolas",
+        "latitud": "-34.60402977887422",
+        "longitud": "-58.385752833966784"
+    },
+    {
+        "ssid": "BA300_297",
+        "ciudad": "Buenos Aires",
+        "barrio": "Palermo",
+        "latitud": "-34.57841639371975",
+        "longitud": "-58.425713859896675"
+    },
+    {
+        "ssid": "BA300_126",
+        "ciudad": "Buenos Aires",
+        "barrio": "Palermo",
+        "latitud": "-34.579609196809024",
+        "longitud": "-58.404970160474406"
+    },
+    {
+        "ssid": "BA300_36",
+        "ciudad": "Buenos Aires",
+        "barrio": "Boedo",
+        "latitud": "-34.62806709773821",
+        "longitud": "-58.41686489332496"
+    },
+    {
+        "ssid": "BA300_245",
+        "ciudad": "Buenos Aires",
+        "barrio": "Parque Chacabuco",
+        "latitud": "-34.628524225858065",
+        "longitud": "-58.427287362907755"
+    },
+    {
+        "ssid": "BA300_240",
+        "ciudad": "Buenos Aires",
+        "barrio": "Palermo",
+        "latitud": "-34.57153623747759",
+        "longitud": "-58.41265370944483"
+    },
+    {
+        "ssid": "BA300_277",
+        "ciudad": "Buenos Aires",
+        "barrio": "Monserrat",
+        "latitud": "-34.61550977295979",
+        "longitud": "-58.38099052840268"
+    },
+    {
+        "ssid": "BA300_176",
+        "ciudad": "Buenos Aires",
+        "barrio": "Nueva Pompeya",
+        "latitud": "-34.64740453132267",
+        "longitud": "-58.4280555190316"
+    },
+    {
+        "ssid": "BA300_26",
+        "ciudad": "Buenos Aires",
+        "barrio": "Agronomia",
+        "latitud": "-34.591493117759285",
+        "longitud": "-58.476968130263366"
+    },
+    {
+        "ssid": "BA300_65",
+        "ciudad": "Buenos Aires",
+        "barrio": "San Nicolas",
+        "latitud": "-34.60058043002949",
+        "longitud": "-58.38181231039291"
+    },
+    {
+        "ssid": "BA300_142",
+        "ciudad": "Buenos Aires",
+        "barrio": "Caballito",
+        "latitud": "-34.61525736750071",
+        "longitud": "-58.42921902688493"
+    },
+    {
+        "ssid": "BA300_13",
+        "ciudad": "Buenos Aires",
+        "barrio": "Palermo",
+        "latitud": "-34.56927204208385",
+        "longitud": "-58.411219824546464"
+    },
+    {
+        "ssid": "BA300_103",
+        "ciudad": "Buenos Aires",
+        "barrio": "San Telmo",
+        "latitud": "-34.6207369448267",
+        "longitud": "-58.37246909965081"
+    },
+    {
+        "ssid": "BA300_281",
+        "ciudad": "Buenos Aires",
+        "barrio": "Caballito",
+        "latitud": "-34.61502779815339",
+        "longitud": "-58.44825616886705"
+    },
+    {
+        "ssid": "BA300_28",
+        "ciudad": "Buenos Aires",
+        "barrio": "Floresta",
+        "latitud": "-34.63178207312496",
+        "longitud": "-58.48344020882047"
+    },
+    {
+        "ssid": "BA300_283",
+        "ciudad": "Buenos Aires",
+        "barrio": "Palermo",
+        "latitud": "-34.585371950978015",
+        "longitud": "-58.434751970333075"
+    },
+    {
+        "ssid": "BA300_193",
+        "ciudad": "Buenos Aires",
+        "barrio": "Parque Patricios",
+        "latitud": "-34.6374599361024",
+        "longitud": "-58.40755732572879"
+    },
+    {
+        "ssid": "BA300_25",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Soldati",
+        "latitud": "-34.664636723447856",
+        "longitud": "-58.442765585977575"
+    },
+    {
+        "ssid": "BA300_113",
+        "ciudad": "Buenos Aires",
+        "barrio": "Liniers",
+        "latitud": "-34.64659341182433",
+        "longitud": "-58.51360809838073"
+    },
+    {
+        "ssid": "BA300_255",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Crespo",
+        "latitud": "-34.59226641158429",
+        "longitud": "-58.44070401714493"
+    },
+    {
+        "ssid": "BA300_87",
+        "ciudad": "Buenos Aires",
+        "barrio": "Retiro",
+        "latitud": "-34.59277787681622",
+        "longitud": "-58.37418867966752"
+    },
+    {
+        "ssid": "BA300_4",
+        "ciudad": "Buenos Aires",
+        "barrio": "Parque Patricios",
+        "latitud": "-34.639585098882144",
+        "longitud": "-58.4086560696891"
+    },
+    {
+        "ssid": "BA300_41",
+        "ciudad": "Buenos Aires",
+        "barrio": "Belgrano",
+        "latitud": "-34.549624426893814",
+        "longitud": "-58.43482315588594"
+    },
+    {
+        "ssid": "BA300_24",
+        "ciudad": "Buenos Aires",
+        "barrio": "Monserrat",
+        "latitud": "-34.61485823033229",
+        "longitud": "-58.3880545662544"
+    },
+    {
+        "ssid": "BA300_179",
+        "ciudad": "Buenos Aires",
+        "barrio": "Flores",
+        "latitud": "-34.65051346179053",
+        "longitud": "-58.43308107259344"
+    },
+    {
+        "ssid": "BA300_15",
+        "ciudad": "Buenos Aires",
+        "barrio": "Palermo",
+        "latitud": "-34.570013607921524",
+        "longitud": "-58.44467051787526"
+    },
+    {
+        "ssid": "BA300_211",
+        "ciudad": "Buenos Aires",
+        "barrio": "Barracas",
+        "latitud": "-34.63021229120702",
+        "longitud": "-58.37584521852595"
+    },
+    {
+        "ssid": "BA300_122",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Lugano",
+        "latitud": "-34.67930261466343",
+        "longitud": "-58.45852641762679"
+    },
+    {
+        "ssid": "BA300_194",
+        "ciudad": "Buenos Aires",
+        "barrio": "Monserrat",
+        "latitud": "-34.60855694079956",
+        "longitud": "-58.37426782068061"
+    },
+    {
+        "ssid": "BA300_5",
+        "ciudad": "Buenos Aires",
+        "barrio": "Parque Avellaneda",
+        "latitud": "-34.65501815561253",
+        "longitud": "-58.47270257630156"
+    },
+    {
+        "ssid": "BA300_17",
+        "ciudad": "Buenos Aires",
+        "barrio": "Nueva Pompeya",
+        "latitud": "-34.649884608148916",
+        "longitud": "-58.404577407378675"
+    },
+    {
+        "ssid": "BA300_171",
+        "ciudad": "Buenos Aires",
+        "barrio": "Monserrat",
+        "latitud": "-34.61044764827412",
+        "longitud": "-58.3722231289722"
+    },
+    {
+        "ssid": "BA300_32",
+        "ciudad": "Buenos Aires",
+        "barrio": "Palermo",
+        "latitud": "-34.5927265568355",
+        "longitud": "-58.41994678036272"
+    },
+    {
+        "ssid": "BA300_144",
+        "ciudad": "Buenos Aires",
+        "barrio": "Monserrat",
+        "latitud": "-34.60838842517265",
+        "longitud": "-58.37478345381116"
+    },
+    {
+        "ssid": "BA300_263",
+        "ciudad": "Buenos Aires",
+        "barrio": "Parque Chacabuco",
+        "latitud": "-34.638471979070914",
+        "longitud": "-58.43613815680792"
+    },
+    {
+        "ssid": "BA300_268",
+        "ciudad": "Buenos Aires",
+        "barrio": "Nuñez",
+        "latitud": "-34.551293872648124",
+        "longitud": "-58.46641760193905"
+    },
+    {
+        "ssid": "BA300_85",
+        "ciudad": "Buenos Aires",
+        "barrio": "Barracas",
+        "latitud": "-34.64616453574137",
+        "longitud": "-58.37182200542866"
+    },
+    {
+        "ssid": "BA300_229",
+        "ciudad": "Buenos Aires",
+        "barrio": "Monte Castro",
+        "latitud": "-34.62533689048154",
+        "longitud": "-58.50761393958593"
+    },
+    {
+        "ssid": "BA300_253",
+        "ciudad": "Buenos Aires",
+        "barrio": "Nuñez",
+        "latitud": "-34.54931140266216",
+        "longitud": "-58.467816702794714"
+    },
+    {
+        "ssid": "BA300_98",
+        "ciudad": "Buenos Aires",
+        "barrio": "Monserrat",
+        "latitud": "-34.61261649345401",
+        "longitud": "-58.380445538285265"
+    },
+    {
+        "ssid": "BA300_153",
+        "ciudad": "Buenos Aires",
+        "barrio": "Recoleta",
+        "latitud": "-34.5844277590145",
+        "longitud": "-58.40269466924337"
+    },
+    {
+        "ssid": "BA300_219",
+        "ciudad": "Buenos Aires",
+        "barrio": "Saavedra",
+        "latitud": "-34.546340959730166",
+        "longitud": "-58.47015746786014"
+    },
+    {
+        "ssid": "BA300_20",
+        "ciudad": "Buenos Aires",
+        "barrio": "Palermo",
+        "latitud": "-34.54103876014086",
+        "longitud": "-58.43821440159947"
+    },
+    {
+        "ssid": "BA300_45",
+        "ciudad": "Buenos Aires",
+        "barrio": "Parque Chacabuco",
+        "latitud": "-34.634056121949904",
+        "longitud": "-58.438336893164674"
+    },
+    {
+        "ssid": "BA300_188",
+        "ciudad": "Buenos Aires",
+        "barrio": "Nueva Pompeya",
+        "latitud": "-34.65047669720904",
+        "longitud": "-58.424652823892366"
+    },
+    {
+        "ssid": "BA300_93",
+        "ciudad": "Buenos Aires",
+        "barrio": "Floresta",
+        "latitud": "-34.62514298399526",
+        "longitud": "-58.48592332454983"
+    },
+    {
+        "ssid": "BA300_249",
+        "ciudad": "Buenos Aires",
+        "barrio": "Flores",
+        "latitud": "-34.6242960974224",
+        "longitud": "-58.4694218564536"
+    },
+    {
+        "ssid": "BA300_39",
+        "ciudad": "Buenos Aires",
+        "barrio": "San Cristobal",
+        "latitud": "-34.623771234865046",
+        "longitud": "-58.393915747054905"
+    },
+    {
+        "ssid": "BA300_145",
+        "ciudad": "Buenos Aires",
+        "barrio": "Boca",
+        "latitud": "-34.62867753798313",
+        "longitud": "-58.35687384988059"
+    },
+    {
+        "ssid": "BA300_174",
+        "ciudad": "Buenos Aires",
+        "barrio": "Puerto Madero",
+        "latitud": "-34.61613489638391",
+        "longitud": "-58.36626021473037"
+    },
+    {
+        "ssid": "BA300_56",
+        "ciudad": "Buenos Aires",
+        "barrio": "Palermo",
+        "latitud": "-34.57983377662528",
+        "longitud": "-58.40519345768896"
+    },
+    {
+        "ssid": "BA300_50",
+        "ciudad": "Buenos Aires",
+        "barrio": "Velez Sarsfield",
+        "latitud": "-34.62889202571693",
+        "longitud": "-58.49351975837205"
+    },
+    {
+        "ssid": "BA300_213",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Lugano",
+        "latitud": "-34.676923360823025",
+        "longitud": "-58.47460235148323"
+    },
+    {
+        "ssid": "BA300_177",
+        "ciudad": "Buenos Aires",
+        "barrio": "Boca",
+        "latitud": "-34.635422436063664",
+        "longitud": "-58.35903829494614"
+    },
+    {
+        "ssid": "BA300_184",
+        "ciudad": "Buenos Aires",
+        "barrio": "Barracas",
+        "latitud": "-34.65638158668935",
+        "longitud": "-58.39953438202737"
+    },
+    {
+        "ssid": "BA300_49",
+        "ciudad": "Buenos Aires",
+        "barrio": "Flores",
+        "latitud": "-34.63070708706437",
+        "longitud": "-58.4696396292697"
+    },
+    {
+        "ssid": "BA300_262",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Lugano",
+        "latitud": "-34.68863295010466",
+        "longitud": "-58.46338929236283"
+    },
+    {
+        "ssid": "BA300_218",
+        "ciudad": "Buenos Aires",
+        "barrio": "San Nicolas",
+        "latitud": "-34.60417576691078",
+        "longitud": "-58.390509882896495"
+    },
+    {
+        "ssid": "BA300_228",
+        "ciudad": "Buenos Aires",
+        "barrio": "San Nicolas",
+        "latitud": "-34.60452199527315",
+        "longitud": "-58.37234594718695"
+    },
+    {
+        "ssid": "BA300_210",
+        "ciudad": "Buenos Aires",
+        "barrio": "Belgrano",
+        "latitud": "-34.56621442386537",
+        "longitud": "-58.45212341962101"
+    },
+    {
+        "ssid": "BA300_284",
+        "ciudad": "Buenos Aires",
+        "barrio": "San Nicolas",
+        "latitud": "-34.60489009502834",
+        "longitud": "-58.3790286025624"
+    },
+    {
+        "ssid": "BA300_2",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Lugano",
+        "latitud": "-34.67864164608067",
+        "longitud": "-58.465004731850996"
+    },
+    {
+        "ssid": "BA300_58",
+        "ciudad": "Buenos Aires",
+        "barrio": "Boca",
+        "latitud": "-34.62778585474584",
+        "longitud": "-58.366023345923"
+    },
+    {
+        "ssid": "BA300_62",
+        "ciudad": "Buenos Aires",
+        "barrio": "Belgrano",
+        "latitud": "-34.55246537839036",
+        "longitud": "-58.43698695194612"
+    },
+    {
+        "ssid": "BA300_110",
+        "ciudad": "Buenos Aires",
+        "barrio": "Barracas",
+        "latitud": "-34.63559203018672",
+        "longitud": "-58.38231077355322"
+    },
+    {
+        "ssid": "BA300_125",
+        "ciudad": "Buenos Aires",
+        "barrio": "Flores",
+        "latitud": "-34.635954424419054",
+        "longitud": "-58.46252397667906"
+    },
+    {
+        "ssid": "BA300_130",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Urquiza",
+        "latitud": "-34.57375060208764",
+        "longitud": "-58.47504902541748"
+    },
+    {
+        "ssid": "BA300_236",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Real",
+        "latitud": "-34.613742203341026",
+        "longitud": "-58.5266752081579"
+    },
+    {
+        "ssid": "BA300_34",
+        "ciudad": "Buenos Aires",
+        "barrio": "Palermo",
+        "latitud": "-34.58104523884557",
+        "longitud": "-58.40675877152928"
+    },
+    {
+        "ssid": "BA300_131",
+        "ciudad": "Buenos Aires",
+        "barrio": "Palermo",
+        "latitud": "-34.579214212700144",
+        "longitud": "-58.41891534493581"
+    },
+    {
+        "ssid": "BA300_12",
+        "ciudad": "Buenos Aires",
+        "barrio": "Flores",
+        "latitud": "-34.623580152030115",
+        "longitud": "-58.454583498772685"
+    },
+    {
+        "ssid": "BA300_100",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Santa Rita",
+        "latitud": "-34.612003929350756",
+        "longitud": "-58.47975461835752"
+    },
+    {
+        "ssid": "BA300_19",
+        "ciudad": "Buenos Aires",
+        "barrio": "San Cristobal",
+        "latitud": "-34.62283284248346",
+        "longitud": "-58.39446600608653"
+    },
+    {
+        "ssid": "BA300_64",
+        "ciudad": "Buenos Aires",
+        "barrio": "Coghlan",
+        "latitud": "-34.56510774731828",
+        "longitud": "-58.47098608322132"
+    },
+    {
+        "ssid": "BA300_160",
+        "ciudad": "Buenos Aires",
+        "barrio": "Balvanera",
+        "latitud": "-34.607769820408095",
+        "longitud": "-58.40821974560761"
+    },
+    {
+        "ssid": "BA300_163",
+        "ciudad": "Buenos Aires",
+        "barrio": "San Nicolas",
+        "latitud": "-34.60412626448811",
+        "longitud": "-58.38718487227851"
+    },
+    {
+        "ssid": "BA300_92",
+        "ciudad": "Buenos Aires",
+        "barrio": "Monte Castro",
+        "latitud": "-34.62580212424544",
+        "longitud": "-58.50780903597574"
+    },
+    {
+        "ssid": "BA300_183",
+        "ciudad": "Buenos Aires",
+        "barrio": "Colegiales",
+        "latitud": "-34.5677946028092",
+        "longitud": "-58.44902817157713"
+    },
+    {
+        "ssid": "BA300_73",
+        "ciudad": "Buenos Aires",
+        "barrio": "Retiro",
+        "latitud": "-34.597120176396565",
+        "longitud": "-58.38200151943439"
+    },
+    {
+        "ssid": "BA300_195",
+        "ciudad": "Buenos Aires",
+        "barrio": "Retiro",
+        "latitud": "-34.58300282474364",
+        "longitud": "-58.38004707557412"
+    },
+    {
+        "ssid": "BA300_243",
+        "ciudad": "Buenos Aires",
+        "barrio": "Belgrano",
+        "latitud": "-34.56230760685596",
+        "longitud": "-58.45649590021823"
+    },
+    {
+        "ssid": "BA300_114",
+        "ciudad": "Buenos Aires",
+        "barrio": "San Nicolas",
+        "latitud": "-34.60001665420623",
+        "longitud": "-58.39155095790904"
+    },
+    {
+        "ssid": "BA300_129",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Soldati",
+        "latitud": "-34.66079727486334",
+        "longitud": "-58.43323934967425"
+    },
+    {
+        "ssid": "BA300_244",
+        "ciudad": "Buenos Aires",
+        "barrio": "Belgrano",
+        "latitud": "-34.5579693044523",
+        "longitud": "-58.46028960956043"
+    },
+    {
+        "ssid": "BA300_99",
+        "ciudad": "Buenos Aires",
+        "barrio": "Retiro",
+        "latitud": "-34.582823606207654",
+        "longitud": "-58.3789725827467"
+    },
+    {
+        "ssid": "BA300_170",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Lugano",
+        "latitud": "-34.68500721741969",
+        "longitud": "-58.46355118130445"
+    },
+    {
+        "ssid": "BA300_150",
+        "ciudad": "Buenos Aires",
+        "barrio": "Retiro",
+        "latitud": "-34.59106258980168",
+        "longitud": "-58.38023705295978"
+    },
+    {
+        "ssid": "BA300_139",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Del Parque",
+        "latitud": "-34.60133846597785",
+        "longitud": "-58.49632222389245"
+    },
+    {
+        "ssid": "BA300_234",
+        "ciudad": "Buenos Aires",
+        "barrio": "Flores",
+        "latitud": "-34.64873307615705",
+        "longitud": "-58.44755003511331"
+    },
+    {
+        "ssid": "BA300_201",
+        "ciudad": "Buenos Aires",
+        "barrio": "Balvanera",
+        "latitud": "-34.60623379650535",
+        "longitud": "-58.40315505689031"
+    },
+    {
+        "ssid": "BA300_89",
+        "ciudad": "Buenos Aires",
+        "barrio": "San Nicolas",
+        "latitud": "-34.604420862180994",
+        "longitud": "-58.39230929262593"
+    },
+    {
+        "ssid": "BA300_227",
+        "ciudad": "Buenos Aires",
+        "barrio": "San Nicolas",
+        "latitud": "-34.604093648362756",
+        "longitud": "-58.38729625176453"
+    },
+    {
+        "ssid": "BA300_264",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Del Parque",
+        "latitud": "-34.59773085501653",
+        "longitud": "-58.48361134517695"
+    },
+    {
+        "ssid": "BA300_203",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Urquiza",
+        "latitud": "-34.571917034017766",
+        "longitud": "-58.489408632460425"
+    },
+    {
+        "ssid": "BA300_265",
+        "ciudad": "Buenos Aires",
+        "barrio": "San Telmo",
+        "latitud": "-34.62478209360017",
+        "longitud": "-58.376199954314075"
+    },
+    {
+        "ssid": "BA300_10",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Urquiza",
+        "latitud": "-34.569817951811864",
+        "longitud": "-58.47428561166219"
+    },
+    {
+        "ssid": "BA300_77",
+        "ciudad": "Buenos Aires",
+        "barrio": "Balvanera",
+        "latitud": "-34.59976437986033",
+        "longitud": "-58.397927208526674"
+    },
+    {
+        "ssid": "BA300_276",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Crespo",
+        "latitud": "-34.5978876978846",
+        "longitud": "-58.4298018199437"
+    },
+    {
+        "ssid": "BA300_7",
+        "ciudad": "Buenos Aires",
+        "barrio": "Retiro",
+        "latitud": "-34.5811062158408",
+        "longitud": "-58.385793623770496"
+    },
+    {
+        "ssid": "BA300_67",
+        "ciudad": "Buenos Aires",
+        "barrio": "Balvanera",
+        "latitud": "-34.60407925444006",
+        "longitud": "-58.41176111372008"
+    },
+    {
+        "ssid": "BA300_86",
+        "ciudad": "Buenos Aires",
+        "barrio": "Recoleta",
+        "latitud": "-34.59438298410562",
+        "longitud": "-58.40222244272497"
+    },
+    {
+        "ssid": "BA300_164",
+        "ciudad": "Buenos Aires",
+        "barrio": "Flores",
+        "latitud": "-34.64502785593573",
+        "longitud": "-58.44686592747377"
+    },
+    {
+        "ssid": "BA300_107",
+        "ciudad": "Buenos Aires",
+        "barrio": "Retiro",
+        "latitud": "-34.59792238855682",
+        "longitud": "-58.37551917488996"
+    },
+    {
+        "ssid": "BA300_61",
+        "ciudad": "Buenos Aires",
+        "barrio": "Boca",
+        "latitud": "-34.63889293036987",
+        "longitud": "-58.360126743046145"
+    },
+    {
+        "ssid": "BA300_182",
+        "ciudad": "Buenos Aires",
+        "barrio": "Caballito",
+        "latitud": "-34.61828223146938",
+        "longitud": "-58.43643171364413"
+    },
+    {
+        "ssid": "BA300_166",
+        "ciudad": "Buenos Aires",
+        "barrio": "Versalles",
+        "latitud": "-34.63363884194124",
+        "longitud": "-58.521446849149896"
+    },
+    {
+        "ssid": "BA300_0",
+        "ciudad": "Buenos Aires",
+        "barrio": "Flores",
+        "latitud": "-34.644739818933566",
+        "longitud": "-58.44195678928743"
+    },
+    {
+        "ssid": "BA300_79",
+        "ciudad": "Buenos Aires",
+        "barrio": "Palermo",
+        "latitud": "-34.57842025157556",
+        "longitud": "-58.4257146632194"
+    },
+    {
+        "ssid": "BA300_138",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Lugano",
+        "latitud": "-34.67101453572952",
+        "longitud": "-58.494508883659705"
+    },
+    {
+        "ssid": "BA300_191",
+        "ciudad": "Buenos Aires",
+        "barrio": "Parque Chacabuco",
+        "latitud": "-34.63216436843224",
+        "longitud": "-58.4410671831614"
+    },
+    {
+        "ssid": "BA300_29",
+        "ciudad": "Buenos Aires",
+        "barrio": "Constitucion",
+        "latitud": "-34.62402696752906",
+        "longitud": "-58.386419587565385"
+    },
+    {
+        "ssid": "BA300_225",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Luro",
+        "latitud": "-34.632208354415965",
+        "longitud": "-58.501044087952174"
+    },
+    {
+        "ssid": "BA300_180",
+        "ciudad": "Buenos Aires",
+        "barrio": "Boca",
+        "latitud": "-34.63132911414976",
+        "longitud": "-58.35793977766689"
+    },
+    {
+        "ssid": "BA300_22",
+        "ciudad": "Buenos Aires",
+        "barrio": "Recoleta",
+        "latitud": "-34.58435819990092",
+        "longitud": "-58.400808719110664"
+    },
+    {
+        "ssid": "BA300_168",
+        "ciudad": "Buenos Aires",
+        "barrio": "Monte Castro",
+        "latitud": "-34.61861105576544",
+        "longitud": "-58.5080672628557"
+    },
+    {
+        "ssid": "BA300_38",
+        "ciudad": "Buenos Aires",
+        "barrio": "Parque Chacabuco",
+        "latitud": "-34.63638997728382",
+        "longitud": "-58.45027983639978"
+    },
+    {
+        "ssid": "BA300_237",
+        "ciudad": "Buenos Aires",
+        "barrio": "Liniers",
+        "latitud": "-34.64918669765312",
+        "longitud": "-58.51563732914727"
+    },
+    {
+        "ssid": "BA300_116",
+        "ciudad": "Buenos Aires",
+        "barrio": "Chacarita",
+        "latitud": "-34.59135584556237",
+        "longitud": "-58.45036320086966"
+    },
+    {
+        "ssid": "BA300_60",
+        "ciudad": "Buenos Aires",
+        "barrio": "San Cristobal",
+        "latitud": "-34.62795583253738",
+        "longitud": "-58.39606299141189"
+    },
+    {
+        "ssid": "BA300_111",
+        "ciudad": "Buenos Aires",
+        "barrio": "San Cristobal",
+        "latitud": "-34.6238657595808",
+        "longitud": "-58.40293753348215"
+    },
+    {
+        "ssid": "BA300_289",
+        "ciudad": "Buenos Aires",
+        "barrio": "Recoleta",
+        "latitud": "-34.58435819990092",
+        "longitud": "-58.400808719110664"
+    },
+    {
+        "ssid": "BA300_128",
+        "ciudad": "Buenos Aires",
+        "barrio": "Constitucion",
+        "latitud": "-34.62694002528437",
+        "longitud": "-58.38223024448295"
+    },
+    {
+        "ssid": "BA300_46",
+        "ciudad": "Buenos Aires",
+        "barrio": "Saavedra",
+        "latitud": "-34.5687229996412",
+        "longitud": "-58.50724111803133"
+    },
+    {
+        "ssid": "BA300_189",
+        "ciudad": "Buenos Aires",
+        "barrio": "Parque Patricios",
+        "latitud": "-34.64420079195237",
+        "longitud": "-58.41201361742898"
+    },
+    {
+        "ssid": "BA300_231",
+        "ciudad": "Buenos Aires",
+        "barrio": "Monserrat",
+        "latitud": "-34.61793852397548",
+        "longitud": "-58.38153460612"
+    },
+    {
+        "ssid": "BA300_290",
+        "ciudad": "Buenos Aires",
+        "barrio": "San Nicolas",
+        "latitud": "-34.60383173372569",
+        "longitud": "-58.375253672180754"
+    },
+    {
+        "ssid": "BA300_108",
+        "ciudad": "Buenos Aires",
+        "barrio": "Monserrat",
+        "latitud": "-34.60924008670606",
+        "longitud": "-58.373680494821095"
+    },
+    {
+        "ssid": "BA300_205",
+        "ciudad": "Buenos Aires",
+        "barrio": "Boca",
+        "latitud": "-34.627884379836495",
+        "longitud": "-58.36592441530576"
+    },
+    {
+        "ssid": "BA300_143",
+        "ciudad": "Buenos Aires",
+        "barrio": "San Nicolas",
+        "latitud": "-34.60758460898418",
+        "longitud": "-58.38139186616656"
+    },
+    {
+        "ssid": "BA300_221",
+        "ciudad": "Buenos Aires",
+        "barrio": "Flores",
+        "latitud": "-34.64335244367402",
+        "longitud": "-58.45443122250372"
+    },
+    {
+        "ssid": "BA300_31",
+        "ciudad": "Buenos Aires",
+        "barrio": "Barracas",
+        "latitud": "-34.656135259200695",
+        "longitud": "-58.39729222957648"
+    },
+    {
+        "ssid": "BA300_292",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Crespo",
+        "latitud": "-34.60516031437452",
+        "longitud": "-58.4448889910928"
+    },
+    {
+        "ssid": "BA300_11",
+        "ciudad": "Buenos Aires",
+        "barrio": "Monserrat",
+        "latitud": "-34.60888445269521",
+        "longitud": "-58.37908902664163"
+    },
+    {
+        "ssid": "BA300_204",
+        "ciudad": "Buenos Aires",
+        "barrio": "Balvanera",
+        "latitud": "-34.60972975571524",
+        "longitud": "-58.40742971756126"
+    },
+    {
+        "ssid": "BA300_72",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Soldati",
+        "latitud": "-34.66436618473373",
+        "longitud": "-58.46680241584044"
+    },
+    {
+        "ssid": "BA300_16",
+        "ciudad": "Buenos Aires",
+        "barrio": "Parque Avellaneda",
+        "latitud": "-34.66022426210881",
+        "longitud": "-58.473920564211205"
+    },
+    {
+        "ssid": "BA300_105",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Del Parque",
+        "latitud": "-34.597468679393955",
+        "longitud": "-58.48701827727867"
+    },
+    {
+        "ssid": "BA300_9",
+        "ciudad": "Buenos Aires",
+        "barrio": "San Telmo",
+        "latitud": "-34.62073554186765",
+        "longitud": "-58.37246916790325"
+    },
+    {
+        "ssid": "BA300_35",
+        "ciudad": "Buenos Aires",
+        "barrio": "San Nicolas",
+        "latitud": "-34.60414445054136",
+        "longitud": "-58.380572076679044"
+    },
+    {
+        "ssid": "BA300_53",
+        "ciudad": "Buenos Aires",
+        "barrio": "Caballito",
+        "latitud": "-34.61773881414421",
+        "longitud": "-58.45251888468413"
+    },
+    {
+        "ssid": "BA300_216",
+        "ciudad": "Buenos Aires",
+        "barrio": "Flores",
+        "latitud": "-34.64495673023714",
+        "longitud": "-58.44693011225181"
+    },
+    {
+        "ssid": "BA300_136",
+        "ciudad": "Buenos Aires",
+        "barrio": "Paternal",
+        "latitud": "-34.60168295982306",
+        "longitud": "-58.46233467351017"
+    },
+    {
+        "ssid": "BA300_109",
+        "ciudad": "Buenos Aires",
+        "barrio": "Caballito",
+        "latitud": "-34.60887511864387",
+        "longitud": "-58.437887240976806"
+    },
+    {
+        "ssid": "BA300_44",
+        "ciudad": "Buenos Aires",
+        "barrio": "Boedo",
+        "latitud": "-34.63694648828318",
+        "longitud": "-58.415285750782324"
+    },
+    {
+        "ssid": "BA300_27",
+        "ciudad": "Buenos Aires",
+        "barrio": "San Nicolas",
+        "latitud": "-34.60645681544222",
+        "longitud": "-58.3814587397799"
+    },
+    {
+        "ssid": "BA300_260",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Lugano",
+        "latitud": "-34.67362730011727",
+        "longitud": "-58.467968810603466"
+    },
+    {
+        "ssid": "BA300_121",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Soldati",
+        "latitud": "-34.664292658194654",
+        "longitud": "-58.43591549832534"
+    },
+    {
+        "ssid": "BA300_185",
+        "ciudad": "Buenos Aires",
+        "barrio": "Nuñez",
+        "latitud": "-34.54114751841711",
+        "longitud": "-58.47412728948644"
+    },
+    {
+        "ssid": "BA300_169",
+        "ciudad": "Buenos Aires",
+        "barrio": "San Nicolas",
+        "latitud": "-34.60308234116547",
+        "longitud": "-58.38091524827811"
+    },
+    {
+        "ssid": "BA300_167",
+        "ciudad": "Buenos Aires",
+        "barrio": "Recoleta",
+        "latitud": "-34.58451002904687",
+        "longitud": "-58.402605047269915"
+    },
+    {
+        "ssid": "BA300_215",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Lugano",
+        "latitud": "-34.678267795504915",
+        "longitud": "-58.46739374748457"
+    },
+    {
+        "ssid": "BA300_120",
+        "ciudad": "Buenos Aires",
+        "barrio": "Palermo",
+        "latitud": "-34.58823651218988",
+        "longitud": "-58.411294749720355"
+    },
+    {
+        "ssid": "BA300_178",
+        "ciudad": "Buenos Aires",
+        "barrio": "Saavedra",
+        "latitud": "-34.55117002591099",
+        "longitud": "-58.49123807193441"
+    },
+    {
+        "ssid": "BA300_151",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Lugano",
+        "latitud": "-34.669932732602724",
+        "longitud": "-58.446118272350155"
+    },
+    {
+        "ssid": "BA300_242",
+        "ciudad": "Buenos Aires",
+        "barrio": "Nuñez",
+        "latitud": "-34.55309400573813",
+        "longitud": "-58.464765825646275"
+    },
+    {
+        "ssid": "BA300_133",
+        "ciudad": "Buenos Aires",
+        "barrio": "Velez Sarsfield",
+        "latitud": "-34.628001298579576",
+        "longitud": "-58.50401613296964"
+    },
+    {
+        "ssid": "BA300_37",
+        "ciudad": "Buenos Aires",
+        "barrio": "Flores",
+        "latitud": "-34.64335244367402",
+        "longitud": "-58.45443122250372"
+    },
+    {
+        "ssid": "BA300_127",
+        "ciudad": "Buenos Aires",
+        "barrio": "Barracas",
+        "latitud": "-34.633357717995366",
+        "longitud": "-58.38370418726877"
+    },
+    {
+        "ssid": "BA300_212",
+        "ciudad": "Buenos Aires",
+        "barrio": "San Nicolas",
+        "latitud": "-34.60331464311181",
+        "longitud": "-58.38162958075236"
+    },
+    {
+        "ssid": "BA300_119",
+        "ciudad": "Buenos Aires",
+        "barrio": "Palermo",
+        "latitud": "-34.582778580538275",
+        "longitud": "-58.41711683892535"
+    },
+    {
+        "ssid": "BA300_6",
+        "ciudad": "Buenos Aires",
+        "barrio": "Colegiales",
+        "latitud": "-34.56918101361571",
+        "longitud": "-58.446378311536684"
+    },
+    {
+        "ssid": "BA300_117",
+        "ciudad": "Buenos Aires",
+        "barrio": "Palermo",
+        "latitud": "-34.58645247654452",
+        "longitud": "-58.44172375449927"
+    },
+    {
+        "ssid": "BA300_288",
+        "ciudad": "Buenos Aires",
+        "barrio": "Parque Avellaneda",
+        "latitud": "-34.65182629561723",
+        "longitud": "-58.47775448046225"
+    },
+    {
+        "ssid": "BA300_33",
+        "ciudad": "Buenos Aires",
+        "barrio": "Retiro",
+        "latitud": "-34.58532451391104",
+        "longitud": "-58.37680868002915"
+    },
+    {
+        "ssid": "BA300_220",
+        "ciudad": "Buenos Aires",
+        "barrio": "Barracas",
+        "latitud": "-34.63654178021643",
+        "longitud": "-58.38187576020472"
+    },
+    {
+        "ssid": "BA300_280",
+        "ciudad": "Buenos Aires",
+        "barrio": "Parque Chacabuco",
+        "latitud": "-34.63478119257963",
+        "longitud": "-58.44220120664178"
+    },
+    {
+        "ssid": "BA300_192",
+        "ciudad": "Buenos Aires",
+        "barrio": "Colegiales",
+        "latitud": "-34.569737005645024",
+        "longitud": "-58.453339749041874"
+    },
+    {
+        "ssid": "BA300_83",
+        "ciudad": "Buenos Aires",
+        "barrio": "San Nicolas",
+        "latitud": "-34.60304101826893",
+        "longitud": "-58.379434508374906"
+    },
+    {
+        "ssid": "BA300_282",
+        "ciudad": "Buenos Aires",
+        "barrio": "Flores",
+        "latitud": "-34.64919807694763",
+        "longitud": "-58.43840222706389"
+    },
+    {
+        "ssid": "BA300_75",
+        "ciudad": "Buenos Aires",
+        "barrio": "Recoleta",
+        "latitud": "-34.58456438536429",
+        "longitud": "-58.400801612409445"
+    },
+    {
+        "ssid": "BA300_248",
+        "ciudad": "Buenos Aires",
+        "barrio": "San Nicolas",
+        "latitud": "-34.607564500377784",
+        "longitud": "-58.374671834644154"
+    },
+    {
+        "ssid": "BA300_115",
+        "ciudad": "Buenos Aires",
+        "barrio": "San Cristobal",
+        "latitud": "-34.62470556395128",
+        "longitud": "-58.41138541427564"
+    },
+    {
+        "ssid": "BA300_135",
+        "ciudad": "Buenos Aires",
+        "barrio": "Nueva Pompeya",
+        "latitud": "-34.65514133588553",
+        "longitud": "-58.40181428733756"
+    },
+    {
+        "ssid": "BA300_80",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Luro",
+        "latitud": "-34.634223707992966",
+        "longitud": "-58.507922506059366"
+    },
+    {
+        "ssid": "BA300_8",
+        "ciudad": "Buenos Aires",
+        "barrio": "Caballito",
+        "latitud": "-34.60887511864387",
+        "longitud": "-58.437887240976806"
+    },
+    {
+        "ssid": "BA300_257",
+        "ciudad": "Buenos Aires",
+        "barrio": "Floresta",
+        "latitud": "-34.62987788805015",
+        "longitud": "-58.48277169676526"
+    },
+    {
+        "ssid": "BA300_232",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Urquiza",
+        "latitud": "-34.57779723733584",
+        "longitud": "-58.48101661349574"
+    },
+    {
+        "ssid": "BA300_285",
+        "ciudad": "Buenos Aires",
+        "barrio": "Barracas",
+        "latitud": "-34.64852456001057",
+        "longitud": "-58.3801210059809"
+    },
+    {
+        "ssid": "BA300_239",
+        "ciudad": "Buenos Aires",
+        "barrio": "Flores",
+        "latitud": "-34.645131367714306",
+        "longitud": "-58.44566402916287"
+    },
+    {
+        "ssid": "BA300_272",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Urquiza",
+        "latitud": "-34.56981774288437",
+        "longitud": "-58.4742857913161"
+    },
+    {
+        "ssid": "BA300_146",
+        "ciudad": "Buenos Aires",
+        "barrio": "Flores",
+        "latitud": "-34.6242960974224",
+        "longitud": "-58.4694218564536"
+    },
+    {
+        "ssid": "BA300_52",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Riachuelo",
+        "latitud": "-34.68996821980501",
+        "longitud": "-58.4612445434234"
+    },
+    {
+        "ssid": "BA300_158",
+        "ciudad": "Buenos Aires",
+        "barrio": "Flores",
+        "latitud": "-34.64439693861047",
+        "longitud": "-58.445755812226146"
+    },
+    {
+        "ssid": "BA300_95",
+        "ciudad": "Buenos Aires",
+        "barrio": "Retiro",
+        "latitud": "-34.59759503161009",
+        "longitud": "-58.37288797847743"
+    },
+    {
+        "ssid": "BA300_43",
+        "ciudad": "Buenos Aires",
+        "barrio": "Caballito",
+        "latitud": "-34.608955738518134",
+        "longitud": "-58.431232936269744"
+    },
+    {
+        "ssid": "BA300_252",
+        "ciudad": "Buenos Aires",
+        "barrio": "Barracas",
+        "latitud": "-34.64901905299128",
+        "longitud": "-58.38928764342633"
+    },
+    {
+        "ssid": "BA300_21",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Devoto",
+        "latitud": "-34.59162525744721",
+        "longitud": "-58.511202139521906"
+    },
+    {
+        "ssid": "BA300_159",
+        "ciudad": "Buenos Aires",
+        "barrio": "Balvanera",
+        "latitud": "-34.608050078881234",
+        "longitud": "-58.41012517979481"
+    },
+    {
+        "ssid": "BA300_287",
+        "ciudad": "Buenos Aires",
+        "barrio": "Liniers",
+        "latitud": "-34.64654414079278",
+        "longitud": "-58.51366764190324"
+    },
+    {
+        "ssid": "BA300_299",
+        "ciudad": "Buenos Aires",
+        "barrio": "San Telmo",
+        "latitud": "-34.62189327519088",
+        "longitud": "-58.37072282986673"
+    },
+    {
+        "ssid": "BA300_30",
+        "ciudad": "Buenos Aires",
+        "barrio": "Palermo",
+        "latitud": "-34.55733516792062",
+        "longitud": "-58.43063256514463"
+    },
+    {
+        "ssid": "BA300_91",
+        "ciudad": "Buenos Aires",
+        "barrio": "Flores",
+        "latitud": "-34.64979298627045",
+        "longitud": "-58.433346503364994"
+    },
+    {
+        "ssid": "BA300_181",
+        "ciudad": "Buenos Aires",
+        "barrio": "Mataderos",
+        "latitud": "-34.659546835403724",
+        "longitud": "-58.50494358763552"
+    },
+    {
+        "ssid": "BA300_154",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Urquiza",
+        "latitud": "-34.57617669431043",
+        "longitud": "-58.48356811092818"
+    },
+    {
+        "ssid": "BA300_81",
+        "ciudad": "Buenos Aires",
+        "barrio": "San Nicolas",
+        "latitud": "-34.60424172302959",
+        "longitud": "-58.3886390197135"
+    },
+    {
+        "ssid": "BA300_175",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Devoto",
+        "latitud": "-34.59938461393887",
+        "longitud": "-58.512246895491074"
+    },
+    {
+        "ssid": "BA300_102",
+        "ciudad": "Buenos Aires",
+        "barrio": "San Nicolas",
+        "latitud": "-34.60109739226639",
+        "longitud": "-58.371281954594416"
+    },
+    {
+        "ssid": "BA300_190",
+        "ciudad": "Buenos Aires",
+        "barrio": "Colegiales",
+        "latitud": "-34.58008814248904",
+        "longitud": "-58.44183519423648"
+    },
+    {
+        "ssid": "BA300_69",
+        "ciudad": "Buenos Aires",
+        "barrio": "Balvanera",
+        "latitud": "-34.604498770822126",
+        "longitud": "-58.40544988329764"
+    },
+    {
+        "ssid": "BA300_124",
+        "ciudad": "Buenos Aires",
+        "barrio": "Parque Patricios",
+        "latitud": "-34.63861027922997",
+        "longitud": "-58.40675857684785"
+    },
+    {
+        "ssid": "BA300_94",
+        "ciudad": "Buenos Aires",
+        "barrio": "San Nicolas",
+        "latitud": "-34.605371473276456",
+        "longitud": "-58.38858223965226"
+    },
+    {
+        "ssid": "BA300_267",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Soldati",
+        "latitud": "-34.67205585707944",
+        "longitud": "-58.46044708978978"
+    },
+    {
+        "ssid": "BA300_207",
+        "ciudad": "Buenos Aires",
+        "barrio": "Balvanera",
+        "latitud": "-34.6176346384995",
+        "longitud": "-58.40958116671029"
+    },
+    {
+        "ssid": "BA300_152",
+        "ciudad": "Buenos Aires",
+        "barrio": "San Nicolas",
+        "latitud": "-34.60537788588488",
+        "longitud": "-58.38153942024764"
+    },
+    {
+        "ssid": "BA300_214",
+        "ciudad": "Buenos Aires",
+        "barrio": "San Nicolas",
+        "latitud": "-34.606633630813356",
+        "longitud": "-58.377932843624585"
+    },
+    {
+        "ssid": "BA300_47",
+        "ciudad": "Buenos Aires",
+        "barrio": "Caballito",
+        "latitud": "-34.61767287270512",
+        "longitud": "-58.43292279581663"
+    },
+    {
+        "ssid": "BA300_294",
+        "ciudad": "Buenos Aires",
+        "barrio": "Boca",
+        "latitud": "-34.64014243278958",
+        "longitud": "-58.366067420170374"
+    },
+    {
+        "ssid": "BA300_3",
+        "ciudad": "Buenos Aires",
+        "barrio": "Retiro",
+        "latitud": "-34.59942746726183",
+        "longitud": "-58.38185505229514"
+    },
+    {
+        "ssid": "BA300_279",
+        "ciudad": "Buenos Aires",
+        "barrio": "Caballito",
+        "latitud": "-34.60887579518278",
+        "longitud": "-58.4378869647628"
+    },
+    {
+        "ssid": "BA300_66",
+        "ciudad": "Buenos Aires",
+        "barrio": "Monserrat",
+        "latitud": "-34.610448696540956",
+        "longitud": "-58.372075678235916"
+    },
+    {
+        "ssid": "BA300_222",
+        "ciudad": "Buenos Aires",
+        "barrio": "Monserrat",
+        "latitud": "-34.61107089137099",
+        "longitud": "-58.38117172751403"
+    },
+    {
+        "ssid": "BA300_196",
+        "ciudad": "Buenos Aires",
+        "barrio": "Flores",
+        "latitud": "-34.62848915151776",
+        "longitud": "-58.46362248644577"
+    },
+    {
+        "ssid": "BA300_156",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Urquiza",
+        "latitud": "-34.57432383351706",
+        "longitud": "-58.48638752428432"
+    },
+    {
+        "ssid": "BA300_118",
+        "ciudad": "Buenos Aires",
+        "barrio": "San Nicolas",
+        "latitud": "-34.60394819850707",
+        "longitud": "-58.38434216267309"
+    },
+    {
+        "ssid": "BA300_298",
+        "ciudad": "Buenos Aires",
+        "barrio": "Palermo",
+        "latitud": "-34.5811617455184",
+        "longitud": "-58.40681281558606"
+    },
+    {
+        "ssid": "BA300_76",
+        "ciudad": "Buenos Aires",
+        "barrio": "Caballito",
+        "latitud": "-34.62701063679833",
+        "longitud": "-58.42679151880689"
+    },
+    {
+        "ssid": "BA300_59",
+        "ciudad": "Buenos Aires",
+        "barrio": "Liniers",
+        "latitud": "-34.63469580220579",
+        "longitud": "-58.52553240832898"
+    },
+    {
+        "ssid": "BA300_96",
+        "ciudad": "Buenos Aires",
+        "barrio": "Palermo",
+        "latitud": "-34.575174503061795",
+        "longitud": "-58.435008693946294"
+    },
+    {
+        "ssid": "BA300_261",
+        "ciudad": "Buenos Aires",
+        "barrio": "Caballito",
+        "latitud": "-34.61504027893844",
+        "longitud": "-58.4483015756095"
+    },
+    {
+        "ssid": "BA300_273",
+        "ciudad": "Buenos Aires",
+        "barrio": "Retiro",
+        "latitud": "-34.59825315730381",
+        "longitud": "-58.381895022230225"
+    },
+    {
+        "ssid": "BA300_173",
+        "ciudad": "Buenos Aires",
+        "barrio": "Monserrat",
+        "latitud": "-34.610344293186046",
+        "longitud": "-58.37485493861399"
+    },
+    {
+        "ssid": "BA300_238",
+        "ciudad": "Buenos Aires",
+        "barrio": "Balvanera",
+        "latitud": "-34.59876116535538",
+        "longitud": "-58.41073362014074"
+    },
+    {
+        "ssid": "BA300_230",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Devoto",
+        "latitud": "-34.59486105586127",
+        "longitud": "-58.51393124750228"
+    },
+    {
+        "ssid": "BA300_134",
+        "ciudad": "Buenos Aires",
+        "barrio": "San Nicolas",
+        "latitud": "-34.60392099195881",
+        "longitud": "-58.37528855385897"
+    },
+    {
+        "ssid": "BA300_246",
+        "ciudad": "Buenos Aires",
+        "barrio": "Saavedra",
+        "latitud": "-34.54900063296174",
+        "longitud": "-58.47155286346297"
+    },
+    {
+        "ssid": "BA300_106",
+        "ciudad": "Buenos Aires",
+        "barrio": "Palermo",
+        "latitud": "-34.57234369269074",
+        "longitud": "-58.44025673585298"
+    },
+    {
+        "ssid": "BA300_157",
+        "ciudad": "Buenos Aires",
+        "barrio": "Flores",
+        "latitud": "-34.64814146405179",
+        "longitud": "-58.43644343620106"
+    },
+    {
+        "ssid": "BA300_137",
+        "ciudad": "Buenos Aires",
+        "barrio": "Balvanera",
+        "latitud": "-34.60982970745106",
+        "longitud": "-58.40120747484447"
+    },
+    {
+        "ssid": "BA300_259",
+        "ciudad": "Buenos Aires",
+        "barrio": "San Nicolas",
+        "latitud": "-34.60898168185568",
+        "longitud": "-58.380611415153"
+    },
+    {
+        "ssid": "BA300_186",
+        "ciudad": "Buenos Aires",
+        "barrio": "Mataderos",
+        "latitud": "-34.667946195472105",
+        "longitud": "-58.493593984970275"
+    },
+    {
+        "ssid": "BA300_223",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Soldati",
+        "latitud": "-34.664333285699946",
+        "longitud": "-58.44904879733499"
+    },
+    {
+        "ssid": "BA300_42",
+        "ciudad": "Buenos Aires",
+        "barrio": "San Nicolas",
+        "latitud": "-34.605999851634586",
+        "longitud": "-58.37765053399983"
+    },
+    {
+        "ssid": "BA300_187",
+        "ciudad": "Buenos Aires",
+        "barrio": "Parque Chacabuco",
+        "latitud": "-34.63290710493997",
+        "longitud": "-58.44476178411278"
+    },
+    {
+        "ssid": "BA300_254",
+        "ciudad": "Buenos Aires",
+        "barrio": "Nuñez",
+        "latitud": "-34.553782136262456",
+        "longitud": "-58.46402576421846"
+    },
+    {
+        "ssid": "BA300_269",
+        "ciudad": "Buenos Aires",
+        "barrio": "San Cristobal",
+        "latitud": "-34.62261530683561",
+        "longitud": "-58.39443428508624"
+    },
+    {
+        "ssid": "BA300_208",
+        "ciudad": "Buenos Aires",
+        "barrio": "Agronomia",
+        "latitud": "-34.591246069384525",
+        "longitud": "-58.49883209143601"
+    },
+    {
+        "ssid": "BA300_165",
+        "ciudad": "Buenos Aires",
+        "barrio": "Boedo",
+        "latitud": "-34.62305139704276",
+        "longitud": "-58.412658945186195"
+    },
+    {
+        "ssid": "BA300_123",
+        "ciudad": "Buenos Aires",
+        "barrio": "Liniers",
+        "latitud": "-34.64636590558672",
+        "longitud": "-58.520964732829114"
+    },
+    {
+        "ssid": "BA300_57",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Devoto",
+        "latitud": "-34.60025932090714",
+        "longitud": "-58.512389940031454"
+    },
+    {
+        "ssid": "BA300_148",
+        "ciudad": "Buenos Aires",
+        "barrio": "Colegiales",
+        "latitud": "-34.57900920347774",
+        "longitud": "-58.445176875894795"
+    },
+    {
+        "ssid": "BA300_97",
+        "ciudad": "Buenos Aires",
+        "barrio": "San Nicolas",
+        "latitud": "-34.60004620276652",
+        "longitud": "-58.377467277279656"
+    },
+    {
+        "ssid": "BA300_247",
+        "ciudad": "Buenos Aires",
+        "barrio": "Palermo",
+        "latitud": "-34.5812818946845",
+        "longitud": "-58.42379893175878"
+    },
+    {
+        "ssid": "BA300_197",
+        "ciudad": "Buenos Aires",
+        "barrio": "Belgrano",
+        "latitud": "-34.5556376465821",
+        "longitud": "-58.46238455089005"
+    },
+    {
+        "ssid": "BA300_251",
+        "ciudad": "Buenos Aires",
+        "barrio": "Belgrano",
+        "latitud": "-34.56160125243124",
+        "longitud": "-58.44872131459647"
+    },
+    {
+        "ssid": "BA300_82",
+        "ciudad": "Buenos Aires",
+        "barrio": "Balvanera",
+        "latitud": "-34.61524469134499",
+        "longitud": "-58.404737743169434"
+    },
+    {
+        "ssid": "BA300_101",
+        "ciudad": "Buenos Aires",
+        "barrio": "Liniers",
+        "latitud": "-34.638268043453",
+        "longitud": "-58.52611387919904"
+    },
+    {
+        "ssid": "BA300_112",
+        "ciudad": "Buenos Aires",
+        "barrio": "Nuñez",
+        "latitud": "-34.55378158333084",
+        "longitud": "-58.464024962425604"
+    },
+    {
+        "ssid": "BA300_200",
+        "ciudad": "Buenos Aires",
+        "barrio": "Villa Del Parque",
+        "latitud": "-34.60669255250451",
+        "longitud": "-58.47824428874212"
+    },
+    {
+        "ssid": "BA300_291",
+        "ciudad": "Buenos Aires",
+        "barrio": "Boedo",
+        "latitud": "-34.63896372930502",
+        "longitud": "-58.40899135019432"
+    },
+    {
+        "ssid": "BA300_293",
+        "ciudad": "Buenos Aires",
+        "barrio": "Colegiales",
+        "latitud": "-34.56898753411347",
+        "longitud": "-58.44677015977504"
+    },
+    {
+        "ssid": "BA300_296",
+        "ciudad": "Buenos Aires",
+        "barrio": "Mataderos",
+        "latitud": "-34.667920364826834",
+        "longitud": "-58.496446701367155"
+    },
+    {
+        "ssid": "BA300_206",
+        "ciudad": "Buenos Aires",
+        "barrio": "Flores",
+        "latitud": "-34.64934953249845",
+        "longitud": "-58.43810360187708"
+    },
+    {
+        "ssid": "NYC300_179",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6935090001",
+        "longitud": "-73.9769811999"
+    },
+    {
+        "ssid": "NYC300_23",
+        "ciudad": "New York",
+        "barrio": "Bronx",
+        "latitud": "40.8236462899",
+        "longitud": "-73.9140299405"
+    },
+    {
+        "ssid": "NYC300_8",
+        "ciudad": "New York",
+        "barrio": "Queens",
+        "latitud": "40.6714000003",
+        "longitud": "-73.7886099999"
+    },
+    {
+        "ssid": "NYC300_51",
+        "ciudad": "New York",
+        "barrio": "Staten Island",
+        "latitud": "40.5786309996",
+        "longitud": "-74.0768009998"
+    },
+    {
+        "ssid": "NYC300_119",
+        "ciudad": "New York",
+        "barrio": "Staten Island",
+        "latitud": "40.5728531898",
+        "longitud": "-74.1140866602"
+    },
+    {
+        "ssid": "NYC300_52",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7406115598",
+        "longitud": "-73.9790788503"
+    },
+    {
+        "ssid": "NYC300_57",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.6927399998",
+        "longitud": "-74.0147700003"
+    },
+    {
+        "ssid": "NYC300_99",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6509474903",
+        "longitud": "-73.9455446295"
+    },
+    {
+        "ssid": "NYC300_205",
+        "ciudad": "New York",
+        "barrio": "Staten Island",
+        "latitud": "40.5706349998",
+        "longitud": "-74.1099179999"
+    },
+    {
+        "ssid": "NYC300_245",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7411230003",
+        "longitud": "-74.0013699997"
+    },
+    {
+        "ssid": "NYC300_256",
+        "ciudad": "New York",
+        "barrio": "Queens",
+        "latitud": "40.7630995",
+        "longitud": "-73.9279352805"
+    },
+    {
+        "ssid": "NYC300_115",
+        "ciudad": "New York",
+        "barrio": "Queens",
+        "latitud": "40.7585800001",
+        "longitud": "-73.8250780004"
+    },
+    {
+        "ssid": "NYC300_118",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7870279999",
+        "longitud": "-73.9778319997"
+    },
+    {
+        "ssid": "NYC300_210",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7299829146",
+        "longitud": "-74.0053310145"
+    },
+    {
+        "ssid": "NYC300_192",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.726263",
+        "longitud": "-73.9892480004"
+    },
+    {
+        "ssid": "NYC300_181",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.758993",
+        "longitud": "-73.9687269997"
+    },
+    {
+        "ssid": "NYC300_219",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7183829998",
+        "longitud": "-74.0004599995"
+    },
+    {
+        "ssid": "NYC300_38",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7375969997",
+        "longitud": "-73.9838899999"
+    },
+    {
+        "ssid": "NYC300_80",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7514057799",
+        "longitud": "-73.9741424698"
+    },
+    {
+        "ssid": "NYC300_33",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.8060908156",
+        "longitud": "-73.9647620603"
+    },
+    {
+        "ssid": "NYC300_60",
+        "ciudad": "New York",
+        "barrio": "Bronx",
+        "latitud": "40.8412200002",
+        "longitud": "-73.90678"
+    },
+    {
+        "ssid": "NYC300_187",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7809421798",
+        "longitud": "-73.9809659898"
+    },
+    {
+        "ssid": "NYC300_53",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6806299998",
+        "longitud": "-73.9953819995"
+    },
+    {
+        "ssid": "NYC300_117",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6722890003",
+        "longitud": "-74.0037439994"
+    },
+    {
+        "ssid": "NYC300_144",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7467088697",
+        "longitud": "-73.9862071101"
+    },
+    {
+        "ssid": "NYC300_248",
+        "ciudad": "New York",
+        "barrio": "Queens",
+        "latitud": "40.5828240003",
+        "longitud": "-73.8175779995"
+    },
+    {
+        "ssid": "NYC300_94",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.8156958896",
+        "longitud": "-73.9470017398"
+    },
+    {
+        "ssid": "NYC300_284",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.8118409998",
+        "longitud": "-73.9427249998"
+    },
+    {
+        "ssid": "NYC300_155",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.8007811996",
+        "longitud": "-73.94624056"
+    },
+    {
+        "ssid": "NYC300_61",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6948926998",
+        "longitud": "-73.9811802996"
+    },
+    {
+        "ssid": "NYC300_40",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7081985002",
+        "longitud": "-74.0121002005"
+    },
+    {
+        "ssid": "NYC300_268",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.7014189996",
+        "longitud": "-73.942908"
+    },
+    {
+        "ssid": "NYC300_278",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.7060920002",
+        "longitud": "-73.9503080006"
+    },
+    {
+        "ssid": "NYC300_32",
+        "ciudad": "New York",
+        "barrio": "Bronx",
+        "latitud": "40.8397090001",
+        "longitud": "-73.8874640004"
+    },
+    {
+        "ssid": "NYC300_58",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6715266559",
+        "longitud": "-73.9086034329"
+    },
+    {
+        "ssid": "NYC300_96",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7509655202",
+        "longitud": "-73.9741480605"
+    },
+    {
+        "ssid": "NYC300_171",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7563263302",
+        "longitud": "-73.9701433003"
+    },
+    {
+        "ssid": "NYC300_103",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7509597301",
+        "longitud": "-73.97446736"
+    },
+    {
+        "ssid": "NYC300_231",
+        "ciudad": "New York",
+        "barrio": "Queens",
+        "latitud": "40.7475433697",
+        "longitud": "-73.8840978596"
+    },
+    {
+        "ssid": "NYC300_293",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.7200999998",
+        "longitud": "-73.9502000002"
+    },
+    {
+        "ssid": "NYC300_228",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7625953103",
+        "longitud": "-73.95964853"
+    },
+    {
+        "ssid": "NYC300_130",
+        "ciudad": "New York",
+        "barrio": "Queens",
+        "latitud": "40.7456910004",
+        "longitud": "-73.9074080005"
+    },
+    {
+        "ssid": "NYC300_230",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6461791804",
+        "longitud": "-73.9582034701"
+    },
+    {
+        "ssid": "NYC300_299",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.5735269999",
+        "longitud": "-73.9775629995"
+    },
+    {
+        "ssid": "NYC300_239",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7512956803",
+        "longitud": "-73.9715336004"
+    },
+    {
+        "ssid": "NYC300_72",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6861450003",
+        "longitud": "-73.9908620001"
+    },
+    {
+        "ssid": "NYC300_204",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7704587102",
+        "longitud": "-73.9662243504"
+    },
+    {
+        "ssid": "NYC300_113",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7684058604",
+        "longitud": "-73.9892145197"
+    },
+    {
+        "ssid": "NYC300_37",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.8042420002",
+        "longitud": "-73.9417799995"
+    },
+    {
+        "ssid": "NYC300_207",
+        "ciudad": "New York",
+        "barrio": "Queens",
+        "latitud": "40.7009264299",
+        "longitud": "-73.8262048802"
+    },
+    {
+        "ssid": "NYC300_146",
+        "ciudad": "New York",
+        "barrio": "Ozone Park",
+        "latitud": "40.6808618482",
+        "longitud": "-73.8464887284"
+    },
+    {
+        "ssid": "NYC300_257",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6764090003",
+        "longitud": "-73.98029"
+    },
+    {
+        "ssid": "NYC300_145",
+        "ciudad": "New York",
+        "barrio": "Bronx",
+        "latitud": "40.8747789997",
+        "longitud": "-73.8650050004"
+    },
+    {
+        "ssid": "NYC300_151",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.7003770003",
+        "longitud": "-73.9502339996"
+    },
+    {
+        "ssid": "NYC300_34",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6974822489",
+        "longitud": "-73.9122106175"
+    },
+    {
+        "ssid": "NYC300_47",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6813152498",
+        "longitud": "-73.9562012602"
+    },
+    {
+        "ssid": "NYC300_44",
+        "ciudad": "New York",
+        "barrio": "Queens",
+        "latitud": "40.6760899996",
+        "longitud": "-73.7825399998"
+    },
+    {
+        "ssid": "NYC300_120",
+        "ciudad": "New York",
+        "barrio": "Queens",
+        "latitud": "40.6799630002",
+        "longitud": "-73.7677520003"
+    },
+    {
+        "ssid": "NYC300_243",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6041370002",
+        "longitud": "-73.9304300001"
+    },
+    {
+        "ssid": "NYC300_97",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7471144096",
+        "longitud": "-73.9852446298"
+    },
+    {
+        "ssid": "NYC300_21",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7373350001",
+        "longitud": "-73.9967859996"
+    },
+    {
+        "ssid": "NYC300_241",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7431000004",
+        "longitud": "-73.9883000001"
+    },
+    {
+        "ssid": "NYC300_270",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7803212402",
+        "longitud": "-73.9813105102"
+    },
+    {
+        "ssid": "NYC300_153",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7439192899",
+        "longitud": "-73.9996452"
+    },
+    {
+        "ssid": "NYC300_56",
+        "ciudad": "New York",
+        "barrio": "Queens",
+        "latitud": "40.7703598897",
+        "longitud": "-73.9188946797"
+    },
+    {
+        "ssid": "NYC300_14",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.681596",
+        "longitud": "-73.9770380003"
+    },
+    {
+        "ssid": "NYC300_16",
+        "ciudad": "New York",
+        "barrio": "Bronx",
+        "latitud": "40.8337362974",
+        "longitud": "-73.8583552177"
+    },
+    {
+        "ssid": "NYC300_10",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7900530001",
+        "longitud": "-73.9747670005"
+    },
+    {
+        "ssid": "NYC300_45",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.67705",
+        "longitud": "-73.9723670001"
+    },
+    {
+        "ssid": "NYC300_235",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.8126809996",
+        "longitud": "-73.9393569996"
+    },
+    {
+        "ssid": "NYC300_29",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6813456401",
+        "longitud": "-73.9940469403"
+    },
+    {
+        "ssid": "NYC300_286",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.8041379997",
+        "longitud": "-73.9375940006"
+    },
+    {
+        "ssid": "NYC300_225",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7502267799",
+        "longitud": "-73.9950513698"
+    },
+    {
+        "ssid": "NYC300_250",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.8275800002",
+        "longitud": "-73.9492880002"
+    },
+    {
+        "ssid": "NYC300_65",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.718092",
+        "longitud": "-73.9998919998"
+    },
+    {
+        "ssid": "NYC300_125",
+        "ciudad": "New York",
+        "barrio": "Bronx",
+        "latitud": "40.8215990001",
+        "longitud": "-73.8266539996"
+    },
+    {
+        "ssid": "NYC300_78",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6740399998",
+        "longitud": "-73.9350530003"
+    },
+    {
+        "ssid": "NYC300_226",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.8126109997",
+        "longitud": "-73.9454579999"
+    },
+    {
+        "ssid": "NYC300_42",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.8340410001",
+        "longitud": "-73.9448900002"
+    },
+    {
+        "ssid": "NYC300_191",
+        "ciudad": "New York",
+        "barrio": "Queens",
+        "latitud": "40.7108180001",
+        "longitud": "-73.8355280003"
+    },
+    {
+        "ssid": "NYC300_64",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7328489997",
+        "longitud": "-73.9861220002"
+    },
+    {
+        "ssid": "NYC300_2",
+        "ciudad": "New York",
+        "barrio": "Bronx",
+        "latitud": "40.8150393101",
+        "longitud": "-73.9298853698"
+    },
+    {
+        "ssid": "NYC300_124",
+        "ciudad": "New York",
+        "barrio": "Queens",
+        "latitud": "40.7435549998",
+        "longitud": "-73.9241560003"
+    },
+    {
+        "ssid": "NYC300_126",
+        "ciudad": "New York",
+        "barrio": "Staten Island",
+        "latitud": "40.6177499998",
+        "longitud": "-74.1081850003"
+    },
+    {
+        "ssid": "NYC300_211",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7516323603",
+        "longitud": "-73.9706571702"
+    },
+    {
+        "ssid": "NYC300_265",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6936359997",
+        "longitud": "-73.9883469996"
+    },
+    {
+        "ssid": "NYC300_148",
+        "ciudad": "New York",
+        "barrio": "Bronx",
+        "latitud": "40.8602146696",
+        "longitud": "-73.8930594396"
+    },
+    {
+        "ssid": "NYC300_77",
+        "ciudad": "New York",
+        "barrio": "Queens",
+        "latitud": "40.7494585504",
+        "longitud": "-73.8864554498"
+    },
+    {
+        "ssid": "NYC300_92",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7160330001",
+        "longitud": "-74.0025699994"
+    },
+    {
+        "ssid": "NYC300_232",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7658798298",
+        "longitud": "-73.9635832397"
+    },
+    {
+        "ssid": "NYC300_276",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.8056239996",
+        "longitud": "-73.9428120001"
+    },
+    {
+        "ssid": "NYC300_19",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7526364918",
+        "longitud": "-73.9747172258"
+    },
+    {
+        "ssid": "NYC300_295",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.8475133196",
+        "longitud": "-73.9353630897"
+    },
+    {
+        "ssid": "NYC300_82",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6908829998",
+        "longitud": "-73.9896349995"
+    },
+    {
+        "ssid": "NYC300_157",
+        "ciudad": "New York",
+        "barrio": "Staten Island",
+        "latitud": "40.5638429997",
+        "longitud": "-74.1160749996"
+    },
+    {
+        "ssid": "NYC300_213",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.706152",
+        "longitud": "-73.9331469999"
+    },
+    {
+        "ssid": "NYC300_259",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.60800935",
+        "longitud": "-74.0033765451"
+    },
+    {
+        "ssid": "NYC300_122",
+        "ciudad": "New York",
+        "barrio": "Queens",
+        "latitud": "40.7467977541",
+        "longitud": "-73.8912148551"
+    },
+    {
+        "ssid": "NYC300_28",
+        "ciudad": "New York",
+        "barrio": "Queens",
+        "latitud": "40.7377769999",
+        "longitud": "-73.8839780002"
+    },
+    {
+        "ssid": "NYC300_133",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7439503403",
+        "longitud": "-73.9796546501"
+    },
+    {
+        "ssid": "NYC300_20",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7028998998",
+        "longitud": "-74.0095978002"
+    },
+    {
+        "ssid": "NYC300_98",
+        "ciudad": "New York",
+        "barrio": "Queens",
+        "latitud": "40.7205980001",
+        "longitud": "-73.8773369995"
+    },
+    {
+        "ssid": "NYC300_177",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.744815",
+        "longitud": "-73.9949859998"
+    },
+    {
+        "ssid": "NYC300_229",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7277935103",
+        "longitud": "-73.9853250299"
+    },
+    {
+        "ssid": "NYC300_15",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7102499999",
+        "longitud": "-73.9979799999"
+    },
+    {
+        "ssid": "NYC300_134",
+        "ciudad": "New York",
+        "barrio": "Queens",
+        "latitud": "40.7197",
+        "longitud": "-73.8771189999"
+    },
+    {
+        "ssid": "NYC300_104",
+        "ciudad": "New York",
+        "barrio": "Bronx",
+        "latitud": "40.8284999996",
+        "longitud": "-73.9226999995"
+    },
+    {
+        "ssid": "NYC300_69",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7527760003",
+        "longitud": "-73.9816400003"
+    },
+    {
+        "ssid": "NYC300_49",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.7095716301",
+        "longitud": "-73.95070637"
+    },
+    {
+        "ssid": "NYC300_138",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6644060002",
+        "longitud": "-73.9937149997"
+    },
+    {
+        "ssid": "NYC300_194",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.795988",
+        "longitud": "-73.9474260006"
+    },
+    {
+        "ssid": "NYC300_102",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7592336602",
+        "longitud": "-73.9655037894"
+    },
+    {
+        "ssid": "NYC300_298",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6769941203",
+        "longitud": "-73.89835842"
+    },
+    {
+        "ssid": "NYC300_165",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7440809999",
+        "longitud": "-73.9956570005"
+    },
+    {
+        "ssid": "NYC300_222",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6783399999",
+        "longitud": "-73.9119459996"
+    },
+    {
+        "ssid": "NYC300_253",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6800149999",
+        "longitud": "-73.943843"
+    },
+    {
+        "ssid": "NYC300_121",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7762375301",
+        "longitud": "-73.9823380401"
+    },
+    {
+        "ssid": "NYC300_135",
+        "ciudad": "New York",
+        "barrio": "Bronx",
+        "latitud": "40.866804429",
+        "longitud": "-73.8632224848"
+    },
+    {
+        "ssid": "NYC300_141",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.8231244696",
+        "longitud": "-73.9382020003"
+    },
+    {
+        "ssid": "NYC300_1",
+        "ciudad": "New York",
+        "barrio": "Staten Island",
+        "latitud": "40.6182370002",
+        "longitud": "-74.1072130004"
+    },
+    {
+        "ssid": "NYC300_25",
+        "ciudad": "New York",
+        "barrio": "Bronx",
+        "latitud": "40.866978",
+        "longitud": "-73.893509"
+    },
+    {
+        "ssid": "NYC300_227",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6102566673",
+        "longitud": "-73.9531058487"
+    },
+    {
+        "ssid": "NYC300_9",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6580000003",
+        "longitud": "-73.9472300004"
+    },
+    {
+        "ssid": "NYC300_81",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6897999996",
+        "longitud": "-73.9462000005"
+    },
+    {
+        "ssid": "NYC300_182",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.7346839996",
+        "longitud": "-73.955096"
+    },
+    {
+        "ssid": "NYC300_277",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7649329098",
+        "longitud": "-73.9843334296"
+    },
+    {
+        "ssid": "NYC300_193",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7548808397",
+        "longitud": "-73.9916616201"
+    },
+    {
+        "ssid": "NYC300_95",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.8185049997",
+        "longitud": "-73.9411520005"
+    },
+    {
+        "ssid": "NYC300_123",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.706822167",
+        "longitud": "-73.9505289535"
+    },
+    {
+        "ssid": "NYC300_152",
+        "ciudad": "New York",
+        "barrio": "Bronx",
+        "latitud": "40.8518783096",
+        "longitud": "-73.9089756596"
+    },
+    {
+        "ssid": "NYC300_27",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6936359997",
+        "longitud": "-73.9883469996"
+    },
+    {
+        "ssid": "NYC300_261",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6933479999",
+        "longitud": "-73.9874190001"
+    },
+    {
+        "ssid": "NYC300_178",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.8188133802",
+        "longitud": "-73.9557958904"
+    },
+    {
+        "ssid": "NYC300_132",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.8022979998",
+        "longitud": "-73.9524049995"
+    },
+    {
+        "ssid": "NYC300_275",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6894082198",
+        "longitud": "-73.9887286998"
+    },
+    {
+        "ssid": "NYC300_26",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7413232202",
+        "longitud": "-73.9853854705"
+    },
+    {
+        "ssid": "NYC300_282",
+        "ciudad": "New York",
+        "barrio": "Queens",
+        "latitud": "40.7596",
+        "longitud": "-73.8300300003"
+    },
+    {
+        "ssid": "NYC300_217",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6893339998",
+        "longitud": "-73.9819749997"
+    },
+    {
+        "ssid": "NYC300_54",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.8013499999",
+        "longitud": "-73.9457560005"
+    },
+    {
+        "ssid": "NYC300_184",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7292359997",
+        "longitud": "-73.9870809999"
+    },
+    {
+        "ssid": "NYC300_36",
+        "ciudad": "New York",
+        "barrio": "Queens",
+        "latitud": "40.7563120003",
+        "longitud": "-73.9133330004"
+    },
+    {
+        "ssid": "NYC300_237",
+        "ciudad": "New York",
+        "barrio": "Queens",
+        "latitud": "40.7537456299",
+        "longitud": "-73.9177027995"
+    },
+    {
+        "ssid": "NYC300_233",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7865194849",
+        "longitud": "-73.9777652896"
+    },
+    {
+        "ssid": "NYC300_170",
+        "ciudad": "New York",
+        "barrio": "Bronx",
+        "latitud": "40.8401070004",
+        "longitud": "-73.8952190002"
+    },
+    {
+        "ssid": "NYC300_263",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.8048349996",
+        "longitud": "-73.9659950002"
+    },
+    {
+        "ssid": "NYC300_86",
+        "ciudad": "New York",
+        "barrio": "Queens",
+        "latitud": "40.7536406401",
+        "longitud": "-73.9184016594"
+    },
+    {
+        "ssid": "NYC300_197",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.8112048322",
+        "longitud": "-73.9538487753"
+    },
+    {
+        "ssid": "NYC300_73",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7188030002",
+        "longitud": "-74.0001930005"
+    },
+    {
+        "ssid": "NYC300_62",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7963739998",
+        "longitud": "-73.9685420003"
+    },
+    {
+        "ssid": "NYC300_280",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7234019998",
+        "longitud": "-73.989938"
+    },
+    {
+        "ssid": "NYC300_17",
+        "ciudad": "New York",
+        "barrio": "Bronx",
+        "latitud": "40.8356910004",
+        "longitud": "-73.900089"
+    },
+    {
+        "ssid": "NYC300_22",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.666904",
+        "longitud": "-73.9917889996"
+    },
+    {
+        "ssid": "NYC300_186",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7319228897",
+        "longitud": "-73.9851310702"
+    },
+    {
+        "ssid": "NYC300_285",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7458238101",
+        "longitud": "-73.9800350706"
+    },
+    {
+        "ssid": "NYC300_55",
+        "ciudad": "New York",
+        "barrio": "Queens",
+        "latitud": "40.7407269999",
+        "longitud": "-73.8998640006"
+    },
+    {
+        "ssid": "NYC300_101",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7673575899",
+        "longitud": "-73.9825635397"
+    },
+    {
+        "ssid": "NYC300_35",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.690296",
+        "longitud": "-73.9878459996"
+    },
+    {
+        "ssid": "NYC300_43",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7621860177",
+        "longitud": "-73.9693817047"
+    },
+    {
+        "ssid": "NYC300_279",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7309750001",
+        "longitud": "-73.9960789998"
+    },
+    {
+        "ssid": "NYC300_106",
+        "ciudad": "New York",
+        "barrio": "Bronx",
+        "latitud": "40.8460519999",
+        "longitud": "-73.8249499994"
+    },
+    {
+        "ssid": "NYC300_206",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6682166933",
+        "longitud": "-73.9834274329"
+    },
+    {
+        "ssid": "NYC300_158",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7566381504",
+        "longitud": "-73.9866335805"
+    },
+    {
+        "ssid": "NYC300_208",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.8466233302",
+        "longitud": "-73.9358333302"
+    },
+    {
+        "ssid": "NYC300_291",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.8037732698",
+        "longitud": "-73.9362396996"
+    },
+    {
+        "ssid": "NYC300_220",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.692144",
+        "longitud": "-73.9867870001"
+    },
+    {
+        "ssid": "NYC300_238",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7574180004",
+        "longitud": "-73.965084"
+    },
+    {
+        "ssid": "NYC300_85",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7641267204",
+        "longitud": "-73.9823085599"
+    },
+    {
+        "ssid": "NYC300_63",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6806299998",
+        "longitud": "-73.9953819995"
+    },
+    {
+        "ssid": "NYC300_88",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6799210004",
+        "longitud": "-73.9408590005"
+    },
+    {
+        "ssid": "NYC300_174",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7896217796",
+        "longitud": "-73.9700237905"
+    },
+    {
+        "ssid": "NYC300_271",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6938619999",
+        "longitud": "-73.9829061995"
+    },
+    {
+        "ssid": "NYC300_185",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6574519997",
+        "longitud": "-73.9639909997"
+    },
+    {
+        "ssid": "NYC300_79",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6893190003",
+        "longitud": "-73.9871619999"
+    },
+    {
+        "ssid": "NYC300_234",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.8271950003",
+        "longitud": "-73.9460430004"
+    },
+    {
+        "ssid": "NYC300_262",
+        "ciudad": "New York",
+        "barrio": "Queens",
+        "latitud": "40.7037685601",
+        "longitud": "-73.7993433197"
+    },
+    {
+        "ssid": "NYC300_41",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7827656197",
+        "longitud": "-73.9512572898"
+    },
+    {
+        "ssid": "NYC300_111",
+        "ciudad": "New York",
+        "barrio": "Bronx",
+        "latitud": "40.8647299997",
+        "longitud": "-73.899037"
+    },
+    {
+        "ssid": "NYC300_156",
+        "ciudad": "New York",
+        "barrio": "Queens",
+        "latitud": "40.74387741",
+        "longitud": "-73.9269261104"
+    },
+    {
+        "ssid": "NYC300_143",
+        "ciudad": "New York",
+        "barrio": "Bronx",
+        "latitud": "40.8745499996",
+        "longitud": "-73.8655400005"
+    },
+    {
+        "ssid": "NYC300_267",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6932189996",
+        "longitud": "-73.9899979996"
+    },
+    {
+        "ssid": "NYC300_87",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.716869",
+        "longitud": "-73.9975780003"
+    },
+    {
+        "ssid": "NYC300_59",
+        "ciudad": "New York",
+        "barrio": "Forest Hills",
+        "latitud": "40.7111856291",
+        "longitud": "-73.8536727785"
+    },
+    {
+        "ssid": "NYC300_4",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7472150001",
+        "longitud": "-73.9933650002"
+    },
+    {
+        "ssid": "NYC300_287",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7318440003",
+        "longitud": "-73.9990419994"
+    },
+    {
+        "ssid": "NYC300_162",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7705165703",
+        "longitud": "-73.9666044601"
+    },
+    {
+        "ssid": "NYC300_84",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.8131219996",
+        "longitud": "-73.944376"
+    },
+    {
+        "ssid": "NYC300_93",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7600051899",
+        "longitud": "-73.9675675095"
+    },
+    {
+        "ssid": "NYC300_218",
+        "ciudad": "New York",
+        "barrio": "Bronx",
+        "latitud": "40.84779956",
+        "longitud": "-73.9121369301"
+    },
+    {
+        "ssid": "NYC300_109",
+        "ciudad": "New York",
+        "barrio": "Queens",
+        "latitud": "40.7426259997",
+        "longitud": "-73.9535809999"
+    },
+    {
+        "ssid": "NYC300_128",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7577012196",
+        "longitud": "-73.9632133202"
+    },
+    {
+        "ssid": "NYC300_176",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6899890004",
+        "longitud": "-73.9809279998"
+    },
+    {
+        "ssid": "NYC300_5",
+        "ciudad": "New York",
+        "barrio": "Bronx",
+        "latitud": "40.84740591",
+        "longitud": "-73.8999483497"
+    },
+    {
+        "ssid": "NYC300_18",
+        "ciudad": "New York",
+        "barrio": "Queens",
+        "latitud": "40.7444500197",
+        "longitud": "-73.9318752102"
+    },
+    {
+        "ssid": "NYC300_3",
+        "ciudad": "New York",
+        "barrio": "Queens",
+        "latitud": "40.7557352682",
+        "longitud": "-73.944584432"
+    },
+    {
+        "ssid": "NYC300_13",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.8100233403",
+        "longitud": "-73.95141341"
+    },
+    {
+        "ssid": "NYC300_48",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.8099650001",
+        "longitud": "-73.9588889999"
+    },
+    {
+        "ssid": "NYC300_242",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6921780001",
+        "longitud": "-73.9883039999"
+    },
+    {
+        "ssid": "NYC300_137",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.8059230004",
+        "longitud": "-73.9650810003"
+    },
+    {
+        "ssid": "NYC300_200",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6738010002",
+        "longitud": "-73.9351660002"
+    },
+    {
+        "ssid": "NYC300_46",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7819839998",
+        "longitud": "-73.9811840001"
+    },
+    {
+        "ssid": "NYC300_188",
+        "ciudad": "New York",
+        "barrio": "Staten Island",
+        "latitud": "40.5095311239",
+        "longitud": "-74.2441067083"
+    },
+    {
+        "ssid": "NYC300_203",
+        "ciudad": "New York",
+        "barrio": "Queens",
+        "latitud": "40.7431837904",
+        "longitud": "-73.9516172002"
+    },
+    {
+        "ssid": "NYC300_247",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7939621902",
+        "longitud": "-73.9705711698"
+    },
+    {
+        "ssid": "NYC300_24",
+        "ciudad": "New York",
+        "barrio": "Queens",
+        "latitud": "40.7202309996",
+        "longitud": "-73.8778059999"
+    },
+    {
+        "ssid": "NYC300_163",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7455781404",
+        "longitud": "-73.99100163"
+    },
+    {
+        "ssid": "NYC300_31",
+        "ciudad": "New York",
+        "barrio": "Queens",
+        "latitud": "40.7519530003",
+        "longitud": "-73.9274929997"
+    },
+    {
+        "ssid": "NYC300_223",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.785672",
+        "longitud": "-73.9510700004"
+    },
+    {
+        "ssid": "NYC300_290",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.5779799996",
+        "longitud": "-73.9435500001"
+    },
+    {
+        "ssid": "NYC300_249",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.683263",
+        "longitud": "-73.9658379998"
+    },
+    {
+        "ssid": "NYC300_198",
+        "ciudad": "New York",
+        "barrio": "Staten Island",
+        "latitud": "40.5777710002",
+        "longitud": "-74.1023100002"
+    },
+    {
+        "ssid": "NYC300_254",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6836250004",
+        "longitud": "-73.9770060002"
+    },
+    {
+        "ssid": "NYC300_30",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7990749998",
+        "longitud": "-73.9518220006"
+    },
+    {
+        "ssid": "NYC300_39",
+        "ciudad": "New York",
+        "barrio": "Bronx",
+        "latitud": "40.8053679999",
+        "longitud": "-73.9140419999"
+    },
+    {
+        "ssid": "NYC300_202",
+        "ciudad": "New York",
+        "barrio": "Queens",
+        "latitud": "40.7029820003",
+        "longitud": "-73.7851219996"
+    },
+    {
+        "ssid": "NYC300_244",
+        "ciudad": "New York",
+        "barrio": "Bronx",
+        "latitud": "40.8631000001",
+        "longitud": "-73.9065000005"
+    },
+    {
+        "ssid": "NYC300_296",
+        "ciudad": "New York",
+        "barrio": "Bronx",
+        "latitud": "40.8104760003",
+        "longitud": "-73.9261380001"
+    },
+    {
+        "ssid": "NYC300_140",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7591491495",
+        "longitud": "-73.9651624171"
+    },
+    {
+        "ssid": "NYC300_12",
+        "ciudad": "New York",
+        "barrio": "Bronx",
+        "latitud": "40.8166922997",
+        "longitud": "-73.9167190694"
+    },
+    {
+        "ssid": "NYC300_83",
+        "ciudad": "New York",
+        "barrio": "Queens",
+        "latitud": "40.7541882302",
+        "longitud": "-73.9293986402"
+    },
+    {
+        "ssid": "NYC300_116",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7530590804",
+        "longitud": "-73.9873860302"
+    },
+    {
+        "ssid": "NYC300_70",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7545932496",
+        "longitud": "-73.9881367804"
+    },
+    {
+        "ssid": "NYC300_136",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7023010001",
+        "longitud": "-74.0126038001"
+    },
+    {
+        "ssid": "NYC300_274",
+        "ciudad": "New York",
+        "barrio": "Staten Island",
+        "latitud": "40.575748",
+        "longitud": "-74.0806770005"
+    },
+    {
+        "ssid": "NYC300_175",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.5745820002",
+        "longitud": "-73.9779010002"
+    },
+    {
+        "ssid": "NYC300_221",
+        "ciudad": "New York",
+        "barrio": "Queens",
+        "latitud": "40.7480491803",
+        "longitud": "-73.8793864801"
+    },
+    {
+        "ssid": "NYC300_142",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7807159311",
+        "longitud": "-73.958721175"
+    },
+    {
+        "ssid": "NYC300_273",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.8204061702",
+        "longitud": "-73.9403039701"
+    },
+    {
+        "ssid": "NYC300_264",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7415099998",
+        "longitud": "-74.0010880005"
+    },
+    {
+        "ssid": "NYC300_195",
+        "ciudad": "New York",
+        "barrio": "Bronx",
+        "latitud": "40.8676269996",
+        "longitud": "-73.8987299995"
+    },
+    {
+        "ssid": "NYC300_288",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7935244003",
+        "longitud": "-73.9708867699"
+    },
+    {
+        "ssid": "NYC300_240",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7426889998",
+        "longitud": "-74.0002380003"
+    },
+    {
+        "ssid": "NYC300_71",
+        "ciudad": "New York",
+        "barrio": "Staten Island",
+        "latitud": "40.5920499999",
+        "longitud": "-74.1390869998"
+    },
+    {
+        "ssid": "NYC300_131",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7363870002",
+        "longitud": "-73.9947419994"
+    },
+    {
+        "ssid": "NYC300_190",
+        "ciudad": "New York",
+        "barrio": "Staten Island",
+        "latitud": "40.6373170004",
+        "longitud": "-74.0767629998"
+    },
+    {
+        "ssid": "NYC300_168",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6956699996",
+        "longitud": "-73.9797522006"
+    },
+    {
+        "ssid": "NYC300_150",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.8087332904",
+        "longitud": "-73.9520930895"
+    },
+    {
+        "ssid": "NYC300_147",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.8298089998",
+        "longitud": "-73.9482010003"
+    },
+    {
+        "ssid": "NYC300_272",
+        "ciudad": "New York",
+        "barrio": "Ridgewood",
+        "latitud": "40.7051723129",
+        "longitud": "-73.902572375"
+    },
+    {
+        "ssid": "NYC300_212",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6771929997",
+        "longitud": "-74.0087229996"
+    },
+    {
+        "ssid": "NYC300_11",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.5732530004",
+        "longitud": "-73.9801429996"
+    },
+    {
+        "ssid": "NYC300_100",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6583100001",
+        "longitud": "-73.9440599999"
+    },
+    {
+        "ssid": "NYC300_66",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.6925299998",
+        "longitud": "-74.0145400001"
+    },
+    {
+        "ssid": "NYC300_260",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.82027959",
+        "longitud": "-73.9552680401"
+    },
+    {
+        "ssid": "NYC300_214",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7637419997",
+        "longitud": "-73.9714240001"
+    },
+    {
+        "ssid": "NYC300_224",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.773542",
+        "longitud": "-73.9817740003"
+    },
+    {
+        "ssid": "NYC300_246",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.8271962302",
+        "longitud": "-73.9464406505"
+    },
+    {
+        "ssid": "NYC300_108",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.675377",
+        "longitud": "-73.8721059998"
+    },
+    {
+        "ssid": "NYC300_91",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7984879998",
+        "longitud": "-73.9415419998"
+    },
+    {
+        "ssid": "NYC300_68",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6510267597",
+        "longitud": "-73.9465128704"
+    },
+    {
+        "ssid": "NYC300_67",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.799435",
+        "longitud": "-73.950994"
+    },
+    {
+        "ssid": "NYC300_127",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.76148352",
+        "longitud": "-73.9667792596"
+    },
+    {
+        "ssid": "NYC300_251",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7558772099",
+        "longitud": "-73.9710296798"
+    },
+    {
+        "ssid": "NYC300_281",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7616400002",
+        "longitud": "-73.9829960005"
+    },
+    {
+        "ssid": "NYC300_154",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7659016497",
+        "longitud": "-73.9631802505"
+    },
+    {
+        "ssid": "NYC300_164",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6797519303",
+        "longitud": "-73.9391010097"
+    },
+    {
+        "ssid": "NYC300_107",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6570010004",
+        "longitud": "-73.9636970001"
+    },
+    {
+        "ssid": "NYC300_166",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6919760004",
+        "longitud": "-73.9883110001"
+    },
+    {
+        "ssid": "NYC300_252",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6888250003",
+        "longitud": "-73.9823019994"
+    },
+    {
+        "ssid": "NYC300_294",
+        "ciudad": "New York",
+        "barrio": "Queens",
+        "latitud": "40.6988997204",
+        "longitud": "-73.8338343899"
+    },
+    {
+        "ssid": "NYC300_159",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7872468703",
+        "longitud": "-73.9776456494"
+    },
+    {
+        "ssid": "NYC300_173",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7668612898",
+        "longitud": "-73.9834415303"
+    },
+    {
+        "ssid": "NYC300_105",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6807317996",
+        "longitud": "-73.9774460905"
+    },
+    {
+        "ssid": "NYC300_75",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7868960404",
+        "longitud": "-73.97748309"
+    },
+    {
+        "ssid": "NYC300_50",
+        "ciudad": "New York",
+        "barrio": "Bronx",
+        "latitud": "40.8631140504",
+        "longitud": "-73.9045750795"
+    },
+    {
+        "ssid": "NYC300_169",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.8506830002",
+        "longitud": "-73.9328699994"
+    },
+    {
+        "ssid": "NYC300_89",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.8153469997",
+        "longitud": "-73.9475760001"
+    },
+    {
+        "ssid": "NYC300_236",
+        "ciudad": "New York",
+        "barrio": "Queens",
+        "latitud": "40.7176640001",
+        "longitud": "-73.8362619997"
+    },
+    {
+        "ssid": "NYC300_149",
+        "ciudad": "New York",
+        "barrio": "Queens",
+        "latitud": "40.7695360002",
+        "longitud": "-73.8059679998"
+    },
+    {
+        "ssid": "NYC300_258",
+        "ciudad": "New York",
+        "barrio": "Bronx",
+        "latitud": "40.8543469054",
+        "longitud": "-73.8878894289"
+    },
+    {
+        "ssid": "NYC300_110",
+        "ciudad": "New York",
+        "barrio": "Queens",
+        "latitud": "40.7206713786",
+        "longitud": "-73.8428454074"
+    },
+    {
+        "ssid": "NYC300_215",
+        "ciudad": "New York",
+        "barrio": "Queens",
+        "latitud": "40.729869",
+        "longitud": "-73.7738410001"
+    },
+    {
+        "ssid": "NYC300_289",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6950879997",
+        "longitud": "-73.9876710001"
+    },
+    {
+        "ssid": "NYC300_201",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7181977604",
+        "longitud": "-74.0000479997"
+    },
+    {
+        "ssid": "NYC300_292",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7534138897",
+        "longitud": "-73.9666514402"
+    },
+    {
+        "ssid": "NYC300_90",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7647439998",
+        "longitud": "-73.9844699996"
+    },
+    {
+        "ssid": "NYC300_283",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.744668",
+        "longitud": "-73.9913750003"
+    },
+    {
+        "ssid": "NYC300_76",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.745985978",
+        "longitud": "-73.9844921943"
+    },
+    {
+        "ssid": "NYC300_172",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6778615496",
+        "longitud": "-73.9043006705"
+    },
+    {
+        "ssid": "NYC300_74",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7214250004",
+        "longitud": "-73.9934539999"
+    },
+    {
+        "ssid": "NYC300_160",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.819549",
+        "longitud": "-73.944183"
+    },
+    {
+        "ssid": "NYC300_269",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.8050129997",
+        "longitud": "-73.9449089999"
+    },
+    {
+        "ssid": "NYC300_7",
+        "ciudad": "New York",
+        "barrio": "Queens",
+        "latitud": "40.7106879997",
+        "longitud": "-73.8355149994"
+    },
+    {
+        "ssid": "NYC300_216",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.6801973802",
+        "longitud": "-73.9449029294"
+    },
+    {
+        "ssid": "NYC300_209",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.810178",
+        "longitud": "-73.9489240003"
+    },
+    {
+        "ssid": "NYC300_189",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7200050002",
+        "longitud": "-73.9814379995"
+    },
+    {
+        "ssid": "NYC300_255",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7681409996",
+        "longitud": "-73.9638700004"
+    },
+    {
+        "ssid": "NYC300_196",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7873089996",
+        "longitud": "-73.9479439998"
+    },
+    {
+        "ssid": "NYC300_139",
+        "ciudad": "New York",
+        "barrio": "Queens",
+        "latitud": "40.7474499996",
+        "longitud": "-73.9095319999"
+    },
+    {
+        "ssid": "NYC300_266",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7606599902",
+        "longitud": "-73.9982028298"
+    },
+    {
+        "ssid": "NYC300_112",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7439706953",
+        "longitud": "-73.9918828658"
+    },
+    {
+        "ssid": "NYC300_0",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7772412099",
+        "longitud": "-73.9786294005"
+    },
+    {
+        "ssid": "NYC300_199",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.7102499999",
+        "longitud": "-73.9979799999"
+    },
+    {
+        "ssid": "NYC300_297",
+        "ciudad": "New York",
+        "barrio": "Brooklyn",
+        "latitud": "40.69934194",
+        "longitud": "-73.9921867902"
+    },
+    {
+        "ssid": "NYC300_129",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.8209600004",
+        "longitud": "-73.9508629994"
+    },
+    {
+        "ssid": "NYC300_6",
+        "ciudad": "New York",
+        "barrio": "Queens",
+        "latitud": "40.7465540001",
+        "longitud": "-73.9438320005"
+    },
+    {
+        "ssid": "NYC300_167",
+        "ciudad": "New York",
+        "barrio": "Queens",
+        "latitud": "40.6830100001",
+        "longitud": "-73.7848199995"
+    },
+    {
+        "ssid": "NYC300_114",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.8486730402",
+        "longitud": "-73.9340696"
+    },
+    {
+        "ssid": "NYC300_161",
+        "ciudad": "New York",
+        "barrio": "Bronx",
+        "latitud": "40.8423270004",
+        "longitud": "-73.9097340002"
+    },
+    {
+        "ssid": "NYC300_183",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.76210714",
+        "longitud": "-73.9658092805"
+    },
+    {
+        "ssid": "NYC300_180",
+        "ciudad": "New York",
+        "barrio": "New York",
+        "latitud": "40.8039669996",
+        "longitud": "-73.9668470005"
+    }
+]

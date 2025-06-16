@@ -1,9 +1,10 @@
 from fastapi import FastAPI, HTTPException, Query
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, FileResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from rdflib import Graph
-import rdflib
+from export_tools import exportar_csv, exportar_json, obtener_datos_exportar
+from statistics_tools import obtener_estadisticas
 import os
 
 app = FastAPI()
@@ -57,8 +58,6 @@ def puntos(
 
     g = cargar_grafo_owl(ciudad)
 
-    # --- Detección de consulta según los parámetros recibidos ---
-    # Orden de prioridad: barrio>estado>proveedor>seguridad>tipo>ciudad (solo)
     consulta_file = None
     params = {}
 
@@ -83,7 +82,6 @@ def puntos(
     else:
         raise HTTPException(status_code=400, detail="No hay parámetros de filtro suficientes.")
 
-    # --- Ejecutar consulta ---
     sparql = cargar_consulta(consulta_file, params)
     try:
         results = g.query(sparql)
@@ -99,7 +97,6 @@ def puntos(
 
     return JSONResponse(content=puntos)
 
-# 🚀 NUEVO ENDPOINT: Comparar ciudades por número de puntos WiFi
 @app.get("/api/comparar_ciudades")
 async def comparar_ciudades():
     resultados_comparacion = []
@@ -107,7 +104,7 @@ async def comparar_ciudades():
 
     for ciudad in ciudades:
         g = cargar_grafo_owl(ciudad)
-        query = cargar_consulta("consulta_comparar_ciudades.rq", {})  # sin parámetros
+        query = cargar_consulta("consulta_comparar_ciudades.rq", {})
         results = g.query(query)
 
         for row in results:
@@ -119,15 +116,22 @@ async def comparar_ciudades():
             })
 
     return JSONResponse(content=resultados_comparacion)
-# 🧩 FIN DEL NUEVO ENDPOINT
 
-# Servir archivos estáticos (frontend)
-app.mount("/", StaticFiles(directory=PUBLIC_DIR, html=True), name="static")
+@app.get("/api/export/csv")
+def exportar_csv_endpoint():
+    datos = obtener_datos_exportar()
+    ruta = exportar_csv(datos)
+    return FileResponse(ruta, filename=os.path.basename(ruta), media_type="text/csv")
+
+@app.get("/api/export/json")
+def exportar_json_endpoint():
+    datos = obtener_datos_exportar()
+    ruta = exportar_json(datos)
+    return FileResponse(ruta, filename=os.path.basename(ruta), media_type="application/json")
 
 @app.get("/api/valores")
 def obtener_valores(filtro: str = Query(...), ciudad: str = Query(...)):
     archivo_consulta = f"consulta_{'proveedores_por_ciudad' if filtro == 'proveedor' else f'por_{filtro}'}.rq"
-
     g = cargar_grafo_owl(ciudad)
     try:
         sparql = cargar_consulta(archivo_consulta, {"ciudad": ciudad})
@@ -137,3 +141,15 @@ def obtener_valores(filtro: str = Query(...), ciudad: str = Query(...)):
 
     valores = sorted({str(row[0]) for row in resultados})
     return JSONResponse(content=valores)
+
+@app.get("/api/estadisticas/{ciudad}")
+def estadisticas_ciudad(ciudad: str):
+    try:
+        datos = obtener_estadisticas(ciudad)
+        return {"ciudad": ciudad, **datos}
+    except Exception as e:
+        print(f"Error al obtener estadísticas de {ciudad}: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+# Servir archivos estáticos
+app.mount("/", StaticFiles(directory=PUBLIC_DIR, html=True), name="static")
